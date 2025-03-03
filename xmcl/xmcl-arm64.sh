@@ -8,6 +8,17 @@ fi
 echo "✅ Xwayland detected. Continuing..."
 sleep 2
 
+
+# Define paths
+LIBREWOLF_APPIMAGE="/userdata/system/pro/librewolf/librewolf.AppImage"
+
+# Check if Librewolf is installed
+if [ ! -f "$LIBREWOLF_APPIMAGE" ]; then
+    echo "Browser for signing-in not found, installing Librewolf..."
+    sleep 3
+    curl -L https://github.com/trashbus99/profork/raw/master/librewolf/install_arm64.sh | bash
+fi
+
 ######################################################################
 # PROFORK/X-Minecraft-Launcher INSTALLER
 ######################################################################
