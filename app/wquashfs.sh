@@ -74,6 +74,7 @@ apps=(
     ["Spelunky-Classic/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/spelunky.sh | bash"
     ["Donkey-Kong-Advanced/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/dka.sh | bash"
     ["The-Ur-Quan-Masters/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/uqm.sh | bash"       
+    ["MEGAMAN X8 16 BIT DEMAKE"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/megamanx8.sh | bash"
     ["SPACE-QUEST-3D/SQ3-REMAKE/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/sq3d.sh | bash"
     ["STARFIGHTER-MOVIE-ARCADE-GAME/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/starfighter.sh | bash"
     ["OPENRA-CNC-TIBERIAN-DAWN/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/td.sh | bash"
