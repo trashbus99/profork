@@ -22,7 +22,7 @@ LIBREWOLF_APPIMAGE="/userdata/system/pro/librewolf/librewolf.AppImage"
 
 # Check if Librewolf is installed
 if [ ! -f "$LIBREWOLF_APPIMAGE" ]; then
-    echo "Browser not found, installing Librewolf..."
+    echo "Browser not found required for sign-in, installing Librewolf..."
     sleep 3
     curl -L https://github.com/trashbus99/profork/raw/master/librewolf/install_arm64.sh | bash
 fi
