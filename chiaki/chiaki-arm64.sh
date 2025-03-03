@@ -7,7 +7,7 @@ if ! pgrep -x "Xwayland" > /dev/null; then
 fi
 
 # Show a Yes/No confirmation dialog
-dialog --title "Chiaki-Ng" --yesno "Chiaki is Experimental on Batocera. Some device vulkan drivers are incompatible (e.g. orange pi 5 pro)\n\nContinue installing?" 8 50
+dialog --title "Chiaki-Ng" --yesno "Chiaki is Experimental on Batocera. Some device vulkan drivers are incompatible (e.g. orange pi 5 panfrost drivers)\n\nContinue installing?" 8 50
 
 # PROFORK INSTALLER
 ######################################################################
