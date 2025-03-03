@@ -5,7 +5,14 @@ if ! pgrep -x "Xwayland" > /dev/null; then
     exit 1
 fi
 
+# Show a Yes/No confirmation dialog
+dialog --title "X-Minecraft Launcher" --yesno "X-Minecraft is Experimental on Batocera. Bugs may occur.\n\nContinue installing?" 8 50
 
+# Capture the exit status of the dialog (Yes=0, No=1)
+if [ $? -ne 0 ]; then
+    echo "Installation canceled by user."
+    exit 1
+fi
 
 echo "✅ Xwayland detected. Continuing..."
 sleep 3
@@ -20,14 +27,7 @@ if [ ! -f "$LIBREWOLF_APPIMAGE" ]; then
     curl -L https://github.com/trashbus99/profork/raw/master/librewolf/install_arm64.sh | bash
 fi
 
-# Show a Yes/No confirmation dialog
-dialog --title "X-Minecraft Launcher" --yesno "X-Minecraft is Experimental on Batocera. Bugs may occur.\n\nContinue installing?" 8 50
 
-# Capture the exit status of the dialog (Yes=0, No=1)
-if [ $? -ne 0 ]; then
-    echo "Installation canceled by user."
-    exit 1
-fi
 
 ######################################################################
 # PROFORK/X-Minecraft-Launcher INSTALLER
