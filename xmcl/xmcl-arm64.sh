@@ -5,18 +5,28 @@ if ! pgrep -x "Xwayland" > /dev/null; then
     exit 1
 fi
 
-echo "✅ Xwayland detected. Continuing..."
-sleep 2
 
+
+echo "✅ Xwayland detected. Continuing..."
+sleep 3
 
 # Define paths
 LIBREWOLF_APPIMAGE="/userdata/system/pro/librewolf/librewolf.AppImage"
 
 # Check if Librewolf is installed
 if [ ! -f "$LIBREWOLF_APPIMAGE" ]; then
-    echo "Browser for signing-in not found, installing Librewolf..."
+    echo "Browser not found, installing Librewolf..."
     sleep 3
     curl -L https://github.com/trashbus99/profork/raw/master/librewolf/install_arm64.sh | bash
+fi
+
+# Show a Yes/No confirmation dialog
+dialog --title "X-Minecraft Launcher" --yesno "X-Minecraft is Experimental on Batocera. Bugs may occur.\n\nContinue installing?" 8 50
+
+# Capture the exit status of the dialog (Yes=0, No=1)
+if [ $? -ne 0 ]; then
+    echo "Installation canceled by user."
+    exit 1
 fi
 
 ######################################################################
@@ -308,8 +318,90 @@ echo 'export DISPLAY=:0.0; batocera-mouse show' >> $launcher
 ###################################################################### 
 ######################################################################
 ######################################################################
-echo 'LD_LIBRARY_PATH="/userdata/system/pro/.dep:${LD_LIBRARY_PATH}" DISPLAY=:0.0 /userdata/system/pro/'$appname'/'$appname'.AppImage --appimage-extract-and-run --no-sandbox  "$@"' >> $launcher
-echo 'LD_LIBRARY_PATH="/userdata/system/pro/.dep:${LD_LIBRARY_PATH}" DISPLAY=:0.0 /userdata/system/pro/'$appname'/'$appname'.AppImage --appimage-extract-and-run --no-sandbox  "$@"' >> /userdata/roms/ports/xmcl.sh
+# Define paths
+XMCL_PATH="/userdata/system/pro/xmcl"
+LIBREWOLF_APPIMAGE="/userdata/system/pro/librewolf/librewolf.AppImage"
+XMCL_APPIMAGE="$XMCL_PATH/xmcl.AppImage"
+DEP_PATH="/userdata/system/pro/.dep"
+
+# Create launcher for /userdata/roms/ports/xmcl.sh
+cat > /userdata/roms/ports/xmcl.sh << 'EOF'
+#!/bin/bash
+
+# Set up display for Batocera
+export DISPLAY=:0.0
+batocera-mouse show
+
+# Define paths
+LIBREWOLF_APPIMAGE="/userdata/system/pro/librewolf/librewolf.AppImage"
+XMCL_APPIMAGE="/userdata/system/pro/xmcl/xmcl.AppImage"
+DEP_PATH="/userdata/system/pro/.dep"
+
+# Create a fake xdg-open in /tmp so Minecraft uses it for web authentication
+export XDG_OPEN_PATH="/tmp/xdg-open"
+cat > "$XDG_OPEN_PATH" << 'EOT'
+#!/bin/bash
+LIBREWOLF_APPIMAGE="/userdata/system/pro/librewolf/librewolf.AppImage"
+
+if echo "$1" | grep -qE '^https?://'; then
+    "$LIBREWOLF_APPIMAGE" --appimage-extract-and-run "$1"
+else
+    echo "xdg-open: Unsupported input: $1"
+fi
+EOT
+
+# Make it executable
+chmod +x "$XDG_OPEN_PATH"
+
+# Export PATH so XMCL finds our custom xdg-open first
+export PATH="/tmp:$PATH"
+
+# Launch XMCL
+LD_LIBRARY_PATH="$DEP_PATH:${LD_LIBRARY_PATH}" DISPLAY=:0.0 "$XMCL_APPIMAGE" --appimage-extract-and-run --no-sandbox "$@"
+EOF
+
+# Make the launcher executable
+chmod +x /userdata/roms/ports/xmcl.sh
+
+# Create the additional "Launcher" file in /userdata/system/pro/xmcl/
+cat > "$XMCL_PATH/Launcher" << 'EOF'
+#!/bin/bash
+
+# Set up display for Batocera
+export DISPLAY=:0.0
+batocera-mouse show
+
+# Define paths
+LIBREWOLF_APPIMAGE="/userdata/system/pro/librewolf/librewolf.AppImage"
+XMCL_APPIMAGE="/userdata/system/pro/xmcl/xmcl.AppImage"
+DEP_PATH="/userdata/system/pro/.dep"
+
+# Create a fake xdg-open in /tmp so Minecraft uses it for web authentication
+export XDG_OPEN_PATH="/tmp/xdg-open"
+cat > "$XDG_OPEN_PATH" << 'EOT'
+#!/bin/bash
+LIBREWOLF_APPIMAGE="/userdata/system/pro/librewolf/librewolf.AppImage"
+
+if echo "$1" | grep -qE '^https?://'; then
+    "$LIBREWOLF_APPIMAGE" --appimage-extract-and-run "$1"
+else
+    echo "xdg-open: Unsupported input: $1"
+fi
+EOT
+
+# Make it executable
+chmod +x "$XDG_OPEN_PATH"
+
+# Export PATH so XMCL finds our custom xdg-open first
+export PATH="/tmp:$PATH"
+
+# Launch XMCL
+LD_LIBRARY_PATH="$DEP_PATH:${LD_LIBRARY_PATH}" DISPLAY=:0.0 "$XMCL_APPIMAGE" --appimage-extract-and-run --no-sandbox "$@"
+EOF
+
+# Make the Launcher file executable
+chmod +x "$XMCL_PATH/Launcher"
+
 chmod +x /userdata/roms/ports/xmcl.sh
 ######################################################################
 ######################################################################
