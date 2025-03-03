@@ -79,6 +79,7 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 |---------------------------------------|---------------------------------------------------------------|
 | **2SHIP2HARKINIAN**                   | Open-Source port of Majora's Mask Engine                     |
 | **7ZIP**                              | File archiver with a high compression ratio                  |
+| **AETHERSX2**                         | PS2 Emulator for ARM DEVICES (HIGH-END)
 | **ALTUS**                             | Desktop client for Google Meet and messaging services        |
 | **AMAZON-LUNA**                       | Amazon's cloud gaming service                                |
 | **ANTIMICROX**                        | Gamepad mapping and customization tool                       |
@@ -149,8 +150,9 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 | **VIVALDI**                           | Customizable web browser                                   |
 | **VLC**                               | Open-source media player                                   |
 | **WHATSAPP**                          | Messaging app                                              |
-| **WIIUPLUS/NEWEST-CEMU/Works Up to v40**     | Wii U emulator                                            |
+| **WIIUPLUS/NEWEST-CEMU/Works Up to v40**     | Wii U emulator                                      |      |
 | **XCLOUD**                            | Electron based Xcloud client (Gamepad Navigatable)        |
+| **X-MINECRAFT-LAUNCHER**              | Minecraft Launcher (EXPERIMNETAL/ARM64)                   |
 | **WPS-OFFICE**                        | Office suite                                              |
 | **YARG**                              | Yet Another Rhythm Game                                   |
 | **YOUTUBE-MUSIC**                     | Streaming app for YouTube Music                           |
