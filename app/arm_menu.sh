@@ -36,7 +36,7 @@ OPTIONS=("1" "Install Portmaster"
          "3" "Install Aethersx2 (Experimental/High-end devices only)"
          "4" "Restore Mame .0139 to v41+"         
          "5" "Youtube TV UI (XWAYLAND)"
-         "6" "X-Minecraft Launcher (XWAYLAND - EXPERIMENTAL)""
+         "6" "X-Minecraft Launcher (XWAYLAND - EXPERIMENTAL)"
          "7" "Exit")
          
 # Display the dialog and get the user choice
