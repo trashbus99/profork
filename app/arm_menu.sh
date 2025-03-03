@@ -32,11 +32,12 @@ sleep 10
 
 # Define the options
 OPTIONS=("1" "Install Portmaster"
-         "2" "Install Librewolf Web Browser (VIA F1 MENU ONLY!!)"
+         "2" "Install Librewolf Web Browser (XWAYLAND)"
          "3" "Install Aethersx2 (Experimental/High-end devices only)"
          "4" "Restore Mame .0139 to v41+"         
-         "5" "Youtube TV UI (NEWER DEVICES THAT HAVE F1 MENU ONLY!!)"
-         "6" "Exit")
+         "5" "Youtube TV UI (XWAYLAND)"
+         "6" "X-Minecraft Launcher (XWAYLAND - EXPERIMENTAL)""
+         "7" "Exit")
          
 # Display the dialog and get the user choice
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
@@ -70,6 +71,10 @@ case $CHOICE in
         curl -Ls  https://github.com/trashbus99/profork/raw/master/youtubetv/yttv-arm64.sh | bash
         ;;   
     6)
+        echo "X-Minecraft-Launcher..."
+        curl -Ls  https://github.com/trashbus99/profork/raw/master/xmcl/xmcl-arm64.sh | bash
+        ;;   
+    7)
         echo "Exiting..."
            exit
         ;;
