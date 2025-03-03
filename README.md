@@ -1,6 +1,7 @@
 
 
 Recents:
+* Added X-Minecraft Launcher for ARM64 devices (Experimental)
 * Removed Docker Linux on Qemu (no longer working)
 * Added Youtube TV-UI for ARM64 (aarch64) devices
 * Added Librewolf Web Browser for x86_64 and ARM64 (aarch64) devices
