@@ -1,10 +1,12 @@
- nano 7.2                                                                                       starship.sh                                                                                                 #!/bin/bash
+#!/bin/bash
 
 # Step 1: Define Directories and URLs
 STARSHIP_DIR="/userdata/roms/ports/starship"
 LAUNCH_SCRIPT="/userdata/roms/ports/Starship.sh"
 STARSHIP_APPIMAGE="Starship-x86_64.AppImage"
 STARSHIP_URL="https://github.com/qurious-pixel/Starship/releases/download/v1.0/Starship-x86_64.AppImage"
+KEYS_FILE="/userdata/roms/ports/starship.sh.keys"
+KEYS_URL="https://raw.githubusercontent.com/trashbus99/profork/refs/heads/master/soh/launch_soh.sh.keys"
 
 # Ensure the directory exists
 mkdir -p "$STARSHIP_DIR"
@@ -31,7 +33,11 @@ EOF
 # Make the launch script executable
 chmod +x "$LAUNCH_SCRIPT"
 
-# Step 4: Display Instructions using dialog
+# Step 4: Download the Key Bindings File
+echo "Downloading launch_2s2h.sh.keys file..."
+wget -O "$KEYS_FILE" "$KEYS_URL"
+
+# Step 5: Display Instructions using dialog
 dialog --msgbox "Setup complete! 🎮\n\n\ 18 50
 To run Starship (Starfox 64 Engine):\n\
 - Go to the PORTS section in Batocera.\n\
