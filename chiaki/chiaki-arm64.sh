@@ -6,8 +6,15 @@ if ! pgrep -x "Xwayland" > /dev/null; then
     exit 1
 fi
 
+
 # Show a Yes/No confirmation dialog
-dialog --title "Chiaki-Ng" --yesno "Chiaki is Experimental on Batocera. Some device vulkan drivers are incompatible (e.g. orange pi 5 panfrost drivers)\n\nContinue installing?" 8 50
+dialog --title "Chiaki-Ng" --yesno "Chiaki is Experimental on Batocera. Some device Vulkan drivers are incompatible (e.g. Orange Pi 5 Panfrost drivers).\n\nContinue installing?" 12 50
+
+# Capture the exit status (0 = Yes, 1 = No)
+if [ $? -ne 0 ]; then
+    echo "Installation canceled by user."
+    exit 1
+fi
 
 # PROFORK INSTALLER
 ######################################################################
