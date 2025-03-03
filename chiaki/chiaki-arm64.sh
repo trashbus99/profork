@@ -1,4 +1,14 @@
 #!/usr/bin/env bash 
+#!/usr/bin/env bash 
+# Check if Xwayland is running
+if ! pgrep -x "Xwayland" > /dev/null; then
+    echo "❌ Xwayland is not running. Exiting."
+    exit 1
+fi
+
+# Show a Yes/No confirmation dialog
+dialog --title "X-Minecraft Launcher" --yesno "Chiaki is Experimental on Batocera. Some device vulkan drivers are incompatible (e.g. orange pi 5 pro) may occur.\n\nContinue installing?" 8 50
+
 # PROFORK INSTALLER
 ######################################################################
 ######################################################################
