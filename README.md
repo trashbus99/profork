@@ -1,6 +1,7 @@
 
 
 Recents:
+* Added Starship (Open-Source Starfox 64 Engine)
 * Added Youtube Music for ARM64
 * Added Chiaki-NG for ARM64
 * Added X-Minecraft Launcher for ARM64 devices (Experimental)
@@ -141,6 +142,7 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 | **SHIP-OF-HARKINIAN**                 | Open-source port of Ocarina of Time Engine                 |
 | **SHEEPSHAVER**                       | PowerPC Mac emulator                                       |
 | **SMPLAYER**                          | Media player with built-in codecs                          |
+| **STARSHIP**                          | Open Source port of Starfox 64 Engine
 | **STEAM/AMD-INTEL-GPUS-ONLY**         | Popular gaming platform                                    |
 | **STRAWBERRY-MUSIC-PLAYER**           | Music player with support for large libraries              |
 | **SUBLIME-TEXT**                      | Text editor for code, markup, and prose                    |
