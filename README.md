@@ -1,6 +1,7 @@
 
 
 Recents:
+* Added Luanti (Minetest)
 * Added Starship (Open-Source Starfox 64 Engine)
 * Added Youtube Music for ARM64
 * Added Chiaki-NG for ARM64
@@ -114,6 +115,7 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 | **KSNIP**                             | Screenshot tool with annotation features                     |
 | **KRITA**                             | Professional digital painting and illustration software      |
 | **LIBREWOLF**                         | Librewolf Web Browser (ARM64 Also Available)                           |
+| **LUANTI**                            | a.k.a. Minetest - Open source voxel Game engine (free minecraft clone) |
 | **LUDUSAVI**                          | Save game manager and backup tool                           |
 | **LUTRIS/AMD-INTEL-GPUS-ONLY**        | Open-source gaming platform                                  |
 | **MEDIAELCH**                         | Media manager for movies and TV shows                       |
