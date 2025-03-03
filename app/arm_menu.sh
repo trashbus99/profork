@@ -36,9 +36,10 @@ OPTIONS=("1" "Install Portmaster"
          "3" "Install Aethersx2 (Experimental/High-end devices only)"
          "4" "Restore Mame .0139 to v41+"         
          "5" "Youtube TV UI (XWAYLAND)"
-         "6" "X-Minecraft Launcher (XWAYLAND - EXPERIMENTAL)"
-         "7" "Chiaki-NG (XWAYLAND)"
-         "8" "Exit")
+         "6" "Youtube Music (XWAYLAND)"
+         "7" "X-Minecraft Launcher (XWAYLAND - EXPERIMENTAL)"
+         "8" "Chiaki-NG (XWAYLAND)"
+         "9" "Exit")
          
 # Display the dialog and get the user choice
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
@@ -72,14 +73,18 @@ case $CHOICE in
         curl -Ls  https://github.com/trashbus99/profork/raw/master/youtubetv/yttv-arm64.sh | bash
         ;;   
     6)
+        echo "Youtube Music..."
+        curl -Ls https://github.com/trashbus99/profork/raw/master/youtube-music/ytm-arm64.sh | bash     
+        ;;
+    7)
         echo "X-Minecraft-Launcher..."
         curl -Ls  https://github.com/trashbus99/profork/raw/master/xmcl/xmcl-arm64.sh | bash
         ;;   
-    7)
+    8)
         echo "Chiaki-NG..."
         curl -Ls https://github.com/trashbus99/profork/raw/master/chiaki/chiaki-arm64.sh | bash
         ;;
-    8)
+    9)
         echo "Exiting..."
            exit
         ;;
