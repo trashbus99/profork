@@ -1,6 +1,7 @@
 
 
 Recents:
+* Added Chiaki-NG for ARM64
 * Added X-Minecraft Launcher for ARM64 devices (Experimental)
 * Removed Docker Linux on Qemu (no longer working)
 * Added Youtube TV-UI for ARM64 (aarch64) devices
@@ -90,7 +91,7 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 | **BLENDER**                           | Open-source 3D modeling and animation tool                   |
 | **BOTTLES/AMD-INTEL-GPUS-ONLY**       | Manage and run Windows apps using Wine/proton                |
 | **BRAVE**                             | Privacy-focused web browser                                  |
-| **CHIAKI-NG**                         | Open-source PS4/PS5 Remote Play client                       |
+| **CHIAKI-NG**                         | Open-source PS4/PS5 Remote Play client (ARM64 also available |
 | **CHROME**                            | Popular web browser by Google                                |
 | **CLONE HERO**                        | Guitar/Music Game                                            |
 | **CPU-X**                             | System profiling and monitoring application                  |
