@@ -150,9 +150,9 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 | **VIVALDI**                           | Customizable web browser                                   |
 | **VLC**                               | Open-source media player                                   |
 | **WHATSAPP**                          | Messaging app                                              |
-| **WIIUPLUS/NEWEST-CEMU/Works Up to v40**     | Wii U emulator                                      |      |
+| **WIIUPLUS/NEWEST-CEMU/Works Up to v40**     | Wii U emulator                                      |      
 | **XCLOUD**                            | Electron based Xcloud client (Gamepad Navigatable)        |
-| **X-MINECRAFT-LAUNCHER**              | Minecraft Launcher (EXPERIMNETAL/ARM64)                   |
+| **X-MINECRAFT-LAUNCHER**              | Minecraft Launcher (EXPERIMENTAL/ARM64)                   |
 | **WPS-OFFICE**                        | Office suite                                              |
 | **YARG**                              | Yet Another Rhythm Game                                   |
 | **YOUTUBE-MUSIC**                     | Streaming app for YouTube Music                           |
