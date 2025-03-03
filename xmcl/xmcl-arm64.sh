@@ -290,8 +290,8 @@ echo 'export DISPLAY=:0.0; batocera-mouse show' >> $launcher
 ###################################################################### 
 ######################################################################
 ######################################################################
-echo 'LD_LIBRARY_PATH="/userdata/system/pro/.dep:${LD_LIBRARY_PATH}" DISPLAY=:0.0 /userdata/system/pro/'$appname'/'$appname'.AppImage --extract-and-run --no-sandbox  "$@"' >> $launcher
-echo 'LD_LIBRARY_PATH="/userdata/system/pro/.dep:${LD_LIBRARY_PATH}" DISPLAY=:0.0 /userdata/system/pro/'$appname'/'$appname'.AppImage --extract-and-run --no-sandbox  "$@"' >> /userdata/roms/ports/xmcl.sh
+echo 'LD_LIBRARY_PATH="/userdata/system/pro/.dep:${LD_LIBRARY_PATH}" DISPLAY=:0.0 /userdata/system/pro/'$appname'/'$appname'.AppImage --appimage-extract-and-run --no-sandbox  "$@"' >> $launcher
+echo 'LD_LIBRARY_PATH="/userdata/system/pro/.dep:${LD_LIBRARY_PATH}" DISPLAY=:0.0 /userdata/system/pro/'$appname'/'$appname'.AppImage --appimage-extract-and-run --no-sandbox  "$@"' >> /userdata/roms/ports/xmcl.sh
 chmod +x /userdata/roms/ports/xmcl.sh
 ######################################################################
 ######################################################################
