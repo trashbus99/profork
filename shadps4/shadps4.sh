@@ -131,7 +131,7 @@ fi
 # -----------------------------------------------------------------------------
 # Install ES Features & System Configurations for PS4
 # -----------------------------------------------------------------------------
-cat << EOF > "$ES_CONFIG_DIR/es_features.ps4.cfg"
+cat << EOF > "$ES_CONFIG_DIR/es_features_ps4.cfg"
 <?xml version="1.0" encoding="UTF-8" ?>
 <features>
     <emulator name="ps4" features="videomode,padtokeyboard,powermode,tdp">
