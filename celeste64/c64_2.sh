@@ -17,8 +17,7 @@ if [ "$arch" == "x86_64" ]; then
 elif [ "$arch" == "aarch64" ]; then
     echo "Architecture: arm64 detected."
     if [ -n "$ARM_SUFFIX" ]; then
-        DOWNLOAD_URL=$(curl -s "https://api.github.com/repos/$REPO/releases/latest" | \
-            jq -r ".assets[] | select(.name | endswith(\"$ARM_SUFFIX\")) | .browser_download_url")
+        DOWNLOAD_URL=https://github.com/EXOK/Celeste64/releases/download/v1.1.1/Celeste64-v1.1.1-Linux-arm64.zip
     else
         echo "No ARM64 binary suffix provided. Skipping download. Exiting."
         exit 1
