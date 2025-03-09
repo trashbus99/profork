@@ -134,8 +134,16 @@ fi
 cat << EOF > "$ES_CONFIG_DIR/es_features_ps4.cfg"
 <?xml version="1.0" encoding="UTF-8" ?>
 <features>
-    <emulator name="ps4" features="videomode,padtokeyboard,powermode,tdp">
+    <emulator name="ps4" features="videomode,padtokeyboard,powermode,tdp,bezel,hud">
     </emulator>
+    <feature name="BEZELS" value="bezel" description="Enable or disable game bezels.">
+        <choice name="On" value="1" />
+        <choice name="Off" value="0" />
+    </feature>
+    <feature name="HUD" value="hud" description="Enable or disable on-screen HUD display.">
+        <choice name="On" value="1" />
+        <choice name="Off" value="0" />
+    </feature>
 </features>
 EOF
 
