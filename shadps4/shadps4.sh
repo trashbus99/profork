@@ -2,7 +2,7 @@
 
 echo "Profork SHADPS4 Installer..."
 echo "This will install SHADPS4 to /userdata/system/pro/shadps4"
-echo""
+echo ""
 echo "A Launcher will be added to F1->Applications"
 echo "and a New menu will be added to Emulationstation for PS4" 
 sleep 7
@@ -165,7 +165,7 @@ cat << EOF > "$ES_CONFIG_DIR/es_systems_ps4.cfg"
 EOF
 
 # -----------------------------------------------------------------------------
-# Create +UPDATE-PS4-SHORTCUTS.sh
+# Create +UPDATE-PS4-SHORTCUTS.sh with pad2 keys generation
 # -----------------------------------------------------------------------------
 cat << 'EOF' > "$ROMS_DIR/+UPDATE-PS4-SHORTCUTS.sh"
 #!/bin/bash
@@ -182,15 +182,65 @@ for file_path in "$desktop_dir"/*.desktop; do
 
         sanitized_name=$(echo "$game_name" | sed 's/ /_/g' | sed 's/[^a-zA-Z0-9_]//g')
         script_path="$output_dir/${sanitized_name}.sh"
+        keys_path="$output_dir/${sanitized_name}.sh.keys"
 
         echo "#!/bin/bash
-        ulimit -H -n 819200 && ulimit -S -n 819200
-        batocera-mouse show
-        DISPLAY=:0.0 \"/userdata/system/pro/shadps4/Shadps4-qt.AppImage\" -g $game_code -f true
-        batocera-mouse hide" > "$script_path"
+ulimit -H -n 819200 && ulimit -S -n 819200
+batocera-mouse show
+DISPLAY=:0.0 \"/userdata/system/pro/shadps4/Shadps4-qt.AppImage\" -g $game_code -f true
+batocera-mouse hide" > "$script_path"
 
         chmod +x "$script_path"
         echo "Shortcut created: $script_path"
+
+        # Create keys file with default mappings and a pad2 entry that includes the game name
+        cat << KEYS_EOF > "$keys_path"
+{
+    "actions_player1": [
+        {
+            "trigger": [
+                "hotkey",
+                "start"
+            ],
+            "type": "key",
+            "target": [
+                "KEY_LEFTALT",
+                "KEY_F4"
+            ],
+            "description": "Press Alt+F4"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "l2"
+            ],
+            "type": "key",
+            "target": "KEY_ESC",
+            "description": "Press Esc"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "r2"
+            ],
+            "type": "key",
+            "target": "KEY_ENTER",
+            "description": "Press Enter"
+        },
+        {
+            "trigger": [
+                "hotkey",
+                "pad2"
+            ],
+            "type": "key",
+            "target": "KEY_P",
+            "description": "Launch ${game_name}"
+        }
+    ]
+}
+KEYS_EOF
+
+        echo "Keys file created: $keys_path"
     fi
 done
 
