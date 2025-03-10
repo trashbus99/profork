@@ -11,7 +11,7 @@ app=sunshine
 #url=https://github.com/LizardByte/Sunshine/releases/download/v0.19.1/sunshine.AppImage
 #url=https://github.com/LizardByte/Sunshine/releases/download/v0.20.0/sunshine.AppImage
 #url=$(curl -s https://api.github.com/repos/LizardByte/Sunshine/releases/latest | jq -r '.assets[] | select(.name | endswith(".AppImage")) | .browser_download_url')
-url=https://github.com/LizardByte/Sunshine/releases/download/v2025.310.123250/sunshine.AppImage
+url=https://github.com/LizardByte/Sunshine/releases/download/v0.23.1/sunshine.AppImage
 url2=https://github.com/trashbus99/profork/releases/download/r1/batocera-sunshine.AppImage
 
 #--------------------------------------------------------------------------------------------------------------------------------
