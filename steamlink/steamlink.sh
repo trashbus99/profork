@@ -1,12 +1,12 @@
 #!/bin/bash
 # Check if Xwayland is running
-if ! pgrep -x "Xwayland" > /dev/null; then
-    echo "❌ Xwayland is not running. Exiting."
-    exit 1
-fi
+#if ! pgrep -x "Xwayland" > /dev/null; then
+#    echo "❌ Xwayland is not running. Exiting."
+#    exit 1
+#fi
 
-echo "✅ Xwayland detected. Continuing..."
-sleep 2
+#echo "✅ Xwayland detected. Continuing..."
+#sleep 2
 # Define variables
 PORTMASTER_DIR="/userdata/system/.local/share/PortMaster"
 PM_INSTALL_URL="https://github.com/trashbus99/profork/raw/master/portmaster/install.sh"
