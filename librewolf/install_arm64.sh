@@ -236,7 +236,7 @@ sleep 0.33
 echo -e "${W}THIS WILL INSTALL $APPNAME FOR BATOCERA"
 echo -e "${W}USING $ORIGIN"
 echo
-echo -e "${W}$APPNAME WILL BE AVAILABLE IN F1->APPLICATIONS "
+echo -e "${W}$APPNAME WILL BE AVAILABLE IN F1->APPLICATIONS & Ports"
 echo -e "${W}AND INSTALLED IN /USERDATA/SYSTEM/PRO/$APPNAME"
 echo
 echo -e "${L}- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
@@ -306,7 +306,7 @@ echo 'DISPLAY=:0.0 /userdata/system/pro/librewolf/librewolf.AppImage --appimage-
 ######################################################################
 dos2unix $launcher
 chmod a+x $launcher
-#### cp $launcher /userdata/roms/ports/Aethersx2.sh 2>/dev/null
+cp $launcher /userdata/roms/ports/Librewolf.sh 2>/dev/null
 cp $launcher /userdata/system/pro/$appname/Launcher 2>/dev/null
 # //
 # -- get icon for shortcut,
