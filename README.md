@@ -1,6 +1,7 @@
 
 
 🚀Recents:
+* ISO to XISO converter added to tools
 * Added Unleashed Recomp (Sonic Unleased Engine)
 * Added Luanti (Minetest)
 * Added Starship (Open-Source Starfox 64 Engine)
