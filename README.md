@@ -148,6 +148,7 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 | **TABBY**                             | Modern, highly configurable terminal emulator              |
 | **TELEGRAM**                          | Messaging app                                              |
 | **TOTAL-COMMANDER**                   | File manager with advanced features                        |
+| **UNLEASHED-RECOMP**                  | Sonic Unleashed engine for PC                               |
 | **VIBER**                             | Messaging and calling app                                  |
 | **VIVALDI**                           | Customizable web browser                                   |
 | **VLC**                               | Open-source media player                                   |
