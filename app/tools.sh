@@ -101,6 +101,7 @@ apps=(
     ["WINE-GE-8-26"]="curl -Ls https://github.com/trashbus99/profork/raw/master/scripts/ge.sh | bash"
     ["XMLSTARLET"]="curl -Ls https://github.com/trashbus99/profork/raw/master/scripts/xmlstarlet.sh | bash"
     ["XDOTOOL"]="curl -Ls https://github.com/trashbus99/profork/raw/master/scripts/xdotool.sh | bash"
+    ["ISO-TO-XISO"]="curl -Ls https://github.com/trashbus99/profork/raw/master/scripts/xiso.sh | bash"
     ["ZENITY"]="curl -Ls  https://github.com/trashbus99/profork/raw/master/.dep/.scripts/zenity.sh | bash"
     ["QEMU"]="curl -Ls https://github.com/trashbus99/profork/raw/master/scripts/qemu.sh | bash"
 )
