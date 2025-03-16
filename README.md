@@ -1,7 +1,7 @@
 
 
 🚀Recents:
-* ISO to XISO converter added to tools
+* ISO to XISO converter added to tools - Converts ISOs in xbox rom folder to XISO format for xemu
 * Added Unleashed Recomp (Sonic Unleased Engine)
 * Added Luanti (Minetest)
 * Added Starship (Open-Source Starfox 64 Engine)
