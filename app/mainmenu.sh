@@ -103,7 +103,7 @@ case $CHOICE in
         curl -Ls https://github.com/trashbus99/profork/raw/master/wine-custom/wine.sh | bash
         ;;              
     6)  echo "Flatpak Linux Games..."
-        curl -Ls https://github.com/trashbus99/profork/raw/master/app/fgs.sh | bash
+        curl -Ls https://raw.githubusercontent.com/trashbus99/profork/master/app/fpg.sh | bash
         ;;            
     7)  echo "Other Linux & Windows/Wine Freeware..."
         curl -Ls https://github.com/trashbus99/profork/raw/master/app/wquashfs.sh | bash
