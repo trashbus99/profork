@@ -1,50 +1,34 @@
-#!/usr/bin/bash
-# This FILE is public domain, by @ryancnelson on GitHub, 2023
-# To be used with a tarball provided by Ryan.
-# (Licenses on files in that tarball are still their respective owners’.)
+!/bin/bash
 
-## Bail out if error:
-set -e
+CHROOT_DIR="/userdata/system/alpine"
 
-mychrootdir="/userdata/system/alpine"
-# If mychrootdir exists, then exit
-if [ -d "$mychrootdir" ]; then
-    echo "Directory $mychrootdir already exists, exiting."
-    echo "If you want to start over, try something like:"
-    echo "umount $mychrootdir/dev"
-    echo "umount $mychrootdir/proc"
-    echo "umount $mychrootdir/sys"
-    echo "rm -rf $mychrootdir"
-    echo "Then run this script again."
-    exit 1
-fi
+# Function to check if Alpine chroot is already installed
+install_alpine_chroot() {
+    echo "🔍 Checking if Alpine chroot is already installed..."
+    if [ -d "$CHROOT_DIR" ] && [ -f "$CHROOT_DIR/bin/busybox" ]; then
+        echo "✅ Alpine chroot detected. Skipping installation."
+    else
+        echo "🚀 Installing Alpine chroot..."
+        curl -L  https://github.com/trashbus99/profork/raw/master/scripts/install-alpine.sh | bash
+    fi
+}
 
-mkdir -p "$mychrootdir"
-cd "$mychrootdir"
+# Function to update Alpine repositories
+update_repositories() {
+    echo "🌍 Updating Alpine package sources..."
+    chroot "$CHROOT_DIR" /bin/bash -l <<EOF
+    apk update
+    apk add nano
+    echo "🔧 Editing repositories file..."
+    sed -i 's|^http.*|# Disabled Default Repo|' /etc/apk/repositories
+    echo "https://dl-cdn.alpinelinux.org/alpine/v3.21/main" > /etc/apk/repositories
+    echo "https://dl-cdn.alpinelinux.org/alpine/v3.21/community" >> /etc/apk/repositories
+    apk update && apk upgrade
+EOF
+}
 
-# Fetch the 'xpkg' aarch64 binary expected to run on your device.
-curl -L -O https://github.com/pkgxdev/pkgx/releases/download/v1.1.1/pkgx-1.1.1+linux+aarch64.tar.xz
-tar -xvf pkgx-1.1.1+linux+aarch64.tar.xz
-chmod +x pkgx
+# Ensure Alpine chroot exists before updating repositories
+install_alpine_chroot
+update_repositories
 
-# Define a temporary directory outside of mychrootdir for the clone.
-temp_dir="${mychrootdir}-temp"
-
-# Use pkgx to clone the Alpine chroot repository into the temporary directory.
-./pkgx git clone https://github.com/ryancnelson/x55-jelos-alpinechroot "$temp_dir"
-
-# Move the cloned contents into mychrootdir.
-mv "$temp_dir"/* "$mychrootdir/"
-
-# Set up necessary directories for the chroot.
-mkdir -p "${mychrootdir}/dev"
-mkdir -p "${mychrootdir}/proc"
-mkdir -p "${mychrootdir}/sys"
-
-mount -o bind /dev  "${mychrootdir}/dev"
-mount -o bind /proc "${mychrootdir}/proc"
-mount -o bind /sys  "${mychrootdir}/sys"
-
-cp -L /etc/resolv.conf "${mychrootdir}/etc/resolv.conf"
-
-echo "Now you should run: chroot $mychrootdir /bin/bash -l"
+echo "🎉 Alpine chroot setup complete!"
