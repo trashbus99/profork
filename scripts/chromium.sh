@@ -23,7 +23,12 @@ install_alpine_chroot() {
 
 # --- Install Alpine chroot (if needed) and update repositories/install Chromium ---
 install_alpine_chroot
-install_chromium
+# Install Chromium inside the chroot
+echo "🟡 Installing Chromium inside chroot..."
+chroot "$CHROOT_DIR" /bin/bash -l <<EOF
+apk update
+apk add chromium
+EOF
 
 echo "🎉 Alpine chroot setup complete!"
 
