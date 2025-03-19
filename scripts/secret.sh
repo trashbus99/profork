@@ -38,7 +38,7 @@ dialog --title "🚨 NINTENDO POLICE ALERT! 🚨" \
 What?! You think I’d just GIVE you *that* information? Oh no, no, no. 🚔\n\n\
 You ever hear of the Yuzu Incident? *They didn’t comply.* Now they work for Nintendo, coding mobile gacha games for all eternity. ☠️\n\n\
 Nintendo’s legal team? SCARY. You ever try dodging blue shells in Mario Kart? That’s NOTHING compared to dodging their lawsuits. You think you have *rights*? Not in their courtroom. You’re playing *Super Lawsuit Bros.* on HARD MODE. 😵\n\n\
-If you *really* need help, maybe check with the *BUA installer guy*. But me? I know NOTHING. NOTHING, I tell you! 🤐\n\n\
+If you *really* need help, maybe check with the *BUA installer guy* or that *Foclabroc Guy*. But me? I know NOTHING. NOTHING, I tell you! 🤐\n\n\
 Now, if you’ll excuse me, I’m going to hide in a bunker. If anyone asks, we were discussing *the rich history of legally acquired retro games* and NOTHING ELSE. 🕵️‍♂️" 25 80
 
 # Fake shutdown message
