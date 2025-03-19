@@ -12,7 +12,7 @@ sudo flatpak remote-add --if-not-exists --system flathub https://flathub.org/rep
 # Declare an associative array mapping display names to their Flatpak App IDs.
 declare -A games
 games["0AD"]="app/com.play0ad.zeroad/x86_64/stable"
-games["AssaultCube"]="AssaultCube"
+games["AssaultCube"]="app/net.cubers.assault.AssaultCube/x86_64/stablee"
 games["AstroMenace"]="Astromenace"
 games["BZFlag"]="BZFlag"
 games["Chromium-BSU"]="net.sourceforge.chromium-bsu"
@@ -24,7 +24,7 @@ games["Dune-Legacy"]="net.sourceforge.DuneLegacy"
 games["FlightGear"]="FlightGear"
 games["FreeOrion"]="FreeOrion"
 games["Freeciv"]="app/org.freeciv.Freeciv/x86_64/stable"
-games["Freedoom"]="Freedoom"
+games["Freedoom"]="io.github.freedoom.FreeDM "
 games["Frozen-Bubble"]="app/org.frozen_bubble.frozen-bubble/x86_64/stable"
 games["Glest-(MegaGlest)"]="Glest"
 games["Hedgewars"]="Hedgewars"
