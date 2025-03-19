@@ -33,7 +33,7 @@ games["Kobo-Deluxe"]="net.olofson.KoboDeluxe"
 games["Mindustry"]="Mindustry"
 games["Minetest"]="Minetest"
 games["Nexuiz"]="Nexuiz"
-games["OpenArena"]="OpenArena"
+games["OpenArena"]="io.github.ec_.Quake3e.OpenArena "
 games["OpenMW"]="OpenMW"
 games["OpenRCT2"]="OpenRCT2"
 games["OpenTTD"]="OpenTTD"
@@ -138,4 +138,4 @@ for game in "${selected_games[@]}"; do
 done
 
 echo "Installation complete."
-
+echo "Refresh ES to see updated game list in ports"
