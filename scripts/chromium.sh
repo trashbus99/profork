@@ -20,20 +20,6 @@ install_alpine_chroot() {
     fi
 }
 
-# --- Function to update repositories and install Chromium ---
-install_chromium() {
-    echo "🌍 Updating Alpine package sources and installing Chromium..."
-    chroot "$CHROOT_DIR" /bin/bash -l <<'EOF'
-apk update
-apk add nano
-echo "🔧 Editing repositories file..."
-sed -i 's|^http.*|# Disabled Default Repo|' /etc/apk/repositories
-echo "https://dl-cdn.alpinelinux.org/alpine/v3.21/main" > /etc/apk/repositories
-echo "https://dl-cdn.alpinelinux.org/alpine/v3.21/community" >> /etc/apk/repositories
-apk update && apk upgrade
-apk add chromium
-EOF
-}
 
 # --- Install Alpine chroot (if needed) and update repositories/install Chromium ---
 install_alpine_chroot
