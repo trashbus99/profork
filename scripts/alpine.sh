@@ -12,20 +12,33 @@ install_alpine_chroot() {
         curl -L  https://github.com/trashbus99/profork/raw/master/scripts/install-alpine.sh | bash
     fi
 }
-
 # Function to update Alpine repositories
 update_repositories() {
     echo "🌍 Updating Alpine package sources..."
-    chroot "$CHROOT_DIR" /bin/bash -l <<EOF
-    apk update
-    apk add nano
-    echo "🔧 Editing repositories file..."
-    sed -i 's|^http.*|# Disabled Default Repo|' /etc/apk/repositories
-    echo "https://dl-cdn.alpinelinux.org/alpine/v3.21/main" > /etc/apk/repositories
-    echo "https://dl-cdn.alpinelinux.org/alpine/v3.21/community" >> /etc/apk/repositories
-    apk update && apk upgrade
+
+    # Ensure chroot environment exists
+    if [ ! -d "$CHROOT_DIR" ] || [ ! -f "$CHROOT_DIR/bin/sh" ]; then
+        echo "❌ Alpine chroot is missing! Exiting."
+        return 1
+    fi
+
+    # Fix repositories from outside chroot
+    cat <<EOF > "$CHROOT_DIR/etc/apk/repositories"
+https://dl-cdn.alpinelinux.org/alpine/v3.21/main
+https://dl-cdn.alpinelinux.org/alpine/v3.21/community
 EOF
+
+    # Ensure file has correct line endings
+    sed -i 's/\r$//' "$CHROOT_DIR/etc/apk/repositories"
+
+    echo "✅ Alpine repositories updated!"
+
+    # Enter chroot and update
+    chroot "$CHROOT_DIR" /bin/sh -c "
+        apk update && apk add nano && apk upgrade
+    "
 }
+
 
 # Ensure Alpine chroot exists before updating repositories
 install_alpine_chroot
