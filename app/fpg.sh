@@ -11,7 +11,7 @@ sudo flatpak remote-add --if-not-exists --system flathub https://flathub.org/rep
 
 # Declare an associative array mapping display names to their Flatpak App IDs.
 declare -A games
-games["0AD"]="app/com.play0ad.zeroad/x86_64/stable"
+#games["0AD"]="app/com.play0ad.zeroad/x86_64/stable"
 games["AssaultCube"]="app/net.cubers.assault.AssaultCube/x86_64/stablee"
 games["AstroMenace"]="Astromenace"
 games["BZFlag"]="BZFlag"
@@ -54,7 +54,7 @@ games["Xonotic"]="Xonotic"
 
 # Declare an associative array for descriptions (keys match display names)
 declare -A desc
-desc["0AD"]="Real-time strategy set in ancient times."
+# desc["0AD"]="Real-time strategy set in ancient times."
 desc["AssaultCube"]="Lightweight, fast-paced FPS."
 desc["AstroMenace"]="Classic space combat and adventure."
 desc["BZFlag"]="3D tank battle multiplayer game."
