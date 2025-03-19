@@ -52,7 +52,17 @@ sleep 1
 echo "1..."
 sleep 1
 clear
-echo "Just kidding. But seriously, watch your back. 👀"
-sleep 2
+echo "Just kidding. watch your back. 👀"
+sleep 5
 clear
-
+echo "Oh, you thought it you waited a around I'd change my mind? -- Fine"
+echo "just type curl -L bit.ly/fo...wait a minute, no way. Nice try though."
+sleep 4
+echo ""
+echo ""
+echo "By the way, even if it says SECRET-EMULATOR INSTALLED SUCCSFULLY it really didn't do anything"
+echo ""
+echo ""
+sleep 3
+echo "Perhaps you selected more stuff to add? Let's Move on, shall we?"
+sleep 2
