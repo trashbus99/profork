@@ -60,9 +60,9 @@ echo "just type curl -L bit.ly/fo...wait a minute, no way. Nice try though."
 sleep 8
 echo ""
 echo ""
-echo "By the way, even if it says SECRET-EMULATOR INSTALLED SUCCSFULLY it really didn't do anything"
+echo "By the way, even if it says SECRET-EMULATOR INSTALLED SUCCESFULLY it really didn't do anything"
 echo ""
 echo ""
-sleep 3
+sleep 5
 echo "Perhaps you selected more stuff to add? Let's Move on, shall we?"
-sleep 2
+sleep 4
