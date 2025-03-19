@@ -62,7 +62,7 @@ echo "Installation complete!"
 
 # Show a dialog message with details about Sonic Unleashed for Xbox 360
 dialog --title "Installation Successful" --msgbox "Sonic Unleashed for Xbox 360 (US or EU, JP is not supported)
-Retail Disc or Digital Copy (can be purchased and downloaded from the Xbox Store).
+Retail Disc or Digital Copy (can be purchased and downloaded from the Xbox Store) &
 Title Update required.
 All available DLC (Adventure Packs) are optional, but highly recommended. The DLC includes high quality lighting for the entire game.
 See GitHub page for more information." 15 80
