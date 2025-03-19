@@ -64,7 +64,7 @@ OPTIONS=("1" "Arch Container (Steam, Heroic, Lutris & More apps)"
 # Display the dialog and get the user choice
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
                 --title "Main Menu" \
-                --menu "Choose an option:" 15 80 3 \
+                --menu "Choose an option:" 25 80 3 \
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
 
