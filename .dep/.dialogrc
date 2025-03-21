@@ -1,0 +1,53 @@
+use_shadow = OFF
+use_colors = ON
+
+screen_color = (WHITE,BLACK,ON)
+shadow_color = (RED,BLACK,ON)
+
+dialog_color = (WHITE,BLACK,OFF)
+title_color = (WHITE,BLACK,ON)
+border_color = (RED,BLACK,ON)
+
+button_active_color = (BLACK,BLACK,ON)
+button_inactive_color = dialog_color
+button_key_active_color = button_active_color
+button_key_inactive_color = (WHITE,BLACK,OFF)
+
+button_label_active_color = (RED,BLACK,ON)
+button_label_inactive_color = screen_color
+
+inputbox_color = dialog_color
+inputbox_border_color = dialog_color
+
+searchbox_color = dialog_color
+searchbox_title_color = title_color
+searchbox_border_color = shadow_color
+
+position_indicator_color = title_color
+menubox_color = dialog_color
+menubox_border_color = shadow_color
+
+item_color = dialog_color
+item_selected_color = button_active_color
+tag_color = title_color
+tag_selected_color = button_label_active_color
+tag_key_color = button_key_inactive_color
+tag_key_selected_color = (RED,BLACK,ON)
+
+check_color = dialog_color
+check_selected_color = button_active_color
+
+uarrow_color = (YELLOW,WHITE,ON)
+darrow_color = uarrow_color
+
+itemhelp_color = dialog_color
+form_active_text_color = button_active_color
+form_text_color = title_color
+form_item_readonly_color = (RED,WHITE,ON)
+
+gauge_color = title_color
+
+border2_color = shadow_color
+inputbox_border2_color = shadow_color
+searchbox_border2_color = shadow_color
+menubox_border2_color = shadow_color
