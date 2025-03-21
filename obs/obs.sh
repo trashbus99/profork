@@ -6,8 +6,9 @@ APPNAME="OBS-STUDIO" # for installer info
 appname=obs   # directory name in /userdata/system/pro/...
 AppName=obs   # App.AppImage name
 APPPATH=/userdata/system/pro/$appname/$appname.AppImage
-APPLINK=$(curl -s https://api.github.com/repos//pkgforge-dev/OBS-Studio-AppImage/releases/latest | jq -r ".assets[] | select(.name | endswith(\".AppImage\")) | .browser_download_url")
-ORIGIN="github.com/ivan-hc/OBS-Studio-appimage" # credit & info
+APPLINK=$(curl -s https://api.github.com/repos/pkgforge-dev/OBS-Studio-AppImage/releases/latest | jq -r ".assets[] | select(.name | endswith(\"AppImage\")) | .browser_download_url")
+ORIGIN="github.com/pkgforge-dev/OBS-Studio-AppImage"  # credit & info where it fetches the release
+
 #APPLINK=http://PROFORK/app/obs.AppImage
 #ORIGIN="APPREPO.DE/APPIMAGE/OBS-STUDIO" # credit & info
 # --------------------------------------------------------------------
