@@ -299,7 +299,7 @@ echo 'export DISPLAY=:0.0; batocera-mouse show' >> $launcher
 ######################################################################
 ######################################################################
 #echo 'mkdir /userdata/system/pro/'$appname'/home 2>/dev/null; mkdir /userdata/system/pro/'$appname'/config 2>/dev/null; DISPLAY=:0.0 HOME=/userdata/system/pro/'$appname'/home XDG_CONFIG_HOME=/userdata/system/pro/'$appname'/config /userdata/system/pro/'$appname'/'$AppName'.AppImage --no-sandbox --disable-gpu --test-type "$1" "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9"' >> $launcher
-echo 'DISPLAY=:0.0 /userdata/system/pro/librewolf/brave.AppImage --appimage-extract-and-run' >> $launcher
+echo 'DISPLAY=:0.0 /userdata/system/pro/brave/brave.AppImage --appimage-extract-and-run --no-sandbox' >> $launcher
 ######################################################################
 ######################################################################
 ######################################################################
