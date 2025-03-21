@@ -18,8 +18,8 @@ clear
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
-APPNAME=LIBREWOLF # for installer info
-appname=librewolf # directory name in /userdata/system/pro/...
+APPNAME=BRAVE # for installer info
+appname=brave # directory name in /userdata/system/pro/...
 AppName=$appname # App.AppImage name
 APPPATH=/userdata/system/pro/$appname/$appname.AppImage
 #APPLINK=http://PROFORK/app/$appname.AppImage
