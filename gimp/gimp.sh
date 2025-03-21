@@ -9,8 +9,9 @@ APPNAME="GIMP" # for installer info
 appname=gimp # directory name in /userdata/system/pro/...
 AppName=gimp # App.AppImage name
 APPPATH=/userdata/system/pro/$appname/$AppName.AppImage
-APPLINK=https://github.com/pkgforge-dev/GIMP-AppImage/releases/download/continuous/gimp-2.10.38-5-x86_64.AppImage
-ORIGIN=GITHUB.COM/LUCASMZ1/GIMP_APPIMAGE
+APPLINK=$(curl -s https://api.github.com/repos/pkgforge-dev/GIMP-AppImage/releases/tags/continuous | jq -r ".assets[] | select(.name | endswith(\".AppImage\")) | .browser_download_url")
+ORIGIN="github.com/pkgforge-dev/GIMP-AppImage"  # credit & info where it fetches the latest release
+
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
@@ -334,7 +335,7 @@ echo -e "${G}> ${W}DONE"
 echo
 sleep 1
 echo -e "${L}-----------------------------------------------------------------------"
-echo -e "${W}> $APPNAME INSTALLED ${G}OK  -- GIMP TAKES A WHILE TO STARUP"
+echo -e "${W}> $APPNAME INSTALLED ${G}OK 
 echo -e "${L}-----------------------------------------------------------------------"
 sleep 4
 }
