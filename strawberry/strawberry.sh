@@ -6,8 +6,8 @@ APPNAME="STRAWBERRY" # for installer info
 appname=strawberry   # directory name in /userdata/system/pro/...
 AppName=strawberry   # App.AppImage name
 APPPATH=/userdata/system/pro/$appname/$appname.AppImage
-APPLINK=$(curl -s https://api.github.com/repos/pkgforge-dev/strawberry-AppImage/releases/latest | jq -r ".assets[] | select(.name | endswith(\"AppImage\")) | .browser_download_url")
-ORIGIN="github.com/pkgforge-dev/strawberry-AppImage"  # credit & info where it fetches the release
+APPLINK=$(curl -s https://api.github.com/repos/pkgforge-dev/OBS-Studio-AppImage/releases/latest | jq -r ".assets[] | select(.name | endswith(\"AppImage\")) | .browser_download_url")
+ORIGIN="github.com/pkgforge-dev/OBS-Studio-AppImage"  # credit & info where it fetches the release
 
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
