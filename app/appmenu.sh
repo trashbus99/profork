@@ -291,7 +291,7 @@ for choice in $choices; do
 
         # Capture the exit code of the installer
         if sed 's,:1234,,g' /tmp/.app | bash; then
-            echo -e "\n\n$choice installed successfully.\n\n"
+            echo -e "\n\n$choice install script finished.\n\n"
         else
             echo -e "\n\nError: Installation of $choice failed.\n\n"
             # Optionally, display the error output of the installer for debugging
