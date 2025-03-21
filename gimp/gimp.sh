@@ -9,7 +9,7 @@ APPNAME="GIMP" # for installer info
 appname=gimp # directory name in /userdata/system/pro/...
 AppName=gimp # App.AppImage name
 APPPATH=/userdata/system/pro/$appname/$AppName.AppImage
-APPLINK=https://github.com/lucasmz1/GIMP_Appimage/releases/download/2.10.38/GIMP-2.10.38.AppImage
+APPLINK=https://github.com/pkgforge-dev/GIMP-AppImage/releases/download/continuous/gimp-2.10.38-5-x86_64.AppImage
 ORIGIN=GITHUB.COM/LUCASMZ1/GIMP_APPIMAGE
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
