@@ -1,9 +1,20 @@
 #!/bin/bash
 
+# Ensure /userdata/system/pro exists
+mkdir -p /userdata/system/pro
+
+# Set and export DIALOGRC if missing
+DIALOGRC_FILE="/userdata/system/pro/.dialogrc"
+if [ ! -f "$DIALOGRC_FILE" ]; then
+    echo "Downloading .dialogrc for custom dialog colors..."
+    curl -Ls https://github.com/trashbus99/profork/raw/master/.dep/.dialogrc -o "$DIALOGRC_FILE"
+fi
+
+export DIALOGRC="$DIALOGRC_FILE"
+
 # Detect system architecture
 ARCH=$(uname -m)
 
-# If the system is ARM64 (aarch64), execute the ARM script
 if [ "$ARCH" = "aarch64" ]; then
     echo "ARM64 (aarch64) detected. Loading ARM Menu..."
     sleep 2
@@ -11,11 +22,11 @@ if [ "$ARCH" = "aarch64" ]; then
     exit 0
 fi
 
-# If the system is x86_64, continue with the normal setup
 if [ "$ARCH" != "x86_64" ]; then
     echo "This script only runs on x86_64 (AMD/Intel) or aarch64 (ARM64)."
     exit 1
 fi
+
 echo "x86_64 (AMD/INTEL) detected. Loading Main Menu....."
 sleep 2
 
@@ -24,7 +35,6 @@ RED='\e[0;31m'
 YELLOW='\e[1;33m'
 NC='\e[0m' # No Color
 
-# Function to display animated text faster
 animate_text() {
     local text="$1"
     echo -e "$text"
@@ -33,20 +43,13 @@ animate_text() {
 
 clear
 
-# Display Warning Message
 animate_text "${YELLOW}⚠️  Important Notice ⚠️${NC}"
 animate_text "${YELLOW}The apps on this repository are provided AS-IS.${NC}"
-
 animate_text "${RED}DO NOT ask for help in the Batocera Discord.${NC}"
 animate_text "${RED}They will NOT help you and will REFUSE support if they are made aware unofficial apps are installed.${NC}"
-
 animate_text "${YELLOW}Use at your own risk.${NC}"
 
-# Reset color
 echo -e "${NC}"
-
-
-
 sleep 10
 
 # Define the options
@@ -60,8 +63,7 @@ OPTIONS=("1" "Arch Container (Steam, Heroic, Lutris & More apps)"
          "8" "Install Portmaster"
          "9" "Install This Menu to Ports"              
          "10" "Exit")
-         
-# Display the dialog and get the user choice
+
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
                 --title "Main Menu" \
                 --menu "Choose an option:" 20 80 3 \
@@ -70,7 +72,6 @@ CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
 
 clear
 
-# Act based on the user choice
 case $CHOICE in
     1)
         echo "Arch Container..."
@@ -99,19 +100,24 @@ case $CHOICE in
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
         ;;
-    5)  echo "Wine Custom...."
+    5)
+        echo "Wine Custom...."
         curl -Ls https://github.com/trashbus99/profork/raw/master/wine-custom/wine.sh | bash
         ;;              
-    6)  echo "Flatpak Linux Games..."
+    6)
+        echo "Flatpak Linux Games..."
         curl -Ls https://raw.githubusercontent.com/trashbus99/profork/master/app/fpg.sh | bash
         ;;            
-    7)  echo "Other Linux & Windows/Wine Freeware..."
+    7)
+        echo "Other Linux & Windows/Wine Freeware..."
         curl -Ls https://github.com/trashbus99/profork/raw/master/app/wquashfs.sh | bash
         ;;             
-    8)  echo "Portmaster Installer..."
+    8)
+        echo "Portmaster Installer..."
         curl -Ls https://github.com/trashbus99/profork/raw/master/portmaster/install.sh | bash
         ;;
-    9)  echo "Ports Installer..."
+    9)
+        echo "Ports Installer..."
         rm /tmp/runner 2>/dev/null
         wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/app/install.sh
         chmod 777 /tmp/runner 2>/dev/null
@@ -119,7 +125,7 @@ case $CHOICE in
         ;;
     10)
         echo "Exiting..."
-           exit
+        exit
         ;;
     *)
         echo "No valid option selected or cancelled. Exiting."
