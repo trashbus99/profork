@@ -62,7 +62,7 @@ OPTIONS=("1" "Arch Container (Steam, Heroic, Lutris & More apps)"
          "7" "Other Linux & Windows/Wine Freeware games"
          "8" "Install Portmaster"
          "9" "Install This Menu to Ports"              
-         "98" "Secret Menu"
+         "98" "Bua Secret Menu cracking tool"
          "99" "Exit")
 
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
