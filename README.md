@@ -101,6 +101,7 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 | **FIREFOX**                           | Open-source web browser                                      |
 | **FOOBAR2000**                        | Lightweight and customizable audio player                    |
 | **GEFORCENOW**                        | Nvidia's cloud gaming service                                |
+| **GIMP**                              | GNU Image editor                                             |
 | **GREENLIGHT**                        | Xbox and Xcloud Remote Play Streamer                          |
 | **HARD-INFO**                         | System information and benchmark tool                        |
 | **HYPER**                             | Modern, extensible terminal emulator                        |
