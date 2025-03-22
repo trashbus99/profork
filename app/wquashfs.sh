@@ -85,9 +85,9 @@ apps=(
     ["OPENRA-CNC-RED-ALERT/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/ra.sh | bash"
     ["OPENRA-DUNE-2000/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/d2k.sh | bash"
     ["ENDLESS-SKY/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/endlesssky/endlesssky.sh | bash"
-    ["AM2R"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/a2r.sh | bash
-    ["Z2-ADV-OF-LNK-Remake]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/z2r.sh | bash"
-    ["TLOZ-DUNGEONS-OF-INFINITY"]=curl -Ls https://github.com/trashbus99/profork/raw/master/windows/doi.sh | bash"
+    ["AM2R/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/a2r.sh | bash
+    ["Z2-ADV-OF-LNK-Remake/WINDOWS]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/z2r.sh | bash"
+    ["TLOZ-DUNGEONS-OF-INFINITY/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/doi.sh | bash"
     ["HYDORA/CONTAINER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/hydorah/hydorah.sh | bash"
     # Add other apps here
 )
