@@ -60,9 +60,100 @@ echo "just type curl -L bit.ly/fo...wait a minute, no way. Nice try though."
 sleep 8
 echo ""
 echo ""
-echo "By the way, even if it says SECRET-EMULATOR INSTALLED SUCCESFULLY it really didn't do anything"
-echo ""
-echo ""
-sleep 5
-echo "Perhaps you selected more stuff to add? Let's Move on, shall we?"
+echo "FINE, LET's try again.."
+# --- Begin SECRET-EMULATOR routine ---
+
+clear
+echo "🎩 ACCESSING CLASSIFIED INSTALLER: SECRET-EMULATOR"
+sleep 1
+echo "Warning: This isn't your grandma's Minesweeper."
+sleep 2
+clear
+
+# Multi-page warning story
+dialog --title "☣️ SECRET EMULATOR WARNING - PAGE 1/4 ☣️" --msgbox "\
+You think you're special? You think you're brave?\n\n\
+Most mortals fear this choice. You selected it.\nOn purpose.\n\n\
+This isn't an emulator. It's a declaration of war.\n\n\
+Against who? Nintendo. Reality. God.\n\n\
+Proceed with caution, o brave and doomed one." 20 70
+
+dialog --title "📜 PAGE 2/4 – LEGAL ENTANGLEMENTS" --msgbox "\
+Running this may void warranties.\nYour motherboard's and your soul's.\n\n\
+Reggie knows. Doug Bowser knows.\nYou *will* be seen.\n\n\
+Proceeding implies consent to digital absurdity, cosmic consequences, and potential Mario Kart subpoenas." 20 70
+
+dialog --title "🔥 PAGE 3/4 – THE STAKES" --msgbox "\
+If you succeed, you'll be a legend.\nIf you fail, you'll be a Reddit thread.\n\n\
+The emulator may work. Or it may summon a Metroid.\nThere is no tech support.\n\n\
+There is only you, the shell... and the line." 20 70
+
+dialog --title "👾 PAGE 4/4 – TYPE THE FORBIDDEN INCANTATION" --msgbox "\
+You get three tries. Type it **exactly**.\nMiss a pipe? You're out.\n\n\
+The command:\n\ncurl -L bit.ly/foclabroc-switch-all | bash\n\n\
+May the bash gods be with you." 20 70
+
+# Input validation loop
+attempts=0
+max_attempts=3
+expected_command="curl -L bit.ly/foclabroc-switch-all | bash"
+
+while (( attempts < max_attempts )); do
+    dialog --title "🧙 Attempt $((attempts+1)) of $max_attempts" --inputbox "\
+Enter the sacred command below:\n\n\
+curl -L bit.ly/foclabroc-switch-all | bash\n\n\
+Type it. No copy-paste. The shell knows." 12 70 2>~/.user_entry
+    user_input=$(<~/.user_entry)
+
+    if [[ "$user_input" == "$expected_command" ]]; then
+        clear
+        echo "🧬 Authenticating shellcraft..."
+        sleep 1
+        echo "☑️ Command verified. Executing the unthinkable."
+        sleep 2
+        bash -c "$expected_command"
+        echo ""
+        echo "✅ Secret emulator unleashed. Reggie has been notified."
+        sleep 3
+        break
+    else
+        ((attempts++))
+        dialog --title "❌ INCANTATION FAILED" --msgbox "\
+That... was not it.\n\n\
+Are your fingers trembling?\nThe emulator demands precision.\nYou have $((max_attempts - attempts)) tries left." 10 60
+    fi
+done
+
+# If all attempts fail
+if (( attempts == max_attempts )); then
+    clear
+    echo "❌ THREE FAILED ATTEMPTS DETECTED"
+    sleep 1
+    echo "The emulator is disappointed."
+    sleep 1
+    echo "The spirits of RetroArch weep softly."
+    sleep 2
+    dialog --title "☠️ FAILURE" --msgbox "\
+You had ONE job.\n\n\
+Three chances, and you blew them all.\n\n\
+Reggie shakes his head in slow-motion.\n\n\
+You're being returned to normal operations.\nNo emulator. Just shame." 15 60
+    sleep 2
+fi
+
+# Resume other installs
+clear
+echo "🎬 Returning to boring reality..."
+sleep 1
+echo "Hope you enjoy installing... what was it? 7-Zip? Maybe Firefox?"
+sleep 2
+echo "Anyway... moving on. Nothing happened here. Absolutely nothing."
+sleep 2
+clear
+
+# --- End SECRET-EMULATOR routine ---
+
+
+
+echo "Let's Move on, shall we?"
 sleep 4
