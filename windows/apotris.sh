@@ -2,7 +2,7 @@
 
 # Define your variables for easy customization
 URL="https://github.com/trashbus99/profork/releases/download/r1/Apotris.wsquashfs"
-KEYS_URL=""  # Leave empty if no keys file is needed
+KEYS_URL="https://github.com/trashbus99/profork/releases/download/r1/Apotris.wsquashfs.keys"  # Leave empty if no keys file is needed
 DEST_DIR="/userdata/roms/windows"
 MESSAGE="APOTRIS - Needs Enable DXVK in adv. settings before running"  # Leave empty if no message is needed
 
