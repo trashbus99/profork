@@ -89,6 +89,12 @@ apps=(
     ["Z2-ADV-OF-LNK-Remake/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/z2r.sh | bash"
     ["TLOZ-DUNGEONS-OF-INFINITY/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/doi.sh | bash"
     ["HYDORA/CONTAINER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/hydorah/hydorah.sh | bash"
+    ["CRASH-BANDICOOT-BACK-IN-TIME/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/cbit.sh | bash"
+    ["MODERN-MODERN-CHEF/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/mmc.sh | bash"
+    ["SONIC-TRIPLE-TROUBLE/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/stt.sh | bash"
+    ["TMNT-RESCUE-PALOOZA/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/tmntrp | bash"
+    ["MEGA-MAN-AGAIN/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/mma.sh | bash"
+    
     # Add other apps here
 )
 
