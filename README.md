@@ -1,4 +1,6 @@
 🚀Recents:
+* More Wine tools added: Easy autorun.cmd, Easy Winetricks, Convert .pc to .wine.  Compress .wine to wsquashfs/tgz. More /wine/exe optins.
+* Some more games added
 * Added GIMP
 * Flatpak Game Menu Added
 * ISO to XISO converter added to tools - Converts ISOs in xbox rom folder to XISO format for xemu
