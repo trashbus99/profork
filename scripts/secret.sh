@@ -75,7 +75,7 @@ dialog --title "☣️ SECRET EMULATOR WARNING - PAGE 1/4 ☣️" --msgbox "\
 You think you're special? You think you're brave?\n\n\
 Most mortals fear this choice. You selected it.\nOn purpose.\n\n\
 This isn't an emulator. It's a declaration of war.\n\n\
-Against who? Nintendo. Reality. God.\n\n\
+Against who? Nintendo. Reality itself.\n\n\
 Proceed with caution, o brave and doomed one." 20 70
 
 dialog --title "📜 PAGE 2/4 – LEGAL ENTANGLEMENTS" --msgbox "\
