@@ -143,3 +143,6 @@ while true; do
   clear
 done
 
+echo "returning to wine tools menu"
+sleep 2
+curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/wine.sh | bash
