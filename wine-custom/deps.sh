@@ -60,7 +60,7 @@ options=(
   "steamy" "Steamy-AIO Wine dependency" off
 )
 
-selected=$(dialog --stdout --checklist "Download Wine Executables\n\nSelect the executables to download.\nThese launchers will run the next time you start the game." 20 85 14 "${options[@]}")
+selected=$(dialog --stdout --checklist "Download Wine Executables\n\nSelect the executables to download.\nThese launchers will run the next time you start the game." 30 85 14 "${options[@]}")
 exit_status=$?
 clear
 if [ $exit_status -ne 0 ]; then
