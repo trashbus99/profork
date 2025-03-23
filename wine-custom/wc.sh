@@ -5,9 +5,10 @@
 #   2. Select the corresponding wine bottle folder (a .wine folder) from /userdata/system/wine-bottles.
 #   3. Copy the wine bottle data into the .pc folder.
 #   4. Delete the original wine bottle folder.
-#   5. Rename the .pc folder to a .wine folder.
+#   5. Rename the .pc folder to a .wine folder (in /userdata/roms/windows).
 #   6. Optionally, offer folder compression (TGZ or SquashFS) with usage advice.
 #      After compression, the output file is renamed to remove the ".wine" part.
+#   7. Optionally, offer to delete the corresponding .wine folder in /userdata/roms/windows.
 #
 # WARNING: This script will remove directories and move data. Please back up your data first!
 
@@ -134,16 +135,25 @@ while true; do
     fi
   fi
 
-  # --- STEP 8: Offer to process another folder ---
+  # --- STEP 8: Optionally Delete the Corresponding .wine Folder in /userdata/roms/windows ---
+  dialog --yesno "Do you want to delete the corresponding .wine folder in /userdata/roms/windows?\n(This will remove the folder at:\n$new_path)" 10 60
+  if [ $? -eq 0 ]; then
+    rm -rf "$new_path"
+    if [ $? -eq 0 ]; then
+      dialog --msgbox ".wine folder deleted successfully." 8 40
+    else
+      dialog --msgbox "Error deleting the .wine folder:\n$new_path" 10 40
+    fi
+  fi
+
+  # --- STEP 9: Offer to process another folder ---
   dialog --yesno "Do you want to process another folder?" 8 40
   if [ $? -ne 0 ]; then
     clear
     exit 0
   fi
   clear
-echo "returning to wine tools menu"
-sleep 2
-curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/wine.sh | bash
+  echo "returning to wine tools menu"
+  sleep 2
+  curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/wine.sh | bash
 done
-
-
