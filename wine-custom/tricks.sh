@@ -97,10 +97,11 @@ while true; do
     # --- STEP 5: Notify and run the winetricks command in unattended mode ---
     dialog --msgbox "Check the main display for any installation prompts." 8 40
     export DISPLAY=:0.0
+    unclutter-remote -s
     dialog --infobox "Running winetricks on:\n$selected_wine\n\nPackage: $FINAL_PACKAGE" 10 60
     batocera-wine windows tricks "$selected_wine" $FINAL_PACKAGE unattended
     dialog --msgbox "Winetricks processing complete." 8 40
-    
+    unclutter-remote -h
     # --- STEP 6: Ask if the user wants to apply another trick on the SAME bottle ---
     dialog --yesno "Do you want to apply another trick on the same bottle?" 8 40
     if [ $? -ne 0 ]; then
