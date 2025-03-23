@@ -6,7 +6,7 @@ OPTIONS=(
   "2" "Wine-TKG-Staging"
   "3" "Wine-GE Custom"
   "4" "GE-Proton"
-  "5" "Steamy-AIO Wine Dependency Installer"
+  "5" "Prepare VC+/DX9/Steamy-AIO Wine Dependency Installer next for next windows app run"
   "6" "Easy Batocera Wine Tricks"
   "7" "Easy autorun.cmd creator"
   "8" "Convert .pc folder to .wine folder"
@@ -43,8 +43,8 @@ case $CHOICE in
         curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/ge-proton.sh | bash
         ;;
     5)
-        echo "You chose Steamy-AIO."
-        curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/steamy.sh | bash
+        echo "You chose Prepare installers next run."
+        curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/deps.sh | bash
         ;;
     6)
         echo "You chose Easy Batocera Wine Tricks."
