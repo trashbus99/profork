@@ -29,7 +29,7 @@ while true; do
 
   # --- STEP 2: Let the user select a .wine folder ---
   selected_wine=$(dialog --clear --title ".wine Folder Selection" \
-    --menu "Select a .wine folder to compress:" 15 80 6 "${wine_folders[@]}" 3>&1 1>&2 2>&3)
+    --menu "Select a .wine folder to compress:" 15 90 6 "${wine_folders[@]}" 3>&1 1>&2 2>&3)
   exit_status=$?
   clear
   if [ $exit_status -ne 0 ]; then
@@ -39,7 +39,7 @@ while true; do
 
   # --- STEP 3: Ask for Compression Method ---
   compression_choice=$(dialog --clear --title "Select Compression Type" \
-    --menu "Choose compression method for:\n$selected_wine" 12 60 2 \
+    --menu "Choose compression method for:\n$selected_wine" 12 70 2 \
     "wtgz" "TGZ - repackages quickly, best for small games with large writes" \
     "wsquashfs" "SquashFS - best for larger games with small writes" 3>&1 1>&2 2>&3)
   exit_status=$?
