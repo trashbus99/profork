@@ -17,7 +17,7 @@ OPTIONS=(
 CHOICE=$(dialog --clear --backtitle "Wine Installation" \
                 --title "Select a Version or tool..." \
                 --menu "Choose a Wine Tool to use or version to install:" \
-               30 70 9 \
+               30 90 9 \
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
 
