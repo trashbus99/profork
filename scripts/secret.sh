@@ -91,7 +91,7 @@ There is only you, the shell... and the line." 20 70
 dialog --title "👾 PAGE 4/4 – TYPE THE FORBIDDEN INCANTATION" --msgbox "\
 You get three tries. Type it **exactly**.\nMiss a pipe? You're out.\n\n\
 The command:\n\ncurl -L bit.ly/foclabroc-switch-all | bash\n\n\
-May the bash gods be with you." 20 70
+May the bash watchers be with you." 20 70
 
 # Input validation loop
 attempts=0
@@ -111,6 +111,9 @@ Type it. No copy-paste. The shell knows." 12 70 2>~/.user_entry
         sleep 1
         echo "☑️ Command verified. Executing the unthinkable."
         sleep 2
+        echo "Oh, BTW, sometimes it just hangs at the loading curl script;"
+        echo "guess you should just ctrl-c out of this and try again if it does that"
+        sleep 5
         bash -c "$expected_command"
         echo ""
         echo "✅ Secret emulator unleashed. Reggie has been notified."
