@@ -4,7 +4,7 @@
 URL="https://ia800606.us.archive.org/18/items/am-2-r_202502/AM2R.wsquashfs"
 KEYS_URL=""  # Leave empty if no keys file is needed
 DEST_DIR="/userdata/roms/windows"
-MESSAGE="SQ3D- Needs Enable DXVK in adv. settings before running"  # Leave empty if no message is needed
+MESSAGE=""  # Leave empty if no message is needed
 
 # Ensure destination directory exists
 mkdir -p "$DEST_DIR"
