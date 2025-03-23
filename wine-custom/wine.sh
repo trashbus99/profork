@@ -1,13 +1,23 @@
 #!/bin/bash
 
 # Define the options
-OPTIONS=("1" "Wine & Proton (vanilla/regular)" "2" "Wine-TKG-Staging" "3" "Wine-GE Custom" "4" "GE-Proton" "5" "Steamy-AIO Wine Dependency Installer")
+OPTIONS=(
+  "1" "Wine & Proton (vanilla/regular)"
+  "2" "Wine-TKG-Staging"
+  "3" "Wine-GE Custom"
+  "4" "GE-Proton"
+  "5" "Steamy-AIO Wine Dependency Installer"
+  "6" "Easy Batocera Wine Tricks"
+  "7" "Easy autorun.cmd creator"
+  "8" "Convert .pc folder to .wine folder"
+  "9" "Compress .wine folder to .wquashfs or .tgz file"
+)
 
 # Use dialog to display the menu
 CHOICE=$(dialog --clear --backtitle "Wine Installation" \
                 --title "Select a Version..." \
-                --menu "Choose a Wine version to install:" \
-                15 50 4 \
+                --menu "Choose a Wine Tool to use or version to install:" \
+                20 50 9 \
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
 
@@ -24,20 +34,35 @@ case $CHOICE in
         echo "You chose Wine-tkg staging."
         curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/tkg.sh | bash
         ;;
-
     3)
         echo "You chose Wine-GE Custom."
-        curl -L  https://github.com/trashbus99/profork/raw/master/wine-custom/wine-ge.sh | bash
+        curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/wine-ge.sh | bash
         ;;
     4)
         echo "You chose GE-Proton."
-        curl -L  https://github.com/trashbus99/profork/raw/master/wine-custom/ge-proton.sh | bash
+        curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/ge-proton.sh | bash
         ;;
     5)
         echo "You chose Steamy-AIO."
-        curl -L  https://github.com/trashbus99/profork/raw/master/wine-custom/steamy.sh | bash
-        ;;    
-     *)
+        curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/steamy.sh | bash
+        ;;
+    6)
+        echo "You chose Easy Batocera Wine Tricks."
+        curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/tricks.sh | bash
+        ;;
+    7)
+        echo "You chose Easy autorun.cmd creator."
+        curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/ar.sh | bash
+        ;;
+    8)
+        echo "You chose to convert a .pc folder to a .wine folder."
+        curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/wc.sh | bash
+        ;;
+    9)
+        echo "You chose to compress a .wine folder to a .wquashfs or .tgz file."
+        curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/squash.sh | bash
+        ;;
+    *)
         echo "Invalid choice or no choice made. Exiting."
         ;;
 esac
