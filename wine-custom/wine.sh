@@ -11,7 +11,7 @@ OPTIONS=(
   "7" "Easy autorun.cmd creator"
   "8" "Convert .pc folder to .wine folder"
   "9" "Compress .wine folder to .wsquashfs or .tgz file"
-  "10" "Decompress a .wsquashfs or .tgz file back to .wine"
+  "10" "Decompress a .wsquashfs or .tgz file back to .wine folder"
 )
 
 # Use dialog to display the menu
