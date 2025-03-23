@@ -5,17 +5,6 @@
 * Flatpak Game Menu Added
 * ISO to XISO converter added to tools - Converts ISOs in xbox rom folder to XISO format for xemu
 * Added Unleashed Recomp (Sonic Unleashed Engine)
-* Added Luanti (Minetest)
-* Added Starship (Open-Source Starfox 64 Engine)
-* Added Youtube Music for ARM64
-* Added Chiaki-NG for ARM64
-* Added X-Minecraft Launcher for ARM64 devices (Experimental)
-* Removed Docker Linux on Qemu (no longer working)
-* Added Youtube TV-UI for ARM64 (aarch64) devices
-* Added Librewolf Web Browser for x86_64 and ARM64 (aarch64) devices
-* Hydorah Game Flatimage Added (big/needs 32bit missing libs in batocera for music)
-* OpenGoal Launcher (Jak and Daxter/2/3 Engine) added 
-* 2ship2Harkinian (Majora's Mask Engine) added
 # Installer/Menu via Terminal/SSH
 ```
 curl -L bit.ly/profork3 | bash
