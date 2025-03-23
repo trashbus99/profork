@@ -165,4 +165,6 @@ done
 dialog --msgbox "Downloads complete. The selected launchers will run the next time you start the game." 10 50
 clear
 exit 0
-
+echo "returning to wine tools menu"
+sleep 2
+curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/wine.sh | bash
