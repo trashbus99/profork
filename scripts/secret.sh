@@ -56,9 +56,10 @@ echo "Just kidding. watch your back. 👀"
 sleep 5
 clear
 echo "Oh, you thought it you waited around I'd change my mind? -- Fine.."
-echo "just type curl -L bit.ly/fo...wait a minute, no way. Nice try though."
+echo "just type curl -L bit.ly/fo...wait a minute, no way.."
 sleep 8
-echo ""
+echo "Hmm, If I don't give you, you'll probably just go do that BUA guy's menu anyway, meh..."
+sleep 4
 echo ""
 echo "FINE, LET's try again.."
 # --- Begin SECRET-EMULATOR routine ---
