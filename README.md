@@ -1,5 +1,5 @@
 🚀Recents:
-* More Wine tools added: Easy autorun.cmd, Easy Winetricks, Convert .pc to .wine.  Compress .wine to wsquashfs/tgz. More /wine/exe optins.
+* More Wine tools added: Easy autorun.cmd, Easy Winetricks, Convert .pc to .wine.  Compress .wine to wsquashfs/tgz. More /wine/exe options.
 * Some more games added
 * Added GIMP
 * Flatpak Game Menu Added
