@@ -29,7 +29,7 @@ fi
 
 # --- STEP 2: Let the user select a .wine folder ---
 selected_folder=$(dialog --clear --title "Select .wine Folder" \
-  --menu "Choose a .wine folder to compress:" 15 80 4 "${wine_folders[@]}" 3>&1 1>&2 2>&3)
+  --menu "Choose a .wine folder to compress:" 25 90 4 "${wine_folders[@]}" 3>&1 1>&2 2>&3)
 exit_status=$?
 clear
 if [ $exit_status -ne 0 ]; then
