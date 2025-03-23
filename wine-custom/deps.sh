@@ -60,7 +60,7 @@ options=(
   "steamy" "Steamy-AIO Wine dependency" off
 )
 
-selected=$(dialog --stdout --checklist "Download Wine Executables\n\nSelect the executables to download.\nThese launchers will run the next time you start the game." 30 85 14 "${options[@]}")
+selected=$(dialog --stdout --checklist "Download Wine Executables\n\nSelect the executables to download.\nThese dependency installers will run the next time you start the game." 30 85 14 "${options[@]}")
 exit_status=$?
 clear
 if [ $exit_status -ne 0 ]; then
@@ -162,7 +162,7 @@ for tag in $selected; do
   esac
 done
 
-dialog --msgbox "Downloads complete. The selected launchers will run the next time you start the game." 10 50
+dialog --msgbox "Downloads complete. The selected dependency launchers will run the next time you start the game." 10 50
 clear
 exit 0
 echo "returning to wine tools menu"
