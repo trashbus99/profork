@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Fetch aria2c
-curl -L aria2c.batocera.pro | bash
+
 
 # Create /userdata/system/wine/exe directory if it doesn't exist
 mkdir -p /userdata/system/wine/exe
