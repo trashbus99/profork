@@ -2,10 +2,10 @@
 
 # Define the options
 OPTIONS=(
-  "1" "Wine & Proton (vanilla/regular)"
-  "2" "Wine-TKG-Staging"
-  "3" "Wine-GE Custom"
-  "4" "GE-Proton"
+  "1" "Downoad Wine & Proton (vanilla/regular) builds"
+  "2" "Download Wine-TKG-Staging builds"
+  "3" "Download Wine-GE Custom builds"
+  "4" "Download GE-Proton builds"
   "5" "Prepare VC+/DX9/Steamy-AIO Wine Dependency Installer next for next windows app run"
   "6" "Easy Batocera Wine Tricks"
   "7" "Easy autorun.cmd creator"
