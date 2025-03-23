@@ -10,7 +10,8 @@ OPTIONS=(
   "6" "Easy Batocera Wine Tricks"
   "7" "Easy autorun.cmd creator"
   "8" "Convert .pc folder to .wine folder"
-  "9" "Compress .wine folder to .wquashfs or .tgz file"
+  "9" "Compress .wine folder to .wsquashfs or .tgz file"
+  "10" "Decompress wsquashfs or .tgz back to .wine"
 )
 
 # Use dialog to display the menu
@@ -59,8 +60,12 @@ case $CHOICE in
         curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/wc.sh | bash
         ;;
     9)
-        echo "You chose to compress a .wine folder to a .wquashfs or .tgz file."
+        echo "You chose to compress a .wine folder to a .wsquashfs or .tgz file."
         curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/squash.sh | bash
+        ;;
+    10)
+        echo "You chose to decompress a .wsquashfs or .tgz file. to a.wine"
+        curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/unsquash.sh | bash
         ;;
     *)
         echo "Invalid choice or no choice made. Exiting."
