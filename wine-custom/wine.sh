@@ -15,7 +15,7 @@ OPTIONS=(
 
 # Use dialog to display the menu
 CHOICE=$(dialog --clear --backtitle "Wine Installation" \
-                --title "Select a Version..." \
+                --title "Select a Version or tool..." \
                 --menu "Choose a Wine Tool to use or version to install:" \
                30 70 9 \
                 "${OPTIONS[@]}" \
