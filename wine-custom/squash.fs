@@ -38,7 +38,7 @@ if [ $exit_status -ne 0 ]; then
 fi
 
 # --- STEP 3: Offer Compression Options ---
-dialog --yesno "Do you want to compress the selected .wine folder?\n\nCompression Options:\n- wtgz (TGZ): For small games with large writes.\n- wsquashfs (SquashFS): For larger games with small writes." 15 70
+dialog --yesno "Do you want to compress the selected .wine folder?\n\nCompression Options:\n- wtgz (TGZ): For small games with large writes.\n- wsquashfs (SquashFS): For larger games with small writes." 15 80
 if [ $? -ne 0 ]; then
   clear
   echo "Compression cancelled."
