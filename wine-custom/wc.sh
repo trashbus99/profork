@@ -20,7 +20,7 @@ fi
 #!/bin/bash
 
 # Display the dialog box. Adjust height and width as needed.
-dialog --title "Game Setup Confirmation" --yesno "You must run the windows game in a .pc folder at least once for Batocera to generate a wine bottle/.wine folder for the game to be generated. Continue?" 10 60
+dialog --title "Game Setup Confirmation" --yesno "You must run the windows game in a .pc folder at least once for Batocera to generate a wine bottle/.wine folder for the game.  Continue?" 10 60
 
 # Capture the exit status of the dialog command.
 # Exit status 0 means the user pressed "Yes", and 1 means "No".
