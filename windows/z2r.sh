@@ -4,7 +4,7 @@
 URL="https://github.com/DTJW92/batocera-unofficial-addons/releases/download/AppImages/Zelda2_Remake.wsquashfs"
 KEYS_URL=""  # Leave empty if no keys file is needed
 DEST_DIR="/userdata/roms/windows"
-MESSAGE="SQ3D- Needs Enable DXVK in adv. settings before running"  # Leave empty if no message is needed
+MESSAGE="Z2REMAKE- Needs Enable DXVK in adv. settings before running"  # Leave empty if no message is needed
 
 # Ensure destination directory exists
 mkdir -p "$DEST_DIR"
