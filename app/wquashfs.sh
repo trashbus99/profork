@@ -94,7 +94,7 @@ apps=(
     ["SONIC-TRIPLE-TROUBLE/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/stt.sh | bash"
     ["TMNT-RESCUE-PALOOZA/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/tmntrp | bash"
     ["MEGA-MAN-AGAIN/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/mma.sh | bash"
-    
+    ["STREET-FIGHTER-X-MEGA-MAN"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/sfxmm.sh | bash"
     # Add other apps here
 )
 
