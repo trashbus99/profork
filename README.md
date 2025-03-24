@@ -219,7 +219,23 @@ While customization has always been part of open-source philosophy, **users shou
 This repository is designed to **provide additional functionality for those who wish to expand their system beyond Batocera's default setup.**  
 
 ---
+### 🔧 Built for Tinkerers — Not a Helpdesk
+Feel free to explore the tools, scripts, and extras — they’re here for people who like getting their hands dirty.
+If you’ve ever opened a terminal on purpose, you’ll be just fine.
 
+Not chasing stars. Not feeding the YouTube hype train.
+No sponsored drama. No fake excitement. Just functional stuff that works.
+
+Don’t expect a helpdesk, and please, no feature wishlists.
+This is a project by and for people who fix their own problems — and maybe even enjoy doing so.
+
+If that’s your vibe — welcome.
+Otherwise… there are other places with pretty menus too.
+
+AND: Please PI SBC users, don't expect a magical script to make PS2 work on your potato 🍟. 
+(well, at Least Orange PI 5 RK3588 users can use Rocknix with libmali support.😉) 
+
+---
 ### 🤔 What About Security?  
 
 This repository follows standard open-source principles—**all scripts are fully accessible, modifiable, and auditable by users.**  
