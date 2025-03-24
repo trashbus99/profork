@@ -99,7 +99,7 @@ C "32bit Portmaster games" \
 D "All of the above")
 [ "$ans5" == "D" ] && ((score++))
 
-ans6=$(dialog --stdout --menu "Bonus: What's Mikhalzrick's favorite response to Pi5 hype?" 15 60 4 \
+ans6=$(dialog --stdout --menu "Bonus: What's Mikhalzrick's favorite response to Pi hype?" 15 60 4 \
 A "Get an N100." \
 B "Try it on Android." \
 C "Overclock it and pray." \
@@ -126,7 +126,7 @@ if [ $score -eq $total ]; then
     fi
     dialog --msgbox "🎉 PERFECT SCORE! 🎉\n\nYou passed the Mikhailzrick SBC Showdown!\nScore: $score/$total\n\n✅ You are SBC-literate.\n🏆 Enjoy your dusty OptiPlex victory lap!" 15 60
 elif [ $score -ge 4 ]; then
-    dialog --msgbox "Not bad!\n\nScore: $score/$total\nYou avoided the loser horn, but you’re not quite full Mikhailzrick yet.\n\nKeep studying those Mali drivers!" 15 60
+    dialog --msgbox "Not bad!\n\nScore: $score/$total\nYou avoided the loser horn, but you’re not quite out of the pi cult yet.\n\nKeep studying those Mali drivers!" 15 60
 else
     if command -v cvlc >/dev/null 2>&1; then
         cvlc --play-and-exit --no-video "$LOSER_HORN_AUDIO" >/dev/null 2>&1 &
@@ -140,7 +140,7 @@ fi
 rm -f "$JEOPARDY_AUDIO" "$RICKROLL_AUDIO" "$LOSER_HORN_AUDIO" "$COME_ON_DOWN_AUDIO" "$WIN_AUDIO"
 clear
 
-echo "Thanks for playing! You've earned the right to scoff at overpriced SBCs. Now go get an N100, or maybe even something better"
+echo "Thanks for playing! You've earned the right to scoff at overpriced SBCs. Now go get an N100, or maybe even something better."
 sleep 5
 exit 0
 
