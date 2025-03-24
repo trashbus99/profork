@@ -39,7 +39,8 @@ OPTIONS=("1" "Install Portmaster"
          "6" "Youtube Music (XWAYLAND)"
          "7" "X-Minecraft Launcher (XWAYLAND - EXPERIMENTAL)"
          "8" "Chiaki-NG (XWAYLAND)"
-         "9" "Exit")
+         "98" "Batocera SBC POP-QUIZ"
+         "99" "Exit")
          
 # Display the dialog and get the user choice
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
@@ -84,7 +85,13 @@ case $CHOICE in
         echo "Chiaki-NG..."
         curl -Ls https://github.com/trashbus99/profork/raw/master/chiaki/chiaki-arm64.sh | bash
         ;;
-    9)
+
+    98)
+       echo "Pop-Quiz...loading.."
+       curl -Ls https://github.com/trashbus99/profork/raw/master/app/pq.sh | bash
+        ;;
+    
+    99)
         echo "Exiting..."
            exit
         ;;
