@@ -139,7 +139,7 @@ for game in "${selected_games[@]}"; do
 
       mkdir -p /userdata/ports
 
-      cat << 'EOF' > /userdata/ports/0AD.sh
+      cat << 'EOF' > /userdata/roms/ports/0AD.sh
 #!/bin/bash
 
 APP_ID="com.play0ad.zeroad"
