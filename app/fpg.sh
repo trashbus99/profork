@@ -135,9 +135,7 @@ for game in "${selected_games[@]}"; do
 
     # Special handling for 0AD: create launcher
     if [[ "$game" == "0AD" ]]; then
-      echo "Creating launch script for 0 A.D. in /userdata/ports/..."
 
-      mkdir -p /userdata/ports
 
       cat << 'EOF' > /userdata/roms/ports/0AD.sh
 #!/bin/bash
