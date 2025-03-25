@@ -85,6 +85,8 @@ DESKTOP_ENVIRONMENT=$(dialog --stdout --menu "Choose a Webtop flavor (desktop en
 "arch-i3" "i3 Arch") || exit
 clear
 
+# create folder for data
+mkdir -p /userdata/system/webtop
 # Docker run command for Webtop
 # Docker run command for Webtop
 docker run -d \
@@ -97,7 +99,7 @@ docker run -d \
   -e TITLE="Webtop" \
   -p $HTTP_PORT:3000 \
   -p $HTTPS_PORT:3001 \
-  -v /path/to/data:/config \
+  -v /userdata/system/webtop:/config \
   -v /var/run/docker.sock:/var/run/docker.sock \
   --device /dev/dri:/dev/dri \
   --shm-size="1gb" \
