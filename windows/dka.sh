@@ -4,7 +4,7 @@
 URL="https://github.com/trashbus99/profork/releases/download/r1/DK_Advanced.wtgz"
 KEYS_URL="https://github.com/trashbus99/profork/releases/download/r1/DK_Advanced.wtgz.keys"  # Leave empty if no keys file is needed
 DEST_DIR="/userdata/roms/windows"
-MESSAGE=""  # Leave empty if no message is needed
+MESSAGE="You may need to ALT-TAB to bring the game into focus"  # Leave empty if no message is needed
 
 # Ensure destination directory exists
 mkdir -p "$DEST_DIR"
