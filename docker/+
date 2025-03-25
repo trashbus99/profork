@@ -86,22 +86,24 @@ DESKTOP_ENVIRONMENT=$(dialog --stdout --menu "Choose a Webtop flavor (desktop en
 clear
 
 # Docker run command for Webtop
+# Docker run command for Webtop
 docker run -d \
   --name=webtop \
-  --security-opt seccomp=unconfined \  # Optional, based on app requirements
+  --security-opt seccomp=unconfined \
   -e PUID=$(id -u) \
   -e PGID=$(id -g) \
   -e TZ=$(cat /etc/timezone 2>/dev/null || echo "Etc/UTC") \
-  -e SUBFOLDER=/ \  # Optional: change if using a reverse proxy subfolder
-  -e TITLE="Webtop" \  # Optional: sets the browser page title
+  -e SUBFOLDER=/ \
+  -e TITLE="Webtop" \
   -p $HTTP_PORT:3000 \
   -p $HTTPS_PORT:3001 \
   -v /path/to/data:/config \
-  -v /var/run/docker.sock:/var/run/docker.sock \  # Optional: for Docker in container
-  --device /dev/dri:/dev/dri \  # Optional: for GPU acceleration (if available)
-  --shm-size="1gb" \  # Optional
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  --device /dev/dri:/dev/dri \
+  --shm-size="1gb" \
   --restart unless-stopped \
   lscr.io/linuxserver/webtop:$DESKTOP_ENVIRONMENT
+
 
 # Final message to the user
 MSG="Your Webtop docker container has been started with the following configurations:\n
