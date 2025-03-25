@@ -89,6 +89,7 @@ apps=(
     ["DOCKER/PODMAN/PORTAINER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/docker/install.sh | bash"
     ["UMBREL-OS/DOCKER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/docker/umbrel.sh | bash"
     ["WINDOWS-VMS/DOCKER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/docker/win.sh | bash"
+    ["LINUX-DESKTOPS-WEB/DOCKER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/docker/webtop.sh | bash"
     ["SYSTEMTOOLS-WETTY-GLANCES-FILEMANAGER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/docker/systools.sh | bash"
 
     # Add other apps here
