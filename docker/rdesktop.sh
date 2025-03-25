@@ -68,6 +68,8 @@ DESKTOP_ENVIRONMENT=$(dialog --stdout --menu "Choose a desktop environment:" 20 
 "fedora-i3" "i3 Fedora" \
 "arch-i3" "i3 Arch") || exit
 clear
+#make data folder
+mkdir -p /userdata/system/rdesktop
 
 # Docker run command, adapted for rdesktop with user inputs
 docker run -d \
@@ -77,6 +79,7 @@ docker run -d \
   -e PGID=$(id -g) \
   -e TZ=$(cat /etc/timezone) \
   -p $VM_PORT:3389 \
+  -v /userdata/system/rdesktop:/config 
   --device /dev/dri:/dev/dri `#optional based on hardware acceleration requirement` \
   --shm-size="1gb" `#optional` \
   --restart unless-stopped \
