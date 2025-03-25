@@ -11,7 +11,7 @@ sudo flatpak remote-add --if-not-exists --system flathub https://flathub.org/rep
 
 # Declare an associative array mapping display names to their Flatpak App IDs.
 declare -A games
-#games["0AD"]="app/com.play0ad.zeroad/x86_64/stable"
+games["0AD"]="app/com.play0ad.zeroad/x86_64/stable"
 games["AssaultCube"]="app/net.cubers.assault.AssaultCube/x86_64/stablee"
 games["AstroMenace"]="Astromenace"
 games["BZFlag"]="BZFlag"
@@ -54,7 +54,7 @@ games["Xonotic"]="Xonotic"
 
 # Declare an associative array for descriptions (keys match display names)
 declare -A desc
-# desc["0AD"]="Real-time strategy set in ancient times."
+desc["0AD"]="Real-time strategy set in ancient times."
 desc["AssaultCube"]="Lightweight, fast-paced FPS."
 desc["AstroMenace"]="Classic space combat and adventure."
 desc["BZFlag"]="3D tank battle multiplayer game."
@@ -132,10 +132,60 @@ for game in "${selected_games[@]}"; do
   if [ -n "$app_id" ]; then
     echo "Installing $game ($app_id)..."
     flatpak install --system -y flathub "$app_id"
+
+    # Special handling for 0AD: create launcher
+    if [[ "$game" == "0AD" ]]; then
+      echo "Creating launch script for 0 A.D. in /userdata/ports/..."
+
+      mkdir -p /userdata/ports
+
+      cat << 'EOF' > /userdata/ports/0AD.sh
+#!/bin/bash
+
+APP_ID="com.play0ad.zeroad"
+FLATPAK_HOME="/userdata/saves/flatpak/data"
+VAR_DIR="$FLATPAK_HOME/.var/app/$APP_ID"
+CONFIG_DIR="$VAR_DIR/config/0ad"
+CACHE_DIR="$VAR_DIR/cache"
+RUNTIME_DIR="/tmp/runtime-batocera"
+
+# Create necessary dirs for 0 A.D.
+mkdir -p "$CONFIG_DIR" "$CACHE_DIR" "$RUNTIME_DIR"
+chown -R batocera:batocera "$VAR_DIR" "$RUNTIME_DIR"
+chmod -R u+rwX "$VAR_DIR"
+chmod 700 "$RUNTIME_DIR"
+
+# PulseAudio permissions fix
+if [ -d /var/run/pulse ]; then
+  chown -R root:audio /var/run/pulse
+  chmod -R g+rwX /var/run/pulse
+fi
+
+# Ensure ~/.local exists for batocera user
+su - batocera -c '
+mkdir -p ~/.local
+chmod 755 ~/.local
+'
+
+# Launch 0 A.D.
+su - batocera -c "
+XDG_DATA_DIRS=$FLATPAK_HOME/.local/share:/usr/local/share:/usr/share \
+XDG_CONFIG_HOME=$FLATPAK_HOME/.config \
+XDG_CACHE_HOME=$FLATPAK_HOME/.cache \
+XDG_RUNTIME_DIR=$RUNTIME_DIR \
+DISPLAY=:0 \
+flatpak run $APP_ID
+"
+EOF
+
+      chmod +x /userdata/ports/0AD.sh
+      echo "0 A.D. launcher created!"
+    fi
+
   else
     echo "No App ID found for $game, skipping..."
   fi
 done
 
 echo "Installation complete."
-echo "Refresh ES to see updated game list in ports"
+echo "Refresh EmulationStation to see 0 A.D. under Ports (if selected)."
