@@ -35,7 +35,6 @@ done
 clear
 echo "============================================="
 echo "  WELCOME TO THE BATOCRA SBC POP QUIZ!"
-echo "  Hosted by the Mikhailzrick Institute"
 echo "============================================="
 sleep 1
 
@@ -99,7 +98,7 @@ C "32bit Portmaster games" \
 D "All of the above")
 [ "$ans5" == "D" ] && ((score++))
 
-ans6=$(dialog --stdout --menu "Bonus: What's Mikhalzrick's favorite response to Pi hype?" 15 60 4 \
+ans6=$(dialog --stdout --menu "Bonus: What's the proper response to Pi hype?" 15 60 4 \
 A "Get an N100." \
 B "Try it on Android." \
 C "Overclock it and pray." \
@@ -124,7 +123,7 @@ if [ $score -eq $total ]; then
     elif command -v mpg123 >/dev/null 2>&1; then
         mpg123 -q "$WIN_AUDIO" &
     fi
-    dialog --msgbox "🎉 PERFECT SCORE! 🎉\n\nYou passed the Mikhailzrick SBC Showdown!\nScore: $score/$total\n\n✅ You are SBC-literate.\n🏆 Enjoy your dusty OptiPlex victory lap!" 15 60
+    dialog --msgbox "🎉 PERFECT SCORE! 🎉\n\nYou passed the Batocera SBC Showdown!\nScore: $score/$total\n\n✅ You are SBC-literate.\n🏆 Enjoy your dusty OptiPlex victory lap!" 15 60
 elif [ $score -ge 4 ]; then
     dialog --msgbox "Not bad!\n\nScore: $score/$total\nYou avoided the loser horn, but you’re not quite out of the pi cult yet.\n\nKeep studying those Mali drivers!" 15 60
 else
