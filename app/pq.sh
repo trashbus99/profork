@@ -94,7 +94,7 @@ D "All of the above")
 
 ans5=$(dialog --stdout --menu "Q5: What can you *not* run on a Raspberry Pi 5? on Batocera" 15 60 4 \
 A "PS2 and GameCube reliably" \
-B "Windows EXEs through Wine on Batocera" \
+B "Windows EXEs through Wine" \
 C "32bit Portmaster games" \
 D "All of the above")
 [ "$ans5" == "D" ] && ((score++))
