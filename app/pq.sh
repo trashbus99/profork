@@ -140,7 +140,8 @@ fi
 rm -f "$JEOPARDY_AUDIO" "$RICKROLL_AUDIO" "$LOSER_HORN_AUDIO" "$COME_ON_DOWN_AUDIO" "$WIN_AUDIO"
 clear
 
-echo "Thanks for playing! You've earned the right to scoff at overpriced SBCs. Now go get an N100, or maybe even something better."
+echo "Thanks for playing! You've earned the right to scoff at overpriced SBCs."
+echo "Now go get an N100, or maybe even something better."
 sleep 5
 exit 0
 
