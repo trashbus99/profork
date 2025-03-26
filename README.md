@@ -1,4 +1,5 @@
 🚀Recents:
+* PKGX added to tools
 * Added PS3 Squash/Unsquash .ps3 folders & updated .psn file auto generator for pkg files -- tools menu
 * 0AD flatpak added with custom launcher fix
 * Added Linux Desktops via web option (in addition to RDP option)
