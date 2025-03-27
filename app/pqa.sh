@@ -79,7 +79,7 @@ while true; do
         C "Batocera with Panfrost" D "Pi with dreams")
     [ "$ans3" == "A" ] && ((score++))
 
-    ans4=$(dialog --stdout --menu "Q4: Better deal than Pi5 + \$120 of junk?" 15 60 4 \
+    ans4=$(dialog --stdout --menu "Q4: Better deal than Pi5 and accesories $120?" 15 60 4 \
         A "N100 mini PC" B "\$50 OptiPlex" \
         C "AliExpress handheld" D "All of the above")
     [ "$ans4" == "D" ] && ((score++))
@@ -133,7 +133,7 @@ while true; do
         if [ $response -eq 1 ]; then
             clear
             echo "Fair enough. You're not ready yet."
-            echo "Maybe go check eBay for an OptiPlex and reflect on your life."
+            echo "Maybe go check eBay for a used SFF OptiPlex or an N100 mini pc and reflect on your life."
             sleep 4
             exit 1
         fi
