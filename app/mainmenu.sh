@@ -128,7 +128,7 @@ case $CHOICE in
         ;;
     96)
      echo "Tech-Support Solution Loading.."
-        curl -Ls https://github.com/trashbus99/profork/blob/master/app/bua.sh | bash
+        curl -Ls https://github.com/trashbus99/profork/raw/master/app/bua.sh | bash
         ;;
     97)
      echo "Pop-Quiz...loading.."
