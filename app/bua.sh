@@ -4,9 +4,13 @@ clear
 
 echo "I guess you didn't read the README.MD "
 echo "Profork is for tinkerers.."
-sleep 5
-echo "THat's ok, there is a solution for that...please wait.."
+echo "thinking....."
+sleep 2
+echo "ahh-ha..."
+sleep 4
+echo "Thhere is a solution for that...please wait.."
 echo 3
+
 
 # === Intro Text ===
 echo "🧑‍🔧 Tech Support Mode Activated"
