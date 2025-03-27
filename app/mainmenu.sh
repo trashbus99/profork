@@ -48,7 +48,7 @@ animate_text "${YELLOW}The apps on this repository are provided AS-IS.${NC}"
 animate_text "${RED}DO NOT ask for help in the Batocera Discord.${NC}"
 animate_text "${RED}They will NOT help you and will REFUSE support if they are made aware unofficial apps are installed.${NC}"
 animate_text "${YELLOW}Use at your own risk.${NC}"
-animate_text "${YELLOW}No Support Offered.${NC}
+animate_text "${YELLOW}No Support Offered.${NC}"
 
 echo -e "${NC}"
 sleep 10
