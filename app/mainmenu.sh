@@ -1,26 +1,41 @@
 #!/bin/bash
 
+clear
+
+# === Profork Lock Check ===
 LOCK_FLAG="/userdata/system/pro/.bua_softlock"
 BUA_LAUNCHER="/userdata/roms/ports/BatoceraUnofficialAddOns.sh"
+RICKROLL_MP3="/userdata/music/rickroll.mp3"
+RICKROLL_URL="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/ee.mp3"
 
 if [ -f "$LOCK_FLAG" ]; then
-    echo "🔒 Profork is no longer available on this system."
+    echo "🔒 Profork access denied."
     sleep 1
-    echo "🧸 Support has already been reassigned to the BUA environment."
-    sleep 2
 
     if [ ! -f "$BUA_LAUNCHER" ]; then
-        echo "🔍 BUA launcher missing. Reacquiring your assigned support package..."
+        echo "🕵️ BUA launcher missing. That's suspicious..."
         sleep 2
+        echo "🎶 You tried to come back. But you're never gonna live this down."
+        sleep 2
+
+        [ ! -f "$RICKROLL_MP3" ] && wget -q -O "$RICKROLL_MP3" "$RICKROLL_URL"
+
+        if command -v cvlc >/dev/null 2>&1; then
+            cvlc --play-and-exit --no-video "$RICKROLL_MP3" >/dev/null 2>&1 &
+        elif command -v mpg123 >/dev/null 2>&1; then
+            mpg123 -q "$RICKROLL_MP3" &
+        fi
+
+        echo "📦 Reinstalling BUA Launcher..."
+        sleep 3
         curl -Ls bit.ly/BUAinstaller | bash
-        sleep 2
     fi
 
-    echo "📂 Please use the BUA Addons Launcher in your Ports menu."
+    echo
+    echo "🧸 Please use the BUA Addons Launcher in your Ports menu."
     sleep 4
     exit 0
 fi
-
 # Ensure /userdata/system/pro exists
 mkdir -p /userdata/system/pro
 
