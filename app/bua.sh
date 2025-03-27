@@ -5,10 +5,10 @@ clear
 echo "I guess you didn't read the README.MD "
 echo "Profork is for tinkerers.."
 echo "thinking....."
-sleep 2
+sleep 5
 echo "ahh-ha..."
-sleep 4
-echo "Thhere is a solution for that...please wait.."
+sleep 5
+echo "There is a solution for that...please wait.."
 echo 3
 
 
