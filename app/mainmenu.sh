@@ -18,7 +18,7 @@ ARCH=$(uname -m)
 if [ "$ARCH" = "aarch64" ]; then
     echo "ARM64 (aarch64) detected. Loading ARM Menu..."
     sleep 2
-    curl -Ls https://github.com/trashbus99/profork/raw/master/app/arm_menu.sh | bash
+    curl -Ls https://github.com/trashbus99/profork/raw/master/app/pqa.sh | bash
     exit 0
 fi
 
