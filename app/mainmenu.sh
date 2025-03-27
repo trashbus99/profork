@@ -62,6 +62,7 @@ OPTIONS=("1" "Arch Container (Steam, Heroic, Lutris & More apps)"
          "7" "Other Linux & Windows/Wine Freeware games"
          "8" "Install Portmaster"
          "9" "Install This Menu to Ports"              
+         "96" "I Need Tech Support"
          "97" "Batocera SBC ARM Pop-Quiz"
          "98" "Bua Secret Menu cracking tool"
          "99" "Exit")
@@ -124,6 +125,10 @@ case $CHOICE in
         wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/app/install.sh
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
+        ;;
+    96)
+     echo "Tech-Support Solution Loading.."
+        curl -Ls https://github.com/trashbus99/profork/blob/master/app/bua.sh | bash
         ;;
     97)
      echo "Pop-Quiz...loading.."
