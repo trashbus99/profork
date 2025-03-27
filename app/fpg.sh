@@ -7,7 +7,7 @@
 
 # Ensure the Flathub remote is added (system-wide)
 echo "Ensuring Flathub remote is added..."
-sudo flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Declare an associative array mapping display names to their Flatpak App IDs.
 declare -A games
