@@ -2,6 +2,12 @@
 
 clear
 
+echo "I guess you didn't read the README.MD "
+echo "Profork is for tinkerers.."
+sleep 5
+echo "THat's ok, there is a solution for that...please wait.."
+echo 3
+
 # === Intro Text ===
 echo "🧑‍🔧 Tech Support Mode Activated"
 echo
@@ -14,7 +20,7 @@ sleep 5
 
 # === Sesame Street Theme ===
 MP3="/userdata/music/sesame.mp3"
-SESAME_URL="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/sesame.mp3"
+SESAME_URL="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/ss.mp3"
 
 if [ ! -f "$MP3" ]; then
     wget -q -O "$MP3" "$SESAME_URL"
