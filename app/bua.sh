@@ -56,5 +56,5 @@ echo "🧠 Profork is designed for advanced users and assumes no tech support."
 echo "🧡 BUA was generously offered as the place for everyone else."
 echo
 echo "🎉 Enjoy your new support environment!"
-sleep 6
+sleep 12
 exit 0
