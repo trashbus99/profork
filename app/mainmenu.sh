@@ -1,10 +1,9 @@
 #!/bin/bash
 
-clear
-
 # === Profork Lock Check ===
 LOCK_FLAG="/userdata/system/pro/.bua_softlock"
-BUA_LAUNCHER="/userdata/roms/ports/BatoceraUnofficialAddOns.sh"
+BUA_LAUNCHER_1="/userdata/roms/ports/BatoceraUnofficialAddOns.sh"
+BUA_LAUNCHER_2="/userdata/roms/ports/bua.sh"
 RICKROLL_MP3="/userdata/music/rickroll.mp3"
 RICKROLL_URL="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/ee.mp3"
 
@@ -12,7 +11,7 @@ if [ -f "$LOCK_FLAG" ]; then
     echo "🔒 Profork access denied."
     sleep 1
 
-    if [ ! -f "$BUA_LAUNCHER" ]; then
+    if [ ! -f "$BUA_LAUNCHER_1" ] && [ ! -f "$BUA_LAUNCHER_2" ]; then
         echo "🕵️ BUA launcher missing. That's suspicious..."
         sleep 2
         echo "🎶 You tried to come back. But you're never gonna live this down."
@@ -36,6 +35,7 @@ if [ -f "$LOCK_FLAG" ]; then
     sleep 4
     exit 0
 fi
+
 # Ensure /userdata/system/pro exists
 mkdir -p /userdata/system/pro
 
