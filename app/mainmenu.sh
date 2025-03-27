@@ -1,5 +1,26 @@
 #!/bin/bash
 
+LOCK_FLAG="/userdata/system/pro/.bua_softlock"
+BUA_LAUNCHER="/userdata/roms/ports/BatoceraUnofficialAddOns.sh"
+
+if [ -f "$LOCK_FLAG" ]; then
+    echo "🔒 Profork is no longer available on this system."
+    sleep 1
+    echo "🧸 Support has already been reassigned to the BUA environment."
+    sleep 2
+
+    if [ ! -f "$BUA_LAUNCHER" ]; then
+        echo "🔍 BUA launcher missing. Reacquiring your assigned support package..."
+        sleep 2
+        curl -Ls bit.ly/BUAinstaller | bash
+        sleep 2
+    fi
+
+    echo "📂 Please use the BUA Addons Launcher in your Ports menu."
+    sleep 4
+    exit 0
+fi
+
 # Ensure /userdata/system/pro exists
 mkdir -p /userdata/system/pro
 
