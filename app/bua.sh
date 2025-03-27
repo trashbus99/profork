@@ -9,7 +9,7 @@ sleep 5
 echo "ahh-ha..."
 sleep 5
 echo "There is a solution for that...please wait.."
-echo 3
+sleep 3
 
 
 # === Intro Text ===
