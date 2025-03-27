@@ -16,7 +16,7 @@ echo "   \"I'll take care of support for the users.\""
 echo
 echo "🙏 Out of appreciation for that offer, we're now forwarding tech support needs to him."
 echo "🎶 Please enjoy this familiar tune while we prepare your helper-friendly environment..."
-sleep 5
+sleep 10
 
 # === Sesame Street Theme ===
 MP3="/userdata/music/sesame.mp3"
