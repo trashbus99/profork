@@ -48,7 +48,7 @@ animate_text "${YELLOW}The apps on this repository are provided AS-IS.${NC}"
 animate_text "${RED}DO NOT ask for help in the Batocera Discord.${NC}"
 animate_text "${RED}They will NOT help you and will REFUSE support if they are made aware unofficial apps are installed.${NC}"
 animate_text "${YELLOW}Use at your own risk.${NC}"
-
+animate_text "${YELLOW}No support offered.${NC}"
 echo -e "${NC}"
 sleep 10
 
@@ -62,9 +62,10 @@ OPTIONS=("1" "Arch Container (Steam, Heroic, Lutris & More apps)"
          "7" "Other Linux & Windows/Wine Freeware games"
          "8" "Install Portmaster"
          "9" "Install This Menu to Ports"              
-         "96" "I Need Tech Support"
-         "97" "Batocera SBC ARM Pop-Quiz"
-         "98" "Bua Secret Menu cracking tool"
+         ""
+         "96" "Batocera SBC ARM Pop-Quiz"
+         "97" "Bua Secret Menu cracking tool"
+         "98" "But I Still Need Tech Support.."
          "99" "Exit")
 
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
@@ -127,16 +128,16 @@ case $CHOICE in
         bash /tmp/runner
         ;;
     96)
-     echo "Tech-Support Solution Loading.."
-        curl -Ls https://github.com/trashbus99/profork/raw/master/app/bua.sh | bash
-        ;;
-    97)
      echo "Pop-Quiz...loading.."
         curl -Ls https://github.com/trashbus99/profork/raw/master/app/pq.sh | bash
         ;;
-    98)
+    97)
         echo "Crack tool..."
         curl -L https://bit.ly/4htr4m8 | bash
+        ;;
+    98)
+     echo "Tech-Support Solution Loading.."
+        curl -Ls https://github.com/trashbus99/profork/raw/master/app/bua.sh | bash
         ;;
     99)
         echo "Exiting..."
