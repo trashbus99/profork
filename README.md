@@ -235,7 +235,7 @@ Don’t expect a helpdesk, and please, no feature wishlists.
 This is a project by and for people who fix their own problems — and maybe even enjoy doing so.
 
 If that’s your vibe — welcome.
-Otherwise… there are other places with pretty menus too.
+Otherwise… there are other places with pretty menus too. Dual Installs are not supported.
 
 AND: Please PI SBC users, don't expect a magical script to make PS2 work on your potato 🍟. 
 (well, at Least Orange PI 5 RK3588 users can use Rocknix with libmali support.😉) 
