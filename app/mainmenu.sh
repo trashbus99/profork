@@ -1,5 +1,31 @@
 #!/bin/bash
 
+# === BUA Detection ===
+if [ -d "/userdata/system/add-ons" ]; then
+    clear
+    echo "📦 BUA detected."
+    echo "🎺 Dual installs not supported"
+    echo " Goodbye."
+    echo
+
+    # === Loser Horn Sound ===
+    LH_MP3="/userdata/music/lh.mp3"
+    LH_URL="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/lh.mp3"
+
+    if [ ! -f "$LH_MP3" ]; then
+        wget -q -O "$LH_MP3" "$LH_URL"
+    fi
+
+    if command -v cvlc >/dev/null 2>&1; then
+        cvlc --play-and-exit --no-video "$LH_MP3" >/dev/null 2>&1 &
+    elif command -v mpg123 >/dev/null 2>&1; then
+        mpg123 -q "$LH_MP3" &
+    fi
+
+    sleep 4
+    exit 0
+fi
+
 # === Profork Lock Check ===
 LOCK_FLAG="/userdata/system/pro/.bua_softlock"
 BUA_LAUNCHER_1="/userdata/roms/ports/BatoceraUnofficialAddOns.sh"
