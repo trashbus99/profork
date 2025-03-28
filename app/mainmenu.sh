@@ -130,7 +130,6 @@ OPTIONS=("1" "Arch Container (Steam, Heroic, Lutris & More apps)"
          "9" "Install This Menu to Ports"              
          "96" "I Still Need Tech Support"
          "97" "Batocera SBC ARM Pop-Quiz"
-         "98" "Bua Secret Menu cracking tool"
          "99" "Exit")
 
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
