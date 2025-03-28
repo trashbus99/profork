@@ -3,9 +3,9 @@
 # === BUA Detection ===
 if [ -d "/userdata/system/add-ons" ]; then
     clear
-    echo "📦 BUA detected."
-    echo "🎺 Dual installs not supported"
-    echo " Goodbye."
+    echo "BUA detected."
+    echo "Dual installs not supported"
+    echo "Goodbye."
     echo
 
     # === Loser Horn Sound ===
