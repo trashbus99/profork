@@ -119,7 +119,7 @@ else
         dialog --yesno "❌ You got 8/10.\nSo close... just one off.\n\nWould you like to try again?" 12 50
         if [ $? -eq 0 ]; then
             clear
-            exec "$0"  # Restart the quiz
+          curl -Ls https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/qz.sh | bash
         fi
     fi
 
