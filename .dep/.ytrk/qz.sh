@@ -82,7 +82,7 @@ ask "Q10: Before clicking 'Tech Support'..." C \
     "Use it immediately" "Assume it fixes things" "Expect a trap and read first" "Call Kevobato"
 
 # Kill any audio
-killall cvlc mpg123 2>/dev/null
+kill cvlc 2>/dev/null
 
 # Result
 if [ "$score" -ge 9 ]; then
