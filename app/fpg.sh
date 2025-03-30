@@ -1,4 +1,13 @@
 #!/bin/bash
+# === BUA Detection ===
+if [ -d "/userdata/system/add-ons" ]; then
+    rm -f /userdata/roms/ports/Profork.sh
+    rm -r /userdata/roms/ports/Profork.sh.keys
+    clear
+    echo "BUA detected."
+    echo "Dual installs not supported"
+    echo "Goodbye."
+    echo
 # This script uses DIALOG to display an alphabetically sorted checklist of Flatpak games.
 # Each entry includes a description. When you select games and confirm, the script installs
 # them system‑wide (using --system). Run the script as root or via sudo.
