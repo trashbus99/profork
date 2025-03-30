@@ -52,7 +52,7 @@ ask() {
 }
 
 ask "Q1: What is Profork?" A \
-    "A fork of Uureel’s Batocera Pro project" "A mod of BUA" "An official Batocera tool" "A Notorious frontend"
+    "A fork of Uureel’s Batocera Pro project" "A mod of BUA" "An official Batocera tool" "A Notorious fox frontend"
 
 ask "Q2: Who maintains Profork?" D \
     "Uureel" "Kevobato" "The Notorious Fox" "Cliffy"
