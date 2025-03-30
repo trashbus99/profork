@@ -39,8 +39,7 @@ play_sound() {
     fi
 }
 
-play_sound "$COD"
-sleep 2
+
 play_sound "$JEOPARDY"
 
 # Quiz logic
