@@ -26,7 +26,6 @@ declare -A MP3S=(
     ["$WIN"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/win.mp3"
     ["$FAIL"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/lh.mp3"
     ["$JEOPARDY"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/at.mp3"
-    ["$COD"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/cod.mp3"
 )
 
 for f in "${!MP3S[@]}"; do [ -f "$f" ] || wget -q -O "$f" "${MP3S[$f]}"; done
