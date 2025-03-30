@@ -12,7 +12,7 @@ clear
 echo "Profork is a community fork of Uureel's Batocera Pro project."
 echo "This short quiz ensures users understand what they're running."
 echo "Misuse, Discord drama, and BUA crossover is not supported here."
-sleep 4
+sleep 5
 
 # Load and prepare sounds
 MUSIC_DIR="/userdata/music"
@@ -58,7 +58,7 @@ ask "Q2: Who maintains Profork?" D \
     "Uureel" "Kevobato" "The Notorious Fox" "Cliffy"
 
 ask "Q3: If something breaks after updating Profork..." C \
-    "Ask on Reddit" "Blame the script author" "Troubleshoot, rollback, or wait" "Ping everyone on Discord"
+    "Ask on Reddit" "Blame the script author" "Troubleshoot and rollback" "Ping everyone on Discord"
 
 ask "Q4: Why avoid official Batocera Discord for Profork issues?" B \
     "They secretly support it" "To avoid confusion and respect boundaries" "They're jealous" "Profork is banned"
@@ -70,7 +70,7 @@ ask "Q6: If you're not sure how something works..." C \
     "Post blindly in Discord" "Wait for a video" "Explore and test" "Switch distros"
 
 ask "Q7: The ‘Tech Support’ option in Profork is..." D \
-    "Live help" "Bug reporting" "seance to Uureel's ghost" "A one-way trip to BUA"
+    "Live help" "Bug reporting" "A seance to Uureel's ghost" "A one-way trip to BUA"
 
 ask "Q8: Open-source tools like this are..." B \
     "Guaranteed support" "Self-driven and modifiable" "Backed by Batocera team" "Always tested"
@@ -79,7 +79,7 @@ ask "Q9: Who originally developed the core installer system used here?" A \
     "Uureel" "The Notorious Fox" "Kevobato" "Rocknix devs"
 
 ask "Q10: Before clicking 'Tech Support'..." C \
-    "Use it immediately" "Assume it fixes things" "Expect a trap and read first" "Call Kevobato"
+    "Use it immediately" "Watch techdweeb videos" "Expect a trap and read first" "Call Kevobato"
 
 # Kill any audio
 kill cvlc 2>/dev/null
