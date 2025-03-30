@@ -9,6 +9,7 @@ if [ -d "/userdata/system/add-ons" ]; then
     echo "Goodbye."
     echo
      exit 0
+fi
 clear 
 
 # Function to display animated title with colors
