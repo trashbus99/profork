@@ -19,7 +19,8 @@ if [ -d "/userdata/system/add-ons" ]; then
     echo "Dual installs not supported"
     echo "Goodbye."
     echo
-    
+    exit 0
+fi
 # Function to display animated title with colors
 animate_title() {
     local text="DOCKER, PODMAN, & CONTAINERS (h/t UUREEL)"
