@@ -8,6 +8,7 @@ if [ -d "/userdata/system/add-ons" ]; then
     echo "Dual installs not supported"
     echo "Goodbye."
     echo
+     exit 0
 # Define the options
 OPTIONS=(
   "1" "Downoad Wine & Proton (vanilla/regular) builds"
