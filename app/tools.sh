@@ -10,7 +10,8 @@ if [ -d "/userdata/system/add-ons" ]; then
     echo "Goodbye."
     echo
 clear
-
+exit 0
+fi
 # Function to display animated title with colors
 animate_title() {
     local text="Tools (h/t UUREEL)"
