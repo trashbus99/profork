@@ -120,7 +120,7 @@ animate_text ""
 animate_text "${YELLOW}FYI: The Batocera Nation Youtube channel is back in action doing new help videos. Search for it!${NC}"
 
 echo -e "${NC}"
-sleep 10
+sleep 4
 
 # Define the options
 OPTIONS=("1" "Arch Container (Steam, Heroic, Lutris & More apps)"
