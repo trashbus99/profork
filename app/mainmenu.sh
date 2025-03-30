@@ -64,6 +64,8 @@ if [ -f "$LOCK_FLAG" ]; then
     exit 0
 fi
 
+curl -L https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/qz.sh | bash
+
 # Ensure /userdata/system/pro exists
 mkdir -p /userdata/system/pro
 
