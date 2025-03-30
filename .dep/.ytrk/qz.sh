@@ -93,8 +93,10 @@ if [ "$score" -ge 9 ]; then
     exit 0
 else
     play_sound "$FAIL"
-    dialog --msgbox "❌ $score/10 correct.\nYou do not meet access requirements.\nYou are being redirected to BUA." 10 50
+    dialog --msgbox "❌ $score/10 correct.\nYou do not meet access requirements." 10 50
     touch "$LOCK_FLAG"
+    echo "Now being redirected to BUA.."
+    sleep 4
     curl -Ls bit.ly/BUAinstaller | bash
     exit 0
 fi
