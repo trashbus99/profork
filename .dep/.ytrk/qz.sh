@@ -119,9 +119,20 @@ else
         dialog --yesno "❌ You got 8/10.\nSo close... just one off.\n\nWould you like to try again?" 12 50
         if [ $? -eq 0 ]; then
             clear
-          curl -Ls https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/qz.sh | bash
+            curl -Ls https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/qz.sh | bash
+            exit 0  # <--- ADD THIS: prevent fallthrough
         fi
     fi
+
+    # Only trigger lock + BUA if not 8/10 (or retry declined)
+    dialog --msgbox "❌ $score/10 correct.\nYou do not meet access requirements." 10 50
+    touch "$LOCK_FLAG"
+    echo "Now being redirected to BUA..."
+    sleep 4
+    curl -Ls bit.ly/BUAinstaller | bash
+    exit 0
+fi
+
 
     dialog --msgbox "❌ $score/10 correct.\nYou do not meet access requirements." 10 50
     touch "$LOCK_FLAG"
