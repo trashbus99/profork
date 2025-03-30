@@ -9,6 +9,7 @@ if [ -d "/userdata/system/add-ons" ]; then
     echo "Goodbye."
     echo
      exit 0
+    fi
 # Define the options
 OPTIONS=(
   "1" "Downoad Wine & Proton (vanilla/regular) builds"
