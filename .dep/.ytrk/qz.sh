@@ -110,6 +110,7 @@ if [ "$score" -ge 9 ]; then
     play_sound "$WIN"
     dialog --msgbox "✅ $score/10 correct.\nAccess granted to Profork." 10 50
     touch "$GEN_ACCESS"
+    rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
     sleep 1
     exit 0
 else
@@ -119,8 +120,9 @@ else
         dialog --yesno "❌ You got 8/10.\nSo close... just one off.\n\nWould you like to try again?" 12 50
         if [ $? -eq 0 ]; then
             clear
+            rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
             curl -Ls https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/qz.sh | bash
-            exit 0  # <--- ADD THIS: prevent fallthrough
+            exit 0  # prevent fallthrough
         fi
     fi
 
@@ -128,16 +130,10 @@ else
     dialog --msgbox "❌ $score/10 correct.\nYou do not meet access requirements." 10 50
     touch "$LOCK_FLAG"
     echo "Now being redirected to BUA..."
+    rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
     sleep 4
     curl -Ls bit.ly/BUAinstaller | bash
     exit 0
 fi
 
-
-    dialog --msgbox "❌ $score/10 correct.\nYou do not meet access requirements." 10 50
-    touch "$LOCK_FLAG"
-    echo "Now being redirected to BUA..."
-    sleep 4
-    curl -Ls bit.ly/BUAinstaller | bash
-    exit 0
 fi
