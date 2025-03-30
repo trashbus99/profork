@@ -8,6 +8,8 @@ if [ -d "/userdata/system/add-ons" ]; then
     echo "Dual installs not supported"
     echo "Goodbye."
     echo
+    exit 0
+fi
 # This script uses DIALOG to display an alphabetically sorted checklist of Flatpak games.
 # Each entry includes a description. When you select games and confirm, the script installs
 # them system‑wide (using --system). Run the script as root or via sudo.
