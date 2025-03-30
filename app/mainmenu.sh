@@ -64,7 +64,7 @@ if [ -f "$LOCK_FLAG" ]; then
     exit 0
 fi
 
-curl -Ls https://github.com/trashbus99/profork/raw/master/app/quiz_gatekeeper.sh | bash
+curl -Ls https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/qz.sh | bash
 [ -f "/userdata/system/pro/gen_access" ] || exit 0
 
 
