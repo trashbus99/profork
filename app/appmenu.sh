@@ -9,6 +9,8 @@ if [ -d "/userdata/system/add-ons" ]; then
     echo "Dual installs not supported"
     echo "Goodbye."
     echo
+    exit 0
+fi
 # Get the machine hardware name
 architecture=$(uname -m)
 
