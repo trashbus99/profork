@@ -14,4 +14,4 @@ fi
 DIALOGRC="$DIALOGRC_PATH" \
 DISPLAY=:0.0 \
 xterm -fs 20 -maximized -fg white -bg black -fa "DejaVuSansMono" -en UTF-8 \
--e bash -c "DISPLAY=:0.0 curl -L https://github.com/trashbus99/profork/raw/master/app/mainmenu.sh | bash"
+-e bash -c "DISPLAY=:0.0 curl -Ls https://github.com/trashbus99/profork/raw/master/app/mainmenu.sh | bash"
