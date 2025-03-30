@@ -70,7 +70,10 @@ ask "Q6: If you're not sure how something works..." C \
     "Post blindly in Discord" "Wait for a video" "Explore and test" "Switch distros"
 
 ask "Q7: The ‘Tech Support’ option in Profork is..." D \
-    "Live help" "Bug reporting" "A seance to Uureel's ghost" "A one-way trip to BUA"
+    "Live help" \
+    "A link to Kevobato’s BUA videos" \
+    "A séance to Uureel’s ghost" \
+    "A one-way trip to BUA"
 
 ask "Q8: Open-source tools like this are..." B \
     "Guaranteed support" "Self-driven and modifiable" "Backed by Batocera team" "Always tested"
@@ -78,8 +81,11 @@ ask "Q8: Open-source tools like this are..." B \
 ask "Q9: Who originally developed the core installer system used here?" A \
     "Uureel" "The Notorious Fox" "Kevobato" "Rocknix devs"
 
-ask "Q10: Before clicking 'Tech Support'..." C \
-    "Use it immediately" "Watch techdweeb videos" "Expect a trap and read first" "Call Kevobato"
+ask "Q10: In open-source projects, what’s a good way to verify that GPL obligations are respected?" C \
+    "Ask for a video explaining the code" \
+    "Watch TechDweeb videos" \
+    "Check the README and/or code for proper attribution" \
+    "Only worry if someone complains publicly"
 
 # Kill any audio
 kill cvlc 2>/dev/null
