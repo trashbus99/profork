@@ -6,7 +6,7 @@ INSTALL_URL="https://github.com/trashbus99/profork/raw/master/app/install.sh"
 
 # Check if either the launcher or splash video is missing
 if [ ! -f "$PORTS_LAUNCHER" ] || [ ! -f "$SPLASH_MP4" ]; then
-    echo "Profork not fully installed. Running installer..."
+    echo "Profork not fully installed or updated. Running installer..."
     curl -Ls "$INSTALL_URL" | bash
 
     # Re-check and confirm
