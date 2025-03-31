@@ -1,5 +1,14 @@
 🚀Recents:
-* Webapps added/fixed in Arch Container--easily create your own electron/nativefier apps for ES web menu (see below)
+ Webapps added/fixed in Arch Container--easily create your own electron/nativefier apps for ES web menu (see below)
+
+✔ Create custom apps from *any* site  
+✔ Pick your preferred user-agent  (chrome, firefox, xbox, etc)
+✔ Fully containerized (Arch/Conty)  
+✔ Integrated with ES Internet menu  
+✔ No Google Chrome kiosk hacks (option is there if you want it though). 
+
+🛠️ Rebuilt after v41 broke support — now more modular, stable, and user-friendly than ever.
+
 * PKGX added to tools
 * Added PS3 Squash/Unsquash .ps3 folders & updated .psn file auto generator for pkg files -- tools menu
 * 0AD flatpak added with custom launcher fix
