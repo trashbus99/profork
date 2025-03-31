@@ -21,7 +21,8 @@ OPTIONS=("1" "Install/Update Arch Container "
          "6" "Addon: Add/Update Lutris Menu & Shortcuts to Emulationstation"
          "7" "Addon: Add/Update Heroic Menu & Shortcuts to Emulationstation"
          "8" "Addon: Add/Update PS4 Menu & Shortcuts to Emulationstation"
-         "9" "Addon: Emudeck (experimental)")
+         "9" "Addon: Emudeck (experimental)"
+         "10" "Addon: Webapps")
 
 # Display the dialog and get the user choice
 CHOICE=$(dialog --clear --backtitle "Arch Container Management" \
@@ -106,6 +107,16 @@ case $CHOICE in
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
         ;;
+ 10)  
+        echo "Webapps Installer..."
+        rm /tmp/runner 2>/dev/null
+        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/webapps/install.sj
+        dos2unix /tmp/runner 2>/dev/null 
+        chmod 777 /tmp/runner 2>/dev/null
+        bash /tmp/runner
+        ;;
+    
+    
     *)
         echo "No valid option selected or cancelled. Exiting."
         ;;
