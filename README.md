@@ -1,12 +1,14 @@
 🚀Recents:
 
-🛠️ Webapps added/fixed in Arch Container--easily create your own electron/nativefier apps for ES web menu (see below)
+🛠️ Webapps added/fixed in Arch Container--easily create your own electron/nativefier apps for ES web menu 
 
 ✔ Create custom web app from *any* site: discord, spotify, luna, twitch, etc.   
 ✔ Pick your preferred user-agent  (chrome, firefox, xbox, etc)
 ✔ Fully containerized (Arch/Conty)  
 ✔ Integrated with ES Internet menu  
 ✔ No Google Chrome kiosk hacks (option is there if you want it though). 
+
+![image](https://github.com/user-attachments/assets/38c146fb-29f4-4047-a294-8eda1dcc818c)
 
 * PKGX added to tools
 * Added PS3 Squash/Unsquash .ps3 folders & updated .psn file auto generator for pkg files -- tools menu
