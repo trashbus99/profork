@@ -51,7 +51,7 @@ mkdir -p ~/configs/emulationstation
 
 # Download the es_systems_webapps.cfg file into ~/configs/emulationstation
 curl -L https://github.com/trashbus99/profork/raw/master/webapps/es_systems_webapps.cfg -o ~/configs/emulationstation/es_systems_webapps.cfg
-curl -L https://github.com/trashbus99/profork/raw/master/webapps/es_features_webapps.cfg -o ~/configs/emulationstation/es_feature_webapps.cfg
+curl -L https://github.com/trashbus99/profork/raw/master/webapps/es_features_webapps.cfg -o ~/configs/emulationstation/es_features_webapps.cfg
 
 echo "All files have been downloaded and placed in their respective directories. Scripts have been made executable."
 sleep 5
