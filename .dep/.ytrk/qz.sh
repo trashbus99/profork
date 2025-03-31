@@ -109,6 +109,7 @@ ask "Q10: In open-source projects, what’s a good way to verify that GPL obliga
 if [ "$score" -ge 9 ]; then
     play_sound "$WIN"
     dialog --msgbox "✅ $score/10 correct.\nAccess granted to Profork." 10 50
+    mkdir -p /userdata/system/pro
     touch "$GEN_ACCESS"
     rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
     sleep 1
@@ -128,6 +129,7 @@ else
 
     # Only trigger lock + BUA if not 8/10 (or retry declined)
     dialog --msgbox "❌ $score/10 correct.\nYou do not meet access requirements." 10 50
+    mkdir -p /userdata/system/pro
     touch "$LOCK_FLAG"
     echo "Now being redirected to BUA..."
     rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
