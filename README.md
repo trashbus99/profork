@@ -1,4 +1,5 @@
 🚀Recents:
+* Webapps added/fixed in Arch Container--easily create your own electron/nativefier apps for ES web menu (see below)
 * PKGX added to tools
 * Added PS3 Squash/Unsquash .ps3 folders & updated .psn file auto generator for pkg files -- tools menu
 * 0AD flatpak added with custom launcher fix
