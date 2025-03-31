@@ -10,7 +10,7 @@ done
 echo ""
 
 # Set variables
-PLUGIN_URL="https://github.com/SteamDeckHomebrew/decky-loader/releases/download/v3.0.1/PluginLoader"
+PLUGIN_URL="https://github.com/SteamDeckHomebrew/decky-loader/releases/download/v3.1.3/PluginLoader"
 DEST_DIR="/userdata/system/homebrew/services"
 CUSTOM_SH="/userdata/system/custom.sh"
 FLATPAK_STEAM_DEBUG_FILE="/userdata/saves/flatpak/data/.var/app/com.valvesoftware.Steam/data/Steam.cef-enable-remote-debugging"
