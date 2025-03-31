@@ -110,6 +110,7 @@ animate_text() {
 }
 
 clear
+curl -Ls https://github.com/trashbus99/profork/blob/master/app/check.sh | bash
 
 animate_text "${YELLOW}⚠️  Important Notice ⚠️${NC}"
 animate_text "${YELLOW}The apps on this repository are provided AS-IS.${NC}"
@@ -130,8 +131,7 @@ OPTIONS=("1" "Arch Container (Steam, Heroic, Lutris & More apps)"
          "5" "Wine tools and Wine Custom Downloader for v40+"
          "6" "Flatpak Linux Games"
          "7" "Other Linux & Windows/Wine Freeware games"
-         "8" "Install Portmaster"
-         "9" "Install This Menu to Ports"              
+         "8" "Install Portmaster"             
          "96" "I Still Need Tech Support"
          "97" "Batocera SBC ARM Pop-Quiz"
          "99" "Exit")
