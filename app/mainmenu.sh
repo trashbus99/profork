@@ -110,7 +110,7 @@ animate_text() {
 }
 
 clear
-curl -Ls https://github.com/trashbus99/profork/blob/master/app/check.sh | bash
+curl -Ls https://github.com/trashbus99/profork/raw/master/app/check.sh | bash
 
 animate_text "${YELLOW}⚠️  Important Notice ⚠️${NC}"
 animate_text "${YELLOW}The apps on this repository are provided AS-IS.${NC}"
