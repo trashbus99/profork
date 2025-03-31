@@ -51,7 +51,7 @@ nativefier "$url" -n "$appName" --user-agent "$userAgent" --electron-version $(n
 
 # Choose where to save the launcher script
 choice=$(dialog --title "Save Location" --menu "Choose where to save the launcher script:" 15 50 4 \
-1 "Ports (PAD2KEY Available)" \
+1 "Ports" \
 2 "Webapps" 3>&1 1>&2 2>&3 3>&-)
 
 # Determine save directory
