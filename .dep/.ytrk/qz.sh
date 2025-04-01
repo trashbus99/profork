@@ -134,7 +134,7 @@ else
     echo "Now being redirected to BUA..."
     rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
     sleep 4
-    curl -Ls bit.ly/BUAinstaller | bash
+   curl -Ls install.batoaddons.app | bash
     exit 0
 fi
 
