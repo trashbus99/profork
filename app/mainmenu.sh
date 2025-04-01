@@ -55,7 +55,7 @@ if [ -f "$LOCK_FLAG" ]; then
 
         echo "📦 Reinstalling BUA Launcher..."
         sleep 3
-        curl -Ls bit.ly/BUAinstaller | bash
+       curl -Ls install.batoaddons.app | bash
     fi
 
     echo
