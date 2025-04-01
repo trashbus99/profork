@@ -3,7 +3,7 @@
 🛠️ Webapps added back/fixed in Arch Container--easily create your own electron/nativefier apps for ES web menu 
 
 ✔ Create custom web app from *any* site: discord, spotify, luna, twitch, etc.   
-✔ Pick your preferred user-agent  (chrome, firefox, xbox, google tv etc))  
+✔ Pick your preferred user-agent  (chrome, firefox, xbox, google tv etc)
 ✔ Integrated with ES Internet menu  
 ✔ No Google Chrome kiosk hacks (option is there if you want it though). 
 
