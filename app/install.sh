@@ -61,6 +61,26 @@ sleep 1
 
 mv /userdata/roms/ports/bkeys.txt /userdata/roms/ports/Profork.sh.keys
 
+# Set path where .dialogrc should be
+DIALOGRC_PATH="/userdata/system/pro/.dialogrc"
+SPLASH_PATH="/userdata/system/pro/pf.mp4"
+SPLASH_URL="https://github.com/trashbus99/profork/raw/master/.dep/pf.mp4"
+
+# Ensure the pro directory exists
+mkdir -p /userdata/system/pro
+
+# Download .dialogrc if missing
+if [ ! -f "$DIALOGRC_PATH" ]; then
+    echo "Downloading .dialogrc for dialog color customization..."
+    curl -Ls https://github.com/trashbus99/profork/raw/master/.dep/.dialogrc -o "$DIALOGRC_PATH"
+fi
+
+# Download splash video if missing
+if [ ! -f "$SPLASH_PATH" ]; then
+    echo "Downloading Profork splash video..."
+    curl -Ls "$SPLASH_URL" -o "$SPLASH_PATH"
+fi
+
 
 echo "Finished.  You should see Profork in Ports"
 
