@@ -80,6 +80,16 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 
 ![image](https://github.com/user-attachments/assets/96b43db9-719c-4d9c-92f4-90ec79f293f5)
 
+Working XDG in container: E.G. Add Heroic games to steam
+
+![image](https://github.com/user-attachments/assets/7f9fb65c-fa20-4c95-b606-194098cbc206)
+
+
+# Emudeck running in Desktop Mode on Arch Container in Batocera
+![image](https://github.com/user-attachments/assets/209cb77f-ee91-4f34-bb30-af279782bbe0)
+
+# Demo of Desktop Mode by Arcadematicas
+https://www.youtube.com/watch?v=C_-Ij5ADUPw
 
 
 # Standalone Apps*
@@ -201,8 +211,9 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 ![image](https://github.com/user-attachments/assets/6395ba9c-f1c1-48fe-9a84-c0074072387a)
 
 
-# Custom Wine Installer (for v40+)
-![image](https://github.com/user-attachments/assets/4507131e-0942-4247-8da5-1000efaa99ff)
+# New Wine Tools added
+![image](https://github.com/user-attachments/assets/5bcf4c39-2b5f-4d28-89a3-75cd2680e369)
+
 
 # Portmaster*
 *(works on x86_64 [AMD/INTEL] and aarch64 [ARM64] like Raspberry Pis )
