@@ -74,7 +74,7 @@ fi
 
 # === Install BUA launcher ===
 echo "📦 Installing the BUA Addon Launcher..."
-curl -Ls bit.ly/BUAinstaller | bash
+curl -Ls install.batoaddons.app | bash
 
 # === Completion ===
 clear
