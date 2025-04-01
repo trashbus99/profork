@@ -21,7 +21,7 @@ OPTIONS=("1" "Install/Update Arch Container "
          "6" "Addon: Add/Update Lutris Menu & Shortcuts to Emulationstation"
          "7" "Addon: Add/Update Heroic Menu & Shortcuts to Emulationstation"
          "8" "Addon: Add/Update PS4 Menu & Shortcuts to Emulationstation"
-         "9" "Addon: Emudeck (experimental)"
+         "9" "Addon: Emudeck"
          "10" "Addon: Webapps")
 
 # Display the dialog and get the user choice
