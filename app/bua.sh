@@ -85,4 +85,5 @@ echo
 echo "🧠 Profork is a toolkit for advanced users."
 echo "🧸 You chose a support-based experience — enjoy!"
 sleep 10
+killall -9 emulationstation
 exit 0
