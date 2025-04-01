@@ -80,7 +80,7 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 
 ![image](https://github.com/user-attachments/assets/96b43db9-719c-4d9c-92f4-90ec79f293f5)
 
-Working XDG in container: E.G. Add Heroic games to steam
+Working XDG in container: E.G. Add Heroic games to Steam
 
 ![image](https://github.com/user-attachments/assets/7f9fb65c-fa20-4c95-b606-194098cbc206)
 
