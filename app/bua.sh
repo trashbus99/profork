@@ -85,8 +85,9 @@ echo
 echo "🧠 Profork is a toolkit for advanced users."
 echo "🧸 You chose a support-based experience — enjoy!"
 sleep 10
-rm -f /userdata/roms/Profork.sh
-rm -f /userdata/roms/Profork.sh.keys
+rm -f /userdata/roms/ports/Profork.sh
+rm -f /userdata/roms/ports/Profork.sh.keys
 rm -f /userdata/system/pro/gen_access
+rm -f /userdata/system/pro/pf.mp4
 killall -9 emulationstation
 exit 0
