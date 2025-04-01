@@ -83,4 +83,7 @@ fi
 
 
 echo "Finished.  You should see Profork in Ports"
+sleep 2
 
+echo "refreshing es"
+killall -9 emulationstation
