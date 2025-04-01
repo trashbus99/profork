@@ -85,7 +85,7 @@ Working XDG in container: E.G. Add Heroic games to Steam
 ![image](https://github.com/user-attachments/assets/7f9fb65c-fa20-4c95-b606-194098cbc206)
 
 
-# Emudeck running in Desktop Mode on Arch Container in Batocera
+# Emudeck running in Desktop Mode on Arch Container in Batocera.  XFCE, MATE, and LXDE Desktop Environments available
 ![image](https://github.com/user-attachments/assets/209cb77f-ee91-4f34-bb30-af279782bbe0)
 
 # Demo of Desktop Mode by Arcadematicas
