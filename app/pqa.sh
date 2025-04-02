@@ -8,6 +8,8 @@ if [ -f "$PASS_FILE" ]; then
     echo "✅ SBC quiz previously passed. Launching ARM64 Tools Menu..."
     sleep 1
     curl -Ls https://github.com/trashbus99/profork/raw/master/app/arm_menu.sh | bash
+    echo "Thanks for playing! You've earned the right to scoff at overpriced SBCs."
+    echo "Now go get an N100, or maybe even something better."
     exit 0
 fi
 
