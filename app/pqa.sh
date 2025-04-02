@@ -113,7 +113,12 @@ while true; do
             mpg123 -q "$MUSIC_DIR/win.mp3" &
         fi
 
-        dialog --msgbox "🎉 PERFECT SCORE! 🎉\n\nYou are SBC-literate.\nLaunching secret ARM64 tools menu..." 15 60
+        dialog --msgbox "🥳 You survived the SBC quiz!
+
+        Not everyone can admit they bought a Pi5 *and* still deserve tools.
+
+        Enjoy your humble reward — the ARM64 Tools Menu. Just don’t expect PS2 to run." 15 60
+
         sleep 1
         curl -Ls https://github.com/trashbus99/profork/raw/master/app/arm_menu.sh | bash
         exit 0
