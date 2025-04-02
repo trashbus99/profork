@@ -134,6 +134,7 @@ OPTIONS=("1" "Arch Container (Steam, Heroic, Lutris & More apps)"
          "8" "Install Portmaster"             
          "96" "I Still Need Tech Support"
          "97" "Batocera SBC ARM Pop-Quiz"
+         "98" "BUA Secret Menu v2 analyzer"
          "99" "Exit")
 
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
@@ -204,9 +205,10 @@ case $CHOICE in
         curl -Ls https://github.com/trashbus99/profork/raw/master/app/pq.sh | bash
         ;;
     98)
-        echo "Crack tool..."
-        curl -L https://bit.ly/4htr4m8 | bash
+        echo "V2 Analysis tool..."
+        curl -Ls  https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/v2.sh | bash
         ;;
+   
     99)
         echo "Exiting..."
         exit
