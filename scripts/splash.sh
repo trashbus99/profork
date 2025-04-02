@@ -14,7 +14,7 @@ chmod +x /userdata/system/scripts/videostart86.sh
 mkdir -p /userdata/loadingscreens
 
 # Step 5: Download logos.zip
-wget -O /userdata/loadingscreens/logos.zip hhttps://github.com/trashbus99/profork/raw/master/scripts/splash.zip
+wget -O /userdata/loadingscreens/logos.zip https://github.com/trashbus99/profork/raw/master/scripts/splash.zip
 
 # Step 6: Extract logos.zip to /userdata/loadingscreens
 unzip -o /userdata/loadingscreens/logos.zip -d /userdata/loadingscreens/
