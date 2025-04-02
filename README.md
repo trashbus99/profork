@@ -1,6 +1,6 @@
 🚀Recents:
 
-* Added Handbrake to Standlone apps
+* Added Handbrake to Standalone apps
 * Added PS3 trophy sound for RPCS3 in Tools/PS3
 * Added System gametart splash videos  (e.g. start ps3 get ps3 gameboot, xbox360 splash, etc) in tools
 
