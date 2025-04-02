@@ -39,7 +39,6 @@ OPTIONS=("1" "Install Portmaster"
          "6" "Youtube Music (XWAYLAND)"
          "7" "X-Minecraft Launcher (XWAYLAND - EXPERIMENTAL)"
          "8" "Chiaki-NG (XWAYLAND)"
-         "98" "Batocera SBC POP-QUIZ"
          "99" "Exit")
          
 # Display the dialog and get the user choice
