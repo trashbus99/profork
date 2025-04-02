@@ -3,6 +3,7 @@
 * Added Handbrake to Standalone apps
 * Added PS3 trophy sound for RPCS3 in Tools/PS3
 * Added System game start splash videos  (e.g. start ps3 get ps3 gameboot, xbox360 splash, etc) in tools
+  .mp4s located in /userdata/loadingscreens matching system name (e.g. ps3.mp4)
 
 🛠️ Webapps added back/fixed in Arch Container--easily create your own electron/nativefier apps for ES web menu 
 
