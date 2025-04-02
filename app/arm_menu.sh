@@ -33,7 +33,7 @@ sleep 10
 # Define the options
 OPTIONS=("1" "Install Portmaster"
          "2" "Install Librewolf Web Browser (XWAYLAND)"
-         "3" "Install Aethersx2 (Experimental/High-end devices only)"
+         "3" "Install Aethersx2 (For Qualcomm SOC/Retroid Pocket 5 Mini & Odin2 only -- RK3588 OPI5/Gameforce ace - Use Rocknix)"
          "4" "Restore Mame .0139 to v41+"         
          "5" "Youtube TV UI (XWAYLAND)"
          "6" "Youtube Music (XWAYLAND)"
