@@ -263,7 +263,7 @@ Feel free to explore the tools, scripts, and extras — they’re here for peopl
 If you’ve ever opened a terminal on purpose, you’ll be just fine.
 
 Not chasing stars. Not feeding the YouTube hype train.
-No sponsored drama. No fake excitement. Just functional stuff that works.
+No sponsored drama. No secret menus -- but a little humor. Just functional stuff that works.
 
 Don’t expect a helpdesk, and please, no feature wishlists.
 This is a project by and for people who fix their own problems — and maybe even enjoy doing so.
