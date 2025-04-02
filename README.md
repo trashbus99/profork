@@ -291,7 +291,7 @@ Thanks to **Uureel** for much of the original scripting foundation — and for g
 
 Also big thanks to **Kron4ek** for the **Conty (Arch) container**, and to **IVAN-HC** and **Srevinsaju** for their AppImage builds that made integration smoother.
 
-All other components, tools, or assets are under their respective licenses.
+See upstream software source regarding any other licenses.
 
 
 ---
