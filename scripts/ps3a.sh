@@ -1,13 +1,12 @@
-#!/bin/bash
-# Batocera PS3 Game Manager Script
-# Features:
-#   - Compress .ps3 folders to .squashfs (one-by-one selection)
-#   - Decompress .squashfs images to folders (multi-select)
-#   - Download, run, and remove the PSN parser script
+#!/bin/bash 
+
 
 BASE_DIR="/userdata/roms/ps3"
 SCRIPT_URL="https://raw.githubusercontent.com/trashbus99/profork/master/scripts/rpcs3/batocera-rpcs3-sync"
 SCRIPT_PATH="/userdata/system/batocera-rpcs3-sync"
+TROPHY_URL="https://github.com/trashbus99/profork/raw/master/scripts/snd_trophy.wav"
+TROPHY_DIR="/userdata/system/configs/rpcs3/sounds"
+TROPHY_PATH="$TROPHY_DIR/snd_trophy.wav"
 
 # Check for required tools
 for cmd in dialog mksquashfs unsquashfs wget; do
@@ -22,9 +21,10 @@ cd "$BASE_DIR" || { echo "Cannot access PS3 folder: $BASE_DIR"; exit 1; }
 
 # Main Menu
 MODE=$(dialog --clear --title "PS3 Manager" \
-  --menu "Choose an operation:" 15 60 4 \
+  --menu "Choose an operation:" 15 60 5 \
   compress   "Compress .ps3 folders to .squashfs (one-by-one)" \
   decompress "Decompress .squashfs images to folders" \
+  trophy     "Download trophy sound for RPCS3" \
   psn        "Run PSN parser (auto deletes after run)" \
   exit       "Exit script" \
   3>&1 1>&2 2>&3)
@@ -116,6 +116,22 @@ case "$MODE" in
 
     dialog --msgbox "All selected images have been successfully decompressed." 8 50
     ;;
+  trophy)
+    # Create target directory if it doesn't exist
+    if [ ! -d "$TROPHY_DIR" ]; then
+      mkdir -p "$TROPHY_DIR"
+    fi
+
+    dialog --infobox "Downloading trophy sound..." 5 50
+    wget "$TROPHY_URL" -O "$TROPHY_PATH"
+    if [ $? -ne 0 ]; then
+      dialog --msgbox "Trophy sound download failed. Check your connection." 10 50
+      exit 1
+    fi
+
+    chmod 644 "$TROPHY_PATH"
+    dialog --msgbox "Trophy sound downloaded successfully to:\n$TROPHY_PATH" 10 50
+    ;;
   psn)
     echo "Profork PS3 PSN game parser"
     echo "Thanks to uureel"
@@ -143,4 +159,3 @@ esac
 
 clear
 exit 0
-
