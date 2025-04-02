@@ -51,7 +51,8 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 | **Boilr**                      | Steam third-party app add tool            |
 | **Bottles**                    | Wine/Proton GUI Launcher                  |
 | **Brave**                      | Privacy-focused web browser               |
-| **Chiaki**                     | Open-source PS4/5 Remote Play client        |
+| **Chiaki**                     | Open-source PS4/5 Remote Play client      |
+| **Emudeck Addon**              | Emulator/Rom manager for Steam/ES-DE      |
 | **FileManager-PCManFM**        | Lightweight file manager                  |
 | **Filezilla**                  | FTP, FTPS, and SFTP client                |
 | **Firefox**                    | Open-source web browser                   |
@@ -77,6 +78,7 @@ The current scripts here, that were tested mainly in Dec '24/Jan '25--those that
 | **Terminal-Tabby**             | Modern, feature-rich terminal emulator    |
 | **TigerVNC**                   | VNC server and client                     |
 | **VLC**                        | Open-source media player                  |
+| **WebApps Addon**              | Add your own Natifivfied Electron or Chrome apps to ES | 
 | **WineGUI**                    | GUI tools for Wine configuration          |
 
 
