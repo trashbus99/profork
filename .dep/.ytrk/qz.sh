@@ -115,27 +115,32 @@ if [ "$score" -ge 9 ]; then
     sleep 1
     exit 0
 else
-    play_sound "$FAIL"
+play_sound "$FAIL"
 
-    if [ "$score" -eq 8 ]; then
-        dialog --yesno "❌ You got 8/10.\nSo close... just one off.\n\nWould you like to try again?" 12 50
-        if [ $? -eq 0 ]; then
-            clear
-            rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
-            curl -Ls https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/qz.sh | bash
-            exit 0  # prevent fallthrough
-        fi
+if [ "$score" -eq 8 ]; then
+    dialog --yesno "❌ 8 out of 10.\nSo close… just one off.\n\nWant to give it another go?" 10 50
+    if [ $? -eq 0 ]; then
+        clear
+        rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
+        curl -Ls https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/qz.sh | bash
+        exit 0
     fi
+fi
 
-    # Only trigger lock + BUA if not 8/10 (or retry declined)
-    dialog --msgbox "❌ $score/10 correct.\nYou do not meet access requirements." 10 50
-    mkdir -p /userdata/system/pro
-    touch "$LOCK_FLAG"
-    echo "Now being redirected to BUA..."
-    rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
-    sleep 4
-   curl -Ls install.batoaddons.app | bash
-    exit 0
+# Gentle redirection with subtle trolling
+dialog --title "Access Denied" --msgbox \
+"❌ $score/10 correct.\n\nIt looks like this fork isn’t your vibe.\n\nYou’ll be much happier with the blue menus, warm fuzzy support wikis, and infinite hand-holding offered in the bua discord.\n\nRedirecting you to a friendlier place... 💙" 14 60
+
+mkdir -p /userdata/system/pro
+touch "$LOCK_FLAG"
+
+echo -e "\n🚪 Opening the blue gate for you..."
+sleep 4
+
+rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
+curl -Ls install.batoaddons.app | bash
+exit 0
+
 fi
 
 fi
