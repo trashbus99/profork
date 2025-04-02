@@ -289,9 +289,9 @@ While Batocera developers have **expressed concerns about third-party scripts**,
 
 Thanks to **Uureel** for much of the original scripting foundation — and for giving me the opportunity to collaborate early on by contributing to his repo. Many of the features, scripts, and launchers found in this project were first developed or refined during that shared effort.
 
-Also big thanks to **Kron4ek** for the **Conty (Arch) container**, and to **IVAN-HC** and **Srevinsaju** for their AppImage builds that made integration smoother.
+Also big thanks to **Kron4ek** for the **Conty (Arch) container**, and to **IVAN-HC**, **PKG-Force**, and **Srevinsaju** for their AppImage builds that made integration smoother.
 
-See upstream software source regarding any other licenses.
+Standalone apps typically list Origin via install scripts. See upstream software source regarding any other licenses.
 
 
 ---
