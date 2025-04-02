@@ -1,6 +1,6 @@
 🚀Recents:
 
-* Added PS3 trophy sound for RPCS3 in Tools/PS3
+* Added PS3 trophy sounds for RPCS3 in Tools/PS3
 * Added System gametart splash videos  (e.g. start ps3 get ps3 gameboot, xbox360 splash, etc) 
 🛠️ Webapps added back/fixed in Arch Container--easily create your own electron/nativefier apps for ES web menu 
 
@@ -285,11 +285,14 @@ While Batocera developers have **expressed concerns about third-party scripts**,
 
 ---
 
-## 🙌 Thanks  
+## 🙌 Thanks
 
-Thanks to **Uureel** for many of the original scripts and **Kron4ek** for the **Conty (Arch) container**.  
+Thanks to **Uureel** for much of the original scripting foundation — and for giving me the opportunity to collaborate early on by contributing to his repo. Many of the features, scripts, and launchers found in this project were first developed or refined during that shared effort.
 
-Also thanks to **IVAN-HC** and **Srevinsaju** for some of the AppImage builds.  
+Also big thanks to **Kron4ek** for the **Conty (Arch) container**, and to **IVAN-HC** and **Srevinsaju** for their AppImage builds that made integration smoother.
+
+All other components, tools, or assets are under their respective licenses.
+
 
 ---
 
