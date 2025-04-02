@@ -1,7 +1,7 @@
 🚀Recents:
 
 * Added PS3 trophy sound for RPCS3 in Tools/PS3
-* Added System gametart splash videos  (e.g. start ps3 get ps3 gameboot, xbox360 splash, etc) 
+* Added System gametart splash videos  (e.g. start ps3 get ps3 gameboot, xbox360 splash, etc) in tools
 
 🛠️ Webapps added back/fixed in Arch Container--easily create your own electron/nativefier apps for ES web menu 
 
