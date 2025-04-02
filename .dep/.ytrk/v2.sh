@@ -80,5 +80,6 @@ fi
 
 echo
 echo "💫 It’s good to pretend."
-echo "🧸 See you in Secret Menu v3."
+echo "🧸 See you in Secret Menu v3!"
+sleep 5
 rm -f "$tempfile"
