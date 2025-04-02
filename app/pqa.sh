@@ -48,7 +48,7 @@ while true; do
         MUSIC_PID=$!
     fi
 
-    dialog --msgbox "Welcome to the Batocera SBC Pop Quiz!\n\nPress ENTER to begin..." 10 50
+    dialog --msgbox "Welcome to the Batocera SBC Pop Quiz!\n\nPass the quiz to unlock the secret ARM64 tools menu.\n\nGet all 7 questions correct or try again. Good luck!" 11 60
     kill "$MUSIC_PID" 2>/dev/null
 
     # Play Jeopardy music
@@ -69,17 +69,17 @@ while true; do
         B "Runs Crysis" C "Amazing for PS2 emulation" D "NVIDIA drivers supported")
     [ "$ans1" == "A" ] && ((score++))
 
-    ans2=$(dialog --stdout --menu "Q2: What's the current state of Panfrost drivers on OPI5?" 15 60 4 \
+    ans2=$(dialog --stdout --menu "Q2: What's the current state of Panfrost drivers on Orange PI 5?" 15 60 4 \
         A "OpenGL is buggy, Vulkan worse" B "Better than libMali" \
         C "Plays Spider-Man flawlessly" D "Fully supported with ray tracing")
     [ "$ans2" == "A" ] && ((score++))
 
-    ans3=$(dialog --stdout --menu "Q3: Best GPU driver for Mali G610?" 15 60 4 \
+    ans3=$(dialog --stdout --menu "Q3: Which is the best GPU driver for Mali G610?" 15 60 4 \
         A "Android" B "Rocknix with libMali blob" \
         C "Batocera with Panfrost" D "Pi with dreams")
     [ "$ans3" == "A" ] && ((score++))
 
-    ans4=$(dialog --stdout --menu "Q4: Better deal than Pi5 and accesories $120?" 15 60 4 \
+    ans4=$(dialog --stdout --menu "Q4: What's a better deal than Pi5 and accesories \$120?" 15 60 4 \
         A "N100 mini PC" B "\$50 OptiPlex" \
         C "AliExpress handheld" D "All of the above")
     [ "$ans4" == "D" ] && ((score++))
@@ -89,12 +89,12 @@ while true; do
         C "32-bit Portmaster" D "All of the above")
     [ "$ans5" == "D" ] && ((score++))
 
-    ans6=$(dialog --stdout --menu "Bonus: Response to Pi hype?" 15 60 4 \
+    ans6=$(dialog --stdout --menu "What's the proper Response to Pi hype?" 15 60 4 \
         A "Get an N100." B "Try Android" \
         C "Overclock and pray" D "It's about the vibes")
     [ "$ans6" == "A" ] && ((score++))
 
-    ans7=$(dialog --stdout --menu "Bonus: Best thing about x86 SFF PCs?" 15 60 4 \
+    ans7=$(dialog --stdout --menu "What's the Best thing about x86 SFF PCs?" 15 60 4 \
         A "Wine, desktop apps, full emulation" B "Cool BIOS" \
         C "RGB headers" D "No AliExpress spam")
     [ "$ans7" == "A" ] && ((score++))
