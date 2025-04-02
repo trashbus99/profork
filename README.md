@@ -1,5 +1,6 @@
 🚀Recents:
 
+* Added Handbrake to Standlone apps
 * Added PS3 trophy sound for RPCS3 in Tools/PS3
 * Added System gametart splash videos  (e.g. start ps3 get ps3 gameboot, xbox360 splash, etc) in tools
 
@@ -23,7 +24,7 @@
 * Fixed Sublime-Text Installer
 * More Windows/Wine tools added: Easy autorun.cmd, Easy Winetricks, Convert .pc to .wine. Easy compress .wine to wsquashfs/tgz. More ~/wine/exe options.
 * Some more games added
-* Added GIMP
+* Added GIMP to standalone apps
 * Flatpak Game Menu Added
 * ISO to XISO converter added to tools - Converts ISOs in xbox rom folder to XISO format for xemu
 * Added Unleashed Recomp (Sonic Unleashed Engine)
@@ -129,6 +130,7 @@ https://www.youtube.com/watch?v=C_-Ij5ADUPw
 | **GEFORCENOW**                        | Nvidia's cloud gaming service                                |
 | **GIMP**                              | GNU Image editor                                             |
 | **GREENLIGHT**                        | Xbox and Xcloud Remote Play Streamer                          |
+| **Handbrake**                        |  Video transcoding tool.
 | **HARD-INFO**                         | System information and benchmark tool                        |
 | **HYPER**                             | Modern, extensible terminal emulator                        |
 | **JAVA-RUNTIME**                      | Java runtime environment                                     |
