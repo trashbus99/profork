@@ -38,12 +38,6 @@ curl -L bit.ly/profork3 | bash
 
 
 
-I was the previous main collaborator of batocera.pro (Cliffy/Trashbus99) with uureel and did development on that repo--especially with the arch container and 
-docker scripts.
-
-The current scripts here, that were tested mainly in Dec '24/Jan '25--those that are available in the menu system--should be up to date and working as of Jan '25.
-
-
 # Arch Multi-App Container via ES
 
 
