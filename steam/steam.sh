@@ -23,7 +23,7 @@ OPTIONS=("1" "Install/Update Arch Container "
          "8" "Addon: Add/Update PS4 Menu & Shortcuts to Emulationstation"
          "9" "Addon: Emudeck"
          "10" "Addon: Webapps"
-         "99" "Exit to main menu"
+         "99" "Exit to main menu")
 while true; do
 # Display the dialog and get the user choice
 CHOICE=$(dialog --clear --backtitle "Arch Container Management" \
