@@ -23,7 +23,7 @@ OPTIONS=(
   "9" "Compress .wine folder to .wsquashfs or .tgz file"
   "10" "Decompress a .wsquashfs or .tgz file back to .wine folder"
 )
-
+while true; do
 # Use dialog to display the menu
 CHOICE=$(dialog --clear --backtitle "Wine Installation" \
                 --title "Select a Version or tool..." \
@@ -81,3 +81,4 @@ case $CHOICE in
         echo "Invalid choice or no choice made. Exiting."
         ;;
 esac
+   done
