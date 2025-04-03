@@ -22,6 +22,7 @@ OPTIONS=(
   "8" "Convert .pc folder to .wine folder"
   "9" "Compress .wine folder to .wsquashfs or .tgz file"
   "10" "Decompress a .wsquashfs or .tgz file back to .wine folder"
+  "99" "Exit to Main Menu"
 )
 while true; do
 # Use dialog to display the menu
@@ -76,6 +77,10 @@ case $CHOICE in
     10)
         echo "You chose to decompress a .wsquashfs or .tgz file. to a.wine"
         curl -L https://github.com/trashbus99/profork/raw/master/wine-custom/unsquash.sh | bash
+        ;;
+    99)
+        echo "Exiting..."
+        exit
         ;;
     *)
         echo "Invalid choice or no choice made. Exiting."
