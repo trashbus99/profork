@@ -22,7 +22,8 @@ OPTIONS=("1" "Install/Update Arch Container "
          "7" "Addon: Add/Update Heroic Menu & Shortcuts to Emulationstation"
          "8" "Addon: Add/Update PS4 Menu & Shortcuts to Emulationstation"
          "9" "Addon: Emudeck"
-         "10" "Addon: Webapps")
+         "10" "Addon: Webapps"
+         "99" "Exit to main menu"
 while true; do
 # Display the dialog and get the user choice
 CHOICE=$(dialog --clear --backtitle "Arch Container Management" \
@@ -115,7 +116,10 @@ case $CHOICE in
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
         ;;
-    
+     99)
+        echo "Exiting..."
+        exit
+        ;;
     
     *)
         echo "No valid option selected or cancelled. Exiting."
