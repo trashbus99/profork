@@ -1,7 +1,7 @@
 🚀Recents:
 
-* Added QEMU Linux-ARM64 Docker VMS
-* Fixed/Added back QEMU Linux Docker VMs
+* Added QEMU Docker Linux-ARM64 VMs
+* Fixed/Added back QEMU Docker Linux VMs
 * Added Handbrake to Standalone apps
 * Added PS3 trophy sound for RPCS3 in Tools/PS3
 * Added System game start splash videos  (e.g. start ps3 get ps3 gameboot, xbox360 splash, etc) in tools.
