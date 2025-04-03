@@ -23,6 +23,7 @@ EMULATOR_COMMANDS=(
     "batocera-config-vita3k"
     "batocera-config-xenia"
     "batocera-config-xenia-canary"
+    "filemanagerlauncher"
 )
 
 for cmd in "${EMULATOR_COMMANDS[@]}"; do
