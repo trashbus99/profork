@@ -23,7 +23,7 @@ OPTIONS=("1" "Install/Update Arch Container "
          "8" "Addon: Add/Update PS4 Menu & Shortcuts to Emulationstation"
          "9" "Addon: Emudeck"
          "10" "Addon: Webapps")
-
+while true; do
 # Display the dialog and get the user choice
 CHOICE=$(dialog --clear --backtitle "Arch Container Management" \
                 --title "Main Menu" \
@@ -121,3 +121,4 @@ case $CHOICE in
         echo "No valid option selected or cancelled. Exiting."
         ;;
 esac
+   done
