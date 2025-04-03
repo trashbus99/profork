@@ -136,7 +136,7 @@ OPTIONS=("1" "Arch Container (Steam, Heroic, Lutris & More apps)"
          "97" "Batocera SBC ARM Pop-Quiz"
          "98" "BUA Secret Menu v2 analyzer"
          "99" "Exit")
-
+while true; do
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
                 --title "Main Menu" \
                 --menu "Choose an option:" 20 80 3 \
@@ -216,4 +216,5 @@ case $CHOICE in
     *)
         echo "No valid option selected or cancelled. Exiting."
         ;;
-esac
+    esac
+done
