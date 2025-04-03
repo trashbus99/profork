@@ -101,7 +101,8 @@ apps=(
     ["WINDOWS-VMS/DOCKER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/docker/win.sh | bash"
     ["LINUX-DESKTOPS-WEB/DOCKER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/docker/webtop.sh | bash"
     ["SYSTEMTOOLS-WETTY-GLANCES-FILEMANAGER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/docker/systools.sh | bash"
-
+    ["LINUX-VMS-QEMU"]="curl -Ls https://github.com/trashbus99/profork/raw/master/docker/qemu.sh | bash"
+    ["LINUX-VMS-QEMU-ARM64"]="curl -Ls https://github.com/trashbus99/profork/raw/master/docker/qemu-arm.sh | bash"
     # Add other apps here
 )
 
