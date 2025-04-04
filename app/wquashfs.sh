@@ -108,6 +108,8 @@ apps=(
     ["STREET-FIGHTER-X-MEGA-MAN/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/sfxmm.sh | bash"
     ["SONIC-AND-THE-FALLEN-STAR/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/safs.sh | bash"
     ["TROGDOR-REBURNIATED/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/tr.sh | bash"
+    ["PullyWogTog/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/releases/download/r1/pullyWogPog.wtgz | bash"
+    ["SUPERCRATEBOX/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/releases/download/r1/SuperCratebox.wtgz | bash"
     # Add other apps here
 )
 
