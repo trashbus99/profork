@@ -219,11 +219,7 @@ https://www.youtube.com/watch?v=C_-Ij5ADUPw
 ![image](https://github.com/user-attachments/assets/5bcf4c39-2b5f-4d28-89a3-75cd2680e369)
 
 
-# Portmaster*
-*(works on x86_64 [AMD/INTEL] and aarch64 [ARM64] like Raspberry Pis )
 
-*(aarch64 has more apps available than x86_64, but is lacking 32-bit app support due to batocera missing 32-bit libs unlike Rocknix, Knulli Firefly, and muOS)
-![image](https://github.com/user-attachments/assets/0c4864da-764b-4cb5-8f2a-3ed3abe1b549)
 
 Webapps. Add your own websites full screen launchers (electron/nativefier) to main menu via arch container. Spotify, retrogame sites, xcloud, you name it!
 ![image](https://github.com/user-attachments/assets/5a76ecdd-c991-4dc7-a517-c40bb6e9d1f0)
