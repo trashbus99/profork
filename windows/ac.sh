@@ -4,7 +4,7 @@
 URL="https://github.com/trashbus99/profork/releases/download/r1/alleycat-remeow.wtgz"
 KEYS_URL=""  # Leave empty if no keys file is needed
 DEST_DIR="/userdata/roms/windows"
-MESSAGE="https://github.com/trashbus99/profork/releases/download/r1/SuperCratebox.wtgz"  # Leave empty if no message is needed
+MESSAGE="Alley Cat-- Set video 1024x768 for better size"  # Leave empty if no message is needed
 
 # Ensure destination directory exists
 mkdir -p "$DEST_DIR"
