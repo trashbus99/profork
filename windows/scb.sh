@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Define your variables for easy customization
-URL="https://github.com/trashbus99/profork/releases/download/r1/alleycat-remeow.wtgz"
+URL="https://github.com/trashbus99/profork/releases/download/r1/SuperCratebox.wtgz"
 KEYS_URL=""  # Leave empty if no keys file is needed
 DEST_DIR="/userdata/roms/windows"
-MESSAGE="https://github.com/trashbus99/profork/releases/download/r1/SuperCratebox.wtgz"  # Leave empty if no message is needed
+MESSAGE=""  # Leave empty if no message is needed
 
 # Ensure destination directory exists
 mkdir -p "$DEST_DIR"
