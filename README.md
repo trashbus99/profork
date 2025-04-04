@@ -198,6 +198,7 @@ https://www.youtube.com/watch?v=C_-Ij5ADUPw
 | **EMBY-SERVER/DOCKER**                     | Media server for managing and streaming personal media        |
 | **JELLYFIN-SERVER/DOCKER**                 | Open-source media server for streaming and organizing media   |
 | **LINUX-DESKTOPS-RDP/DOCKER**              | Dockerized Linux desktops with RDP access                    |
+| **LINUX-QEMU-VMs**                         | Linux VMS via Web VNC                                        |
 | **NETBOOT-XYZ-SERVER/DOCKER**              | Netboot.xyz server for network-based booting                 |
 | **NEXTCLOUD-SERVER/DOCKER**                | Private cloud server for file storage and sharing            |
 | **PLEX-SERVER/DOCKER**                     | Popular media server for streaming and managing personal media |
