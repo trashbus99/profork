@@ -77,6 +77,7 @@ display_controls
 declare -A apps
 apps=(
     # ... (populate with your apps as shown before)
+    ["Alleycat-Remeow-(Remake)/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/ac.sh | bash"
     ["Celeste-Classic/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/celeste.sh | bash" 
     ["Celeste-64/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/celeste64/c64.sh | bash"
     ["Apotris/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/apotris.sh | bash"
@@ -98,7 +99,7 @@ apps=(
     ["AM2R/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/a2r.sh | bash"
     ["Z2-ADV-OF-LNK-Remake/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/z2r.sh | bash"
     ["TLOZ-DUNGEONS-OF-INFINITY/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/doi.sh | bash"
-    ["HYDORA/CONTAINER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/hydorah/hydorah.sh | bash"
+    ["HYDORA/WINDOWS-IN-CONTAINER"]="curl -Ls https://github.com/trashbus99/profork/raw/master/hydorah/hydorah.sh | bash"
     ["CRASH-BANDICOOT-BACK-IN-TIME/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/cbit.sh | bash"
     ["MODERN-MODERN-CHEF/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/mmc.sh | bash"
     ["SONIC-TRIPLE-TROUBLE/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/stt.sh | bash"
