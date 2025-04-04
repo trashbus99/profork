@@ -110,6 +110,7 @@ apps=(
     ["TROGDOR-REBURNIATED/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/tr.sh | bash"
     ["PullyWogTog/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/releases/download/r1/pullyWogPog.wtgz | bash"
     ["SUPERCRATEBOX/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/releases/download/r1/SuperCratebox.wtgz | bash"
+    ["MEGAMAN-ROCK-N-ROLL/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/mmrnr.sh | bash"
     # Add other apps here
 )
 
