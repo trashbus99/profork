@@ -29,7 +29,7 @@ CHOICE=$(<"$TMPFILE")
 # Step 4: Ask what to do
 dialog --title "Boot Option" --menu "Choose what to do:" 15 75 5 \
     "next" "Boot this entry once (safe)" \
-    "default" "Change default boot order (manual fix needed!)" \
+    "default" "Change default boot order (manual change in BIOS needed to return!)" \
     "create" "Make a reboot-to-entry launcher in Ports" 2>"$TMPFILE"
 MODE=$(<"$TMPFILE")
 [ -z "$MODE" ] && exit 1
