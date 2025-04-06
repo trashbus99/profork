@@ -1,5 +1,6 @@
 🚀Recents:
 
+* Easy Reboot to a different OS from ports via EFIBOOT menu added to tools
 * Added QEMU Docker Linux-ARM64 VMs
 * Fixed/Added back QEMU Docker Linux VMs
 * Added Handbrake to Standalone apps
