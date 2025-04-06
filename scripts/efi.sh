@@ -24,16 +24,16 @@ if [ ${#menu_items[@]} -eq 0 ]; then
 fi
 
 # Step 3: Ask user to pick a boot entry
-dialog --title "Select Boot Entry" --menu "Choose a boot entry:" 20 60 10 "${menu_items[@]}" 2>"$TMPFILE"
+dialog --title "Select Boot Entry" --menu "Choose a boot entry:" 30 75 10 "${menu_items[@]}" 2>"$TMPFILE"
 CHOICE=$(<"$TMPFILE")
 
 # If user cancels
 [ -z "$CHOICE" ] && exit 1
 
 # Step 4: Ask if one-time reboot (-n) or permanent change (-o)
-dialog --title "Boot Option" --menu "How do you want to reboot?" 15 60 5 \
+dialog --title "Boot Option" --menu "How do you want to reboot?" 15 75 5 \
     "next" "Boot this entry once (safe)" \
-    "default" "Change default boot order (manual fix needed!)" 2>"$TMPFILE"
+    "default" "Change default boot order (indefinitely)" 2>"$TMPFILE"
 MODE=$(<"$TMPFILE")
 
 [ -z "$MODE" ] && exit 1
