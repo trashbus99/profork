@@ -98,6 +98,7 @@ apps=(
     ["BATOCERA-CLI/RUN-TO-SEE-ENCLOSED-TOOLS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/docker/cli_install.sh | bash"
     ["DARK-MODE/F1"]="curl -Ls https://github.com/trashbus99/profork/raw/master/dark/dark.sh | bash"
 #    ["DECKY/FOR-ARCH-&-FLATPAK-STEAM"]="curl -Ls https://raw.githubusercontent.com/trashbus99/profork/refs/heads/master/scripts/decky.sh | bash"
+    ["EFIBOOTMGR-EASY-REBOOT-OTHER-OS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/scripts/ei.sh | bash"
     ["LIVECAPTIONS/SERVICE"]="curl -Ls https://github.com/trashbus99/profork/raw/master/livecaptions/livecaptions.sh | bash"
     ["MAME0139/v41+/AMD/INTEL/ARM64"]="curl -Ls https://github.com/trashbus99/profork/raw/master/mame2010_v41+/2010.sh | bash"
     ["NVTOP"]="curl -Ls https://github.com/trashbus99/profork/raw/master/nvtop/nvtop.sh | bash"
