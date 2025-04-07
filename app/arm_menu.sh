@@ -39,6 +39,8 @@ OPTIONS=("1" "Install Portmaster"
          "6" "Youtube Music (XWAYLAND)"
          "7" "X-Minecraft Launcher (XWAYLAND - EXPERIMENTAL)"
          "8" "Chiaki-NG (XWAYLAND)"
+         "9" "Amzaon-Luna (XWAYLAND)"
+         "10" "Xcloud (XWAYLAND)"
          "99" "Exit")
          
 # Display the dialog and get the user choice
@@ -85,12 +87,15 @@ case $CHOICE in
         curl -Ls https://github.com/trashbus99/profork/raw/master/chiaki/chiaki-arm64.sh | bash
         ;;
 
-    98)
-       echo "Pop-Quiz...loading.."
-       curl -Ls https://github.com/trashbus99/profork/raw/master/app/pq.sh | bash
-        ;;
-    
-    99)
+    9) echo "Amazon-Luna..."
+       curl -Ls https://github.com/trashbus99/profork/raw/master/amazonluna/amazonluna-arm64.sh | bash
+       ;;
+   
+   10) echo "Xcloud..."
+       curl -Ls https://github.com/trashbus99/profork/raw/master/xcloud/xcloud-arm64.sh
+       ;;
+           
+   99)
         echo "Exiting..."
            exit
         ;;
