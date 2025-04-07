@@ -9,12 +9,11 @@ APPNAME="CHROMIUM WEB BROWSER" # for installer info
 appname=chromium # directory name in /userdata/system/pro/...
 AppName=Chromium # App.AppImage name
 APPPATH=/userdata/system/pro/$appname/$AppName.AppImage
-APPLINK=$(curl -s https://api.github.com/repos/ivan-hc/Chromium-Web-Browser-appimage/releases | jq -r '.[] .assets[] | select(.name | endswith(".AppImage")) | .browser_download_url' | grep stable)
-
+APPLINK=https://ungoogled-software.github.io/ungoogled-chromium-binaries/releases/appimage/64bit
 #ver=$(curl https://ungoogled-software.github.io/ungoogled-chromium-binaries/releases/appimage/64bit/ | grep 'appimage' | grep '</li>' | head -n1 | sed 's,^.*">,,g' |
 #cut -d "<" -f1)
 #APPLINK="https://github.com/ungoogled-software/ungoogled-chromium-portablelinux/releases/download/$ver/ungoogled-chromium_$ver.AppImage"
-ORIGIN=github.com/repos/ivan-hc/Chromium-Web-Browser-appimage # credit & info
+ORIGIN=ungoogled-software.github.io # credit & info
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
