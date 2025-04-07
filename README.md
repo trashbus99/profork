@@ -1,5 +1,6 @@
 🚀Recents:
 
+* Amazon-Luna and Xcloud added to ARM64 (aarch64)
 * Easy Reboot to a different OS from ports via EFIBOOT menu added to tools
 * Added QEMU Docker Linux-ARM64 VMs
 * Fixed/Added back QEMU Docker Linux VMs
@@ -105,7 +106,7 @@ https://www.youtube.com/watch?v=C_-Ij5ADUPw
 | **7ZIP**                              | File archiver with a high compression ratio                  |
 | **AETHERSX2**                         | PS2 Emulator for ARM DEVICES (HIGH-END)
 | **ALTUS**                             | Desktop client for Google Meet and messaging services        |
-| **AMAZON-LUNA**                       | Amazon's cloud gaming service                                |
+| **AMAZON-LUNA**                       | Amazon's cloud gaming service (ARM64 Available)              |
 | **ANTIMICROX**                        | Gamepad mapping and customization tool                       |
 | **APPLEWIN/WINE**                     | Apple II emulator                                            |
 | **ARCADE-MANAGER**                    | ROM management Tool                                          |
@@ -180,7 +181,7 @@ https://www.youtube.com/watch?v=C_-Ij5ADUPw
 | **VLC**                               | Open-source media player                                   |
 | **WHATSAPP**                          | Messaging app                                              |
 | **WIIUPLUS/NEWEST-CEMU/Works Up to v40**     | Wii U emulator                                      |      
-| **XCLOUD**                            | Electron based Xcloud client (Gamepad Navigatable)        |
+| **XCLOUD**                            | Electron based Xcloud client (Gamepad Navigatable) (ARM64 Available  |
 | **X-MINECRAFT-LAUNCHER**              | Minecraft Launcher (EXPERIMENTAL/ARM64)                   |
 | **WPS-OFFICE**                        | Office suite                                              |
 | **YARG**                              | Yet Another Rhythm Game                                   |
