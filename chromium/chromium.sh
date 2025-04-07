@@ -14,7 +14,7 @@ APPLINK=$(curl -s https://api.github.com/repos/ivan-hc/Chromium-Web-Browser-appi
 #ver=$(curl https://ungoogled-software.github.io/ungoogled-chromium-binaries/releases/appimage/64bit/ | grep 'appimage' | grep '</li>' | head -n1 | sed 's,^.*">,,g' |
 #cut -d "<" -f1)
 #APPLINK="https://github.com/ungoogled-software/ungoogled-chromium-portablelinux/releases/download/$ver/ungoogled-chromium_$ver.AppImage"
-ORIGIN=ungoogled-software.github.io # credit & info
+ORIGIN=github.com/repos/ivan-hc/Chromium-Web-Browser-appimage # credit & info
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
 # --------------------------------------------------------------------
