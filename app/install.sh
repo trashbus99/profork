@@ -55,7 +55,7 @@ wget  https://github.com/trashbus99/profork/raw/master/app/bkeys.txt -P /userdat
 chmod +x /userdata/roms/ports/Profork.sh
 
 
-killall -9 emulationstation
+
 
 sleep 1
 
@@ -82,8 +82,8 @@ if [ ! -f "$SPLASH_PATH" ]; then
 fi
 
 
-echo "Finished.  You should see Profork in Ports"
+echo "Finished.  You should see Profork in Ports. "
 sleep 2
 
-echo "refreshing es"
-killall -9 emulationstation
+echo "(START ➔ GAME SETTINGS ➔ UPDATE GAME LIST) to see in ports."
+
