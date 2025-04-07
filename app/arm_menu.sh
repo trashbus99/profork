@@ -92,7 +92,7 @@ case $CHOICE in
        ;;
    
    10) echo "Xcloud..."
-       curl -Ls https://github.com/trashbus99/profork/raw/master/xcloud/xcloud-arm64.sh
+       curl -Ls https://github.com/trashbus99/profork/raw/master/xcloud/xcloud-arm64.sh | bash
        ;;
            
    99)
