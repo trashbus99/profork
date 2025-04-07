@@ -31,7 +31,7 @@ APPLINK=https://github.com/trashbus99/profork/releases/download/r1/luna.aarch64.
 APPHOME=github.com/trashbus99/PROFORK
 #---------------------------------------------------------------------
 #       DEFINE LAUNCHER COMMAND >>
-COMMAND='mkdir /userdata/system/pro/'$APPNAME'/home 2>/dev/null; mkdir /userdata/system/pro/'$APPNAME'/config 2>/dev/null; mkdir /userdata/system/pro/'$APPNAME'/roms 2>/dev/null; LD_LIBRARY_PATH="/userdata/system/pro/.dep:${LD_LIBRARY_PATH}" HOME=/userdata/system/pro/'$APPNAME'/home XDG_CONFIG_HOME=/userdata/system/pro/'$APPNAME'/config QT_SCALE_FACTOR="1" GDK_SCALE="1" XDG_DATA_HOME=/userdata/system/pro/'$APPNAME'/home DISPLAY=:0.0 /userdata/system/pro/'$APPNAME'/luna --no-sandbox "${@}"'
+COMMAND='mkdir /userdata/system/pro/'$APPNAME'/home 2>/dev/null; mkdir /userdata/system/pro/'$APPNAME'/config 2>/dev/null; mkdir /userdata/system/pro/'$APPNAME'/roms 2>/dev/null; LD_LIBRARY_PATH="/userdata/system/pro/.dep:${LD_LIBRARY_PATH}" HOME=/userdata/system/pro/'$APPNAME'/home XDG_CONFIG_HOME=/userdata/system/pro/'$APPNAME'/config QT_SCALE_FACTOR="1" GDK_SCALE="1" XDG_DATA_HOME=/userdata/system/pro/'$APPNAME'/home DISPLAY=:0.0 /userdata/system/pro/'$APPNAME'/amazonluna --no-sandbox "${@}"'
 #--------------------------------------------------------------------- 
 ######################################################################
 ######################################################################
@@ -149,7 +149,7 @@ line $cols '/'; echo
 line $cols '\'; echo
 echo
 sleep 0.33
-echo -e "${X}THIS WILL INSTALL luna FOR BATOCERA"
+echo -e "${X}THIS WILL INSTALL AMAZON LUNA FOR BATOCERA"
 echo -e "${X}USING $ORIGIN"
 echo
 echo -e "${X}$APPNAME WILL BE AVAILABLE IN PORTS"
@@ -259,7 +259,7 @@ echo -e "${W}PROFORK/${G}$APPNAME${W} INSTALLER ${W}"
 echo; #echo -e "${W}- - -"
 echo; #echo -e "${W}- - -"
 echo;
-echo -e "${W}THIS WILL INSTALL luna FOR BATOCERA"
+echo -e "${W}THIS WILL INSTALL AMAZON LUNA FOR BATOCERA"
 echo -e "${W}USING $ORIGIN"
 echo
 echo -e "${W}$APPNAME WILL BE AVAILABLE IN PORTS"
@@ -342,7 +342,7 @@ chmod a+x $shortcut
 cp $shortcut $f1shortcut 2>/dev/null
 # --------------------------------------------------------------------
 # -- prepare Ports file, 
-port="/userdata/roms/ports/luna.sh" 
+port="/userdata/roms/ports/Amazon-Luna.sh" 
 rm $port 2>/dev/null
 echo '#!/bin/bash ' >> $port
 echo 'killall -9 luna && unclutter-remote -s' >> $port
@@ -351,8 +351,8 @@ dos2unix $port
 chmod a+x $port 
 # --------------------------------------------------------------------
 # -- get padtokey profile
-rm "/userdata/roms/ports/luna.sh.keys" 
-wget -q -O "/userdata/roms/ports/luna.sh.keys" "https://github.com/trashbus99/profork/raw/master/xcloud/extra/xcloud.sh.keys"
+rm "/userdata/roms/ports/Amazon-Luna.sh.keys" 
+wget -q -O "/userdata/roms/ports/Amazon-Luna.sh.keys" "https://github.com/trashbus99/profork/raw/master/xcloud/extra/xcloud.sh.keys"
 # --------------------------------------------------------------------
 # -- prepare prelauncher to avoid overlay,
 pre=/userdata/system/pro/$appname/extra/startup
