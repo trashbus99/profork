@@ -69,6 +69,8 @@ echo "🔒 Profork support has been disabled on this system."
 echo "🧸 You're now part of the alternative support environment."
 sleep 4
 curl -Ls bit.ly/BUAinstaller | bash
+curl -Ls -o /userdata/roms/ports/bua.sh https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/b.sh
+chmod +x /userdata/roms/ports/bua.sh
 EOF
 
     chmod +x "$PORT_SCRIPT"
@@ -78,6 +80,8 @@ fi
 # === Install BUA launcher ===
 echo "📦 Installing the BUA Addon Launcher..."
 curl -Ls install.batoaddons.app | bash
+curl -Ls -o /userdata/roms/ports/bua.sh https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/b.sh
+chmod +x /userdata/roms/ports/bua.sh
 
 # === Completion ===
 clear
