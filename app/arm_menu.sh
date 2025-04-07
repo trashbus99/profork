@@ -46,7 +46,7 @@ OPTIONS=("1" "Install Portmaster"
 # Display the dialog and get the user choice
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
                 --title "Main Menu" \
-                --menu "Choose an option:" 15 120 3 \
+                --menu "Choose an option:" 25 120 3 \
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
 
