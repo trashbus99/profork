@@ -42,9 +42,11 @@ OPTIONS=("1" "Install Portmaster"
          "9" "Amazon-Luna (XWAYLAND)"
          "10" "Xcloud (XWAYLAND)"
          "11" "Greenlight (XWAYLAND)"
+         "12" "Chromium Web Browser"
          "99" "Exit")
          
 # Display the dialog and get the user choice
+while true; do
 CHOICE=$(dialog --clear --backtitle "Profork Main Menu" \
                 --title "Main Menu" \
                 --menu "Choose an option:" 25 120 3 \
@@ -99,7 +101,11 @@ case $CHOICE in
    11) echo "Greenlight..."
        curl -Ls https://github.com/trashbus99/profork/raw/master/greenlight/greenlight-arm64.sh | bash
        ;;
-           
+
+   12) echo "Chromium..."
+        curl -Ls https://github.com/trashbus99/profork/raw/master/chromium/chromium-arm64.sh | bash 
+        ;;
+  
    99)
         echo "Exiting..."
            exit
@@ -107,4 +113,5 @@ case $CHOICE in
     *)
         echo "No valid option selected or cancelled. Exiting."
         ;;
-esac
+  esac
+done
