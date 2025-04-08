@@ -352,7 +352,7 @@ chmod a+x $port
 # --------------------------------------------------------------------
 # -- get padtokey profile
 rm "/userdata/roms/ports/Geforce-Now.sh.keys" 
-wget -q -O "/userdata/roms/ports/Geforce-Now.sh.keys" "https://github.com/trashbus99/profork/raw/master/geforcenow/extra/Geforce-Now.sh.keys"
+wget -q -O "/userdata/roms/ports/Geforce-Now.sh.keys" "https://github.com/trashbus99/profork/raw/master/xcloud/extra/xcloud.sh.keys"
 # --------------------------------------------------------------------
 # -- prepare prelauncher to avoid overlay,
 pre=/userdata/system/pro/$appname/extra/startup
