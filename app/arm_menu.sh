@@ -41,6 +41,7 @@ OPTIONS=("1" "Install Portmaster"
          "8" "Chiaki-NG (XWAYLAND)"
          "9" "Amzaon-Luna (XWAYLAND)"
          "10" "Xcloud (XWAYLAND)"
+         "11" "Greenlight (XWAYLAND)"
          "99" "Exit")
          
 # Display the dialog and get the user choice
@@ -93,6 +94,10 @@ case $CHOICE in
    
    10) echo "Xcloud..."
        curl -Ls https://github.com/trashbus99/profork/raw/master/xcloud/xcloud-arm64.sh | bash
+       ;;
+
+   11) echo "Greenlight..."
+       curl -Ls https://github.com/trashbus99/profork/raw/master/greenlight/greenlight-arm64.sh | bash
        ;;
            
    99)
