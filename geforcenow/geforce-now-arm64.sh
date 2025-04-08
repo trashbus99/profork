@@ -31,7 +31,40 @@ APPLINK=https://github.com/trashbus99/profork/releases/download/r1/geforcenow.aa
 APPHOME=github.com/trashbus99/PROFORK
 #---------------------------------------------------------------------
 #       DEFINE LAUNCHER COMMAND >>
-COMMAND='mkdir /userdata/system/pro/'$APPNAME'/home 2>/dev/null; mkdir /userdata/system/pro/'$APPNAME'/config 2>/dev/null; mkdir /userdata/system/pro/'$APPNAME'/roms 2>/dev/null; LD_LIBRARY_PATH="/userdata/system/pro/.dep:${LD_LIBRARY_PATH}" HOME=/userdata/system/pro/'$APPNAME'/home XDG_CONFIG_HOME=/userdata/system/pro/'$APPNAME'/config QT_SCALE_FACTOR="1" GDK_SCALE="1" XDG_DATA_HOME=/userdata/system/pro/'$APPNAME'/home DISPLAY=:0.0 /userdata/system/pro/'$APPNAME'/geforcenow --no-sandbox "${@}"'
+COMMAND='
+LIBREWOLF_APPIMAGE="/userdata/system/pro/librewolf/librewolf.AppImage"
+
+# Create a fake xdg-open
+cat > /tmp/xdg-open << "EOT"
+#!/bin/bash
+LIBREWOLF_APPIMAGE="/userdata/system/pro/librewolf/librewolf.AppImage"
+if echo "$1" | grep -qE "^https?://"; then
+    "$LIBREWOLF_APPIMAGE" --appimage-extract-and-run "$1"
+else
+    echo "xdg-open: Unsupported input: $1"
+fi
+EOT
+chmod +x /tmp/xdg-open
+
+# Prepend /tmp to PATH so our fake xdg-open is used
+export PATH="/tmp:$PATH"
+
+# Create folders
+mkdir -p /userdata/system/pro/'$APPNAME'/home
+mkdir -p /userdata/system/pro/'$APPNAME'/config
+mkdir -p /userdata/system/pro/'$APPNAME'/roms
+
+# Launch GeForce Now with environment variables
+LD_LIBRARY_PATH="/userdata/system/pro/.dep:${LD_LIBRARY_PATH}" \
+HOME=/userdata/system/pro/'$APPNAME'/home \
+XDG_CONFIG_HOME=/userdata/system/pro/'$APPNAME'/config \
+QT_SCALE_FACTOR="1" \
+GDK_SCALE="1" \
+XDG_DATA_HOME=/userdata/system/pro/'$APPNAME'/home \
+DISPLAY=:0.0 \
+/userdata/system/pro/'$APPNAME'/geforcenow --no-sandbox "${@}"
+'
+
 #--------------------------------------------------------------------- 
 ######################################################################
 ######################################################################
