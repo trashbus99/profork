@@ -16,7 +16,7 @@
 ✔ Create custom web app from *any* site: discord, spotify, luna, twitch, etc.   
 ✔ Pick your preferred user-agent  (chrome, firefox, xbox, google tv etc)
 ✔ Integrated with ES Internet menu  
-✔ No Google Chrome kiosk hacks (option is there if you want it though). 
+✔ No Google Chrome kiosk hacks (option is there if you want it though for widevine support). 
 
 ![image](https://github.com/user-attachments/assets/38c146fb-29f4-4047-a294-8eda1dcc818c)
 ![image](https://github.com/user-attachments/assets/0e19f2c5-e648-48b7-9bdb-9ada9c5d0120)
