@@ -1,5 +1,6 @@
 🚀Recents:
 
+* Chromium ARM64 (aarch64) added
 * Greenlight ARM64 (aarch64) added
 * Amazon-Luna and Xcloud added to ARM64 (aarch64)
 * Easy Reboot to a different OS from ports via EFIBOOT menu added to tools
@@ -118,6 +119,7 @@ https://www.youtube.com/watch?v=C_-Ij5ADUPw
 | **BRAVE**                             | Privacy-focused web browser                                  |
 | **CHIAKI-NG**                         | Open-source PS4/PS5 Remote Play client (ARM64 also available) |
 | **CHROME**                            | Popular web browser by Google                                |
+| **CHROMIUM**                          | Chromium Web Browser (ARM64 Only)                            |
 | **CLONE HERO**                        | Guitar/Music Game                                            |
 | **CPU-X**                             | System profiling and monitoring application                  |
 | **DISCORD**                           | Voice, video, and text chat app                              |
