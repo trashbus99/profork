@@ -1,5 +1,6 @@
 🚀Recents:
 
+* Greenlight ARM64 (aarch64) added
 * Amazon-Luna and Xcloud added to ARM64 (aarch64)
 * Easy Reboot to a different OS from ports via EFIBOOT menu added to tools
 * Added QEMU Docker Linux-ARM64 VMs
@@ -128,7 +129,7 @@ https://www.youtube.com/watch?v=C_-Ij5ADUPw
 | **FOOBAR2000**                        | Lightweight and customizable audio player                    |
 | **GEFORCENOW**                        | Nvidia's cloud gaming service                                |
 | **GIMP**                              | GNU Image editor                                             |
-| **GREENLIGHT**                        | Xbox and Xcloud Remote Play Streamer                          |
+| **GREENLIGHT**                        | Xbox and Xcloud Remote Play Streamer (ARM64 Available)        |
 | **Handbrake**                        |  Video transcoding tool.
 | **HARD-INFO**                         | System information and benchmark tool                        |
 | **HYPER**                             | Modern, extensible terminal emulator                        |
