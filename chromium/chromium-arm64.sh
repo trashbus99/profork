@@ -27,7 +27,7 @@ sleep 2
 #--------------------------------------------------------------------- 
 #       DEFINE APP INFO >> 
 APPNAME=chromium
-APPLINK=https://github.com/trashbus99/profork/releases/download/r1/chromium.aarch64.tar.gzgz
+APPLINK=https://github.com/trashbus99/profork/releases/download/r1/chromium.aarch64.tar.gz
 APPHOME=github.com/trashbus99/PROFORK
 #---------------------------------------------------------------------
 #       DEFINE LAUNCHER COMMAND >>
