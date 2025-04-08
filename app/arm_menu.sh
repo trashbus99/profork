@@ -39,7 +39,7 @@ OPTIONS=("1" "Install Portmaster"
          "6" "Youtube Music (XWAYLAND)"
          "7" "X-Minecraft Launcher (XWAYLAND - EXPERIMENTAL)"
          "8" "Chiaki-NG (XWAYLAND)"
-         "9" "Amzaon-Luna (XWAYLAND)"
+         "9" "Amazon-Luna (XWAYLAND)"
          "10" "Xcloud (XWAYLAND)"
          "11" "Greenlight (XWAYLAND)"
          "99" "Exit")
