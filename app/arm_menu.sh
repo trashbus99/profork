@@ -42,7 +42,7 @@ OPTIONS=("1" "Install Portmaster"
          "9" "Amazon-Luna (XWAYLAND)"
          "10" "Xcloud (XWAYLAND)"
          "11" "Greenlight (XWAYLAND)"
-         "12" "Chromium Web Browser"
+         "12" "Chromium Web Browser (XWAYLAND)"
          "99" "Exit")
          
 # Display the dialog and get the user choice
