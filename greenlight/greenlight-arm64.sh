@@ -27,7 +27,7 @@ sleep 2
 #--------------------------------------------------------------------- 
 #       DEFINE APP INFO >> 
 APPNAME=greenlight
-APPLINK=https://github.com/trashbus99/profork/releases/download/r1/greenlight.aarch64.tar.gzz
+APPLINK=https://github.com/trashbus99/profork/releases/download/r1/greenlight.aarch64.tar.gz
 APPHOME=github.com/trashbus99/PROFORK
 #---------------------------------------------------------------------
 #       DEFINE LAUNCHER COMMAND >>
