@@ -47,7 +47,7 @@ steam-native-runtime gamemode pax-utils lib32-gamemode jre-openjdk lxterminal \
 mangohud thunderbird gimp audacity lib32-mangohud kodi ksysguard ark kate okular breeze breeze-gtk  \
 qt5-wayland xorg-server-xephyr openbox binutils emby-theater \
 xdotool xbindkeys gparted vlc smplayer mpv fish zsh xmlstarlet nvtop duf exa systemsettings dolphin  \
-legendary gamescope  minizip flatpak libreoffice rsync  \
+legendary gamescope  minizip flatpak libreoffice rsync sdl_mixer sdl_image sdl_ttf sdl_gfx \
 xorg-server xorg-xinit xorg-xrandr xorg-xhost xorg-xdpyinfo \
 ripgrep i7z sd bandwhich tre zoxide p7zip atop iftop sysstat totem feh krename  \
 bottles bauh flatseal rebuild-detector ccache axel breeze xorg-xdpyinfo dua-cli  \
