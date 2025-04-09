@@ -96,14 +96,14 @@ apps=(
     ["MEGAMAN-ROCK-N-ROLL/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/mmrnr.sh | bash"
     ["GLOBEBA/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/glba.sh | bash"
     ["FLARE-RPG"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/flare.sh | bash"
+    ["OPENRA-CNC-TIBERIAN-DAWN/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/td.sh | bash"
+    ["OPENRA-CNC-RED-ALERT/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/ra.sh | bash"
+    ["OPENRA-DUNE-2000/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/d2k.sh | bash"
+    ["ENDLESS-SKY/LINUX"]="https://github.com/trashbus99/profork/raw/master/endlesssky/endlesssky.sh | bash"
+    ["ROCKBOT/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb.sh | bash"
+    ["ROCKBOT2/LINUX"]="https://github.com/trashbus99/profork/blob/master/windows/rb2.sh"
     
     # Linux pacman ports
-    ["OPENRA-CNC-TIBERIAN-DAWN/LINUX"]="pacman -S --noconfirm batocera/ports-openra-td"
-    ["OPENRA-CNC-RED-ALERT/LINUX"]="pacman -S --noconfirm batocera/ports-openra-ra"
-    ["OPENRA-DUNE-2000/LINUX"]="pacman -S --noconfirm batocera/ports-openra-d2k"
-    ["ENDLESS-SKY/LINUX"]="pacman -S --noconfirm batocera/ports-endless-sky"
-    ["ROCKBOT/LINUX"]="pacman -S --noconfirm batocera/ports-rockbot"
-    ["ROCKBOT2/LINUX"]="pacman -S --noconfirm batocera/ports-rockbot2"
     ["ABUSE/LINUX"]="pacman -S --noconfirm batocera/ports-abuse"
     ["C-DOGS/LINUX"]="pacman -S --noconfirm batocera/ports-cdogs"
     ["HYDRA-CASTLE-LABYRINTH/LINUX"]="pacman -S --noconfirm batocera/ports-hydra-castle-labyrinth"
@@ -120,7 +120,7 @@ apps=(
     ["OPERATION-KYBER-CRYSTAL/LINUX"]="pacman -S --noconfirm batocera/ports-tfe-Operation-Kyber-Crystal"
 )
 
-# === (continued below because of length) ===
+
 # === Game Descriptions ===
 declare -A descriptions
 descriptions=(
@@ -237,7 +237,9 @@ for choice in $choices; do
             chmod 777 /tmp/.app 2>/dev/null
             clear
             loading_animation
-            sed 's,:1234,,g' /tmp/.app | bash
+            sed 's,:1234,,g' /tmp/.app > /tmp/.app.fixed
+            chmod +x /tmp/.app.fixed
+            ( bash /tmp/.app.fixed )
             echo -e "\n$choice installed.\n"
         else 
             echo "Error: couldn't download installer for ${apps[$choice]}"
