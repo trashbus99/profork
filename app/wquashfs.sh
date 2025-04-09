@@ -115,7 +115,20 @@ apps=(
     ["ROCKBOT/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb.sh | bash"
     ["ROCKBOT2/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb2.sh | bash"
     ["ABUSE/LINUX"]="pacman -S --noconfirm batocera/ports-abuse"
-    
+    ["C-DOGS/LINUX"]="pacman -S --noconfirm batocera/ports-cdogs"
+    ["HYDRA-CASTLE-LABYRINTH/LINUX"]="pacman -S --noconfirm batocera/ports-hcl"
+    ["QUAKE-SHAREWARE/LINUX"]="pacman -S --noconfirm batocera/ports-quake-shareware"
+    ["SUPER-BROS-WAR/LINUX"]="pacman -S --noconfirm batocera/ports-superbroswar"
+    ["SUPERTUXKART/LINUX"]="pacman -S --noconfirm batocera/ports-supertuxkart"
+    ["TFE-OPERATION-KYBER-CRYSTAL/LINUX"]="pacman -S --noconfirm batocera/ports-tfe-Operation-Kyber-Crystal"
+    ["TYRIAN/LINUX"]="pacman -S --noconfirm batocera/ports-tyrian"
+    ["UNVANQUISHED/LINUX"]="pacman -S --noconfirm batocera/ports-unvanquished"
+    ["VELOREN/LINUX"]="pacman -S --noconfirm batocera/ports-veloren"
+    ["XRICK/LINUX"]="pacman -S --noconfirm batocera/ports-xrick"
+    ["ZERO-K/LINUX"]="pacman -S --noconfirm batocera/ports-zerok"
+    ["RI-LI/WINDOWS"]="pacman -S --noconfirm batocera/wine-rili"
+    ["XMOTO/WINDOWS"]="pacman -S --noconfirm batocera/wine-xmoto"
+   
     # Add other apps here
 )
 
@@ -136,19 +149,49 @@ if [ $? -eq 1 ]; then
 fi
 
 # Install selected apps
+needs_pacman_update=false
+
+# First, check if any selected app is a pacman app
 for choice in $choices; do
-    applink="$(echo "${apps[$choice]}" | awk '{print $3}')"
-    rm /tmp/.app 2>/dev/null
-    wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O "/tmp/.app" "$applink"
-    if [[ -s "/tmp/.app" ]]; then 
-        dos2unix /tmp/.app 2>/dev/null
-        chmod 777 /tmp/.app 2>/dev/null
+    install_cmd="${apps[$choice]}"
+    if [[ "$install_cmd" == pacman* ]]; then
+        needs_pacman_update=true
+        break
+    fi
+done
+
+# If needed, update system once
+if $needs_pacman_update; then
+    clear
+    echo "Updating system packages first (pacman -Syu)..."
+    pacman -Syu --noconfirm
+fi
+
+# Now install all selected apps
+for choice in $choices; do
+    install_cmd="${apps[$choice]}"
+
+    if [[ "$install_cmd" == pacman* ]]; then
+        # Install pacman app
         clear
-        loading_animation
-        sed 's,:1234,,g' /tmp/.app | bash
+        echo "Installing $choice with pacman ..."
+        $install_cmd
         echo -e "\n\n$choice DONE.\n\n"
-    else 
-        echo "Error: couldn't download installer for ${apps[$choice]}"
+    else
+        # Normal curl/wget app installation
+        applink="$(echo "$install_cmd" | awk '{print $3}')"
+        rm /tmp/.app 2>/dev/null
+        wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O "/tmp/.app" "$applink"
+        if [[ -s "/tmp/.app" ]]; then 
+            dos2unix /tmp/.app 2>/dev/null
+            chmod 777 /tmp/.app 2>/dev/null
+            clear
+            loading_animation
+            sed 's,:1234,,g' /tmp/.app | bash
+            echo -e "\n\n$choice DONE.\n\n"
+        else 
+            echo "Error: couldn't download installer for ${apps[$choice]}"
+        fi
     fi
 done
 
