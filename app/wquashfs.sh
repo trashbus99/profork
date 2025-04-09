@@ -246,5 +246,5 @@ for choice in $choices; do
 done
 
 # === Refresh Gamelist ===
-echo "Refreshing gamelist after installation..."
-/etc/init.d/S31emulationstation restart
+echo "Update Gamelist to see any additions"
+
