@@ -99,9 +99,9 @@ apps=(
     ["OPENRA-CNC-TIBERIAN-DAWN/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/td.sh | bash"
     ["OPENRA-CNC-RED-ALERT/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/ra.sh | bash"
     ["OPENRA-DUNE-2000/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/d2k.sh | bash"
-    ["ENDLESS-SKY/LINUX"]="https://github.com/trashbus99/profork/raw/master/endlesssky/endlesssky.sh | bash"
+    ["ENDLESS-SKY/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/endlesssky/endlesssky.sh | bash"
     ["ROCKBOT/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb.sh | bash"
-    ["ROCKBOT2/LINUX"]="https://github.com/trashbus99/profork/blob/master/windows/rb2.sh"
+    ["ROCKBOT2/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb2.sh"
     
     # Linux pacman ports
     ["ABUSE/LINUX"]="pacman -S --noconfirm batocera/ports-abuse"
