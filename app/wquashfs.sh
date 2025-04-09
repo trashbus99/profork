@@ -114,6 +114,8 @@ apps=(
     ["GLOBEBA/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/glba.sh | bash"
     ["ROCKBOT/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb.sh | bash"
     ["ROCKBOT2/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb2.sh | bash"
+    ["ABUSE/LINUX"]="pacman -S --noconfirm batocera/ports-abuse"
+    
     # Add other apps here
 )
 
