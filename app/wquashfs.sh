@@ -102,8 +102,8 @@ apps=(
     ["ENDLESS-SKY/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/endlesssky/endlesssky.sh | bash"
     ["ROCKBOT/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb.sh | bash"
     ["ROCKBOT2/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb2.sh | bash"
-    ["CASTLEVANIA-2-SIMONS-QUEST-REVAMPED"]="https://github.com/trashbus99/profork/raw/master/windows/cv2.sh | bash"
-    ["CHIP-&-DALES-RESCUE-RANGERS-REMASTERED"]="https://github.com/trashbus99/profork/raw/master/windows/cdr.sh | bash"
+    ["CASTLEVANIA-2-SIMONS-QUEST-REVAMPED"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/cv2.sh | bash"
+    ["CHIP-&-DALES-RESCUE-RANGERS-REMASTERED"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/cdr.sh | bash"
     ["FREEGEMAS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/fgem.sh | bash"
     ["VALYRIA-TEAR"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/vt.sh | bash"
     
