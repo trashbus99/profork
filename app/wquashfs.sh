@@ -95,7 +95,8 @@ apps=(
     ["SUPERCRATEBOX/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/releases/download/r1/SuperCratebox.wtgz | bash"
     ["MEGAMAN-ROCK-N-ROLL/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/mmrnr.sh | bash"
     ["GLOBEBA/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/glba.sh | bash"
-
+    ["FLARE-RPG"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/flare.sh | bash"
+    
     # Linux pacman ports
     ["OPENRA-CNC-TIBERIAN-DAWN/LINUX"]="pacman -S --noconfirm batocera/ports-openra-td"
     ["OPENRA-CNC-RED-ALERT/LINUX"]="pacman -S --noconfirm batocera/ports-openra-ra"
@@ -174,6 +175,7 @@ descriptions=(
     ["RI-LI/WINDOWS"]="A colorful train-themed puzzle game."
     ["XMOTO/WINDOWS"]="A physics-based 2D motorbike platforming game."
     ["OPERATION-KYBER-CRYSTAL/LINUX"]="A Star Wars-style dark sci-fi shooter adventure."
+    ["FLARE-RPG"]="A free open-source Diablo-style RPG"
 )
 
 # === Animated Header ===
