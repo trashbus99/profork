@@ -113,6 +113,7 @@ apps=(
     ["MEGAMAN-ROCK-N-ROLL/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/mmrnr.sh | bash"
     ["GLOBEBA/WINDOWS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/glba.sh | bash"
     ["ROCKBOT/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb.sh | bash"
+    ["ROCKBOT2/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb2.sh | bash"
     # Add other apps here
 )
 
