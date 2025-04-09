@@ -101,7 +101,11 @@ apps=(
     ["OPENRA-DUNE-2000/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/openra/d2k.sh | bash"
     ["ENDLESS-SKY/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/endlesssky/endlesssky.sh | bash"
     ["ROCKBOT/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb.sh | bash"
-    ["ROCKBOT2/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb2.sh"
+    ["ROCKBOT2/LINUX"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/rb2.sh | bash"
+    ["CASTLEVANIA-2-SIMONS-QUEST-REVAMPED"]="https://github.com/trashbus99/profork/raw/master/windows/cv2.sh | bash"
+    ["CHIP-&-DALES-RESCUE-RANGERS-REMASTERED"]="https://github.com/trashbus99/profork/raw/master/windows/cdr.sh | bash"
+    ["FREEGEMAS"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/fgem.sh | bash"
+    ["VALYRIA-TEAR"]="curl -Ls https://github.com/trashbus99/profork/raw/master/windows/vt.sh | bash"
     
     # Linux pacman ports
     ["ABUSE/LINUX"]="pacman -S --noconfirm batocera/ports-abuse"
@@ -176,6 +180,10 @@ descriptions=(
     ["XMOTO/WINDOWS"]="A physics-based 2D motorbike platforming game."
     ["OPERATION-KYBER-CRYSTAL/LINUX"]="A Star Wars-style dark sci-fi shooter adventure."
     ["FLARE-RPG"]="A free open-source Diablo-style RPG"
+    ["CASTLEVANIA-2-SIMONS-QUEST-REVAMPED"]="Fan remake of Castlevania 2 with better graphics and controls."
+    ["CHIP-&-DALES-RESCUE-RANGERS-REMASTERED"]="NES classic remastered with smoother gameplay and visuals."
+    ["FREEGEMAS"]="Simple match-3 puzzle game with colorful gem swapping."
+    ["VALYRIA-TEAR"]="Open-source 2D RPG with turn-based battles and story."
 )
 
 # === Animated Header ===
