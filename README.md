@@ -132,7 +132,7 @@ https://www.youtube.com/watch?v=C_-Ij5ADUPw
 | **GEFORCENOW**                        | Nvidia's cloud gaming service                                |
 | **GIMP**                              | GNU Image editor                                             |
 | **GREENLIGHT**                        | Xbox and Xcloud Remote Play Streamer (ARM64 Available)        |
-| **Handbrake**                        |  Video transcoding tool.
+| **HANDBRAKE**                        |  Video transcoding tool
 | **HARD-INFO**                         | System information and benchmark tool                        |
 | **HYPER**                             | Modern, extensible terminal emulator                        |
 | **JAVA-RUNTIME**                      | Java runtime environment                                     |
@@ -202,7 +202,7 @@ https://www.youtube.com/watch?v=C_-Ij5ADUPw
 | **CASAOS/CONTAINER/DEBIAN/XFCE**           | CasaOS container with a Debian XFCE desktop environment       |
 | **EMBY-SERVER/DOCKER**                     | Media server for managing and streaming personal media        |
 | **JELLYFIN-SERVER/DOCKER**                 | Open-source media server for streaming and organizing media   |
-| **LINUX-DESKTOPS-RDP/DOCKER**              | Dockerized Linux desktops with RDP access                    |
+| **LINUX-DESKTOPS-VNC/RDP/DOCKER**          | Dockerized Linux desktops with WebVNC or RDP access          |
 | **LINUX-QEMU-VMs**                         | Linux VMS via Web VNC                                        |
 | **NETBOOT-XYZ-SERVER/DOCKER**              | Netboot.xyz server for network-based booting                 |
 | **NEXTCLOUD-SERVER/DOCKER**                | Private cloud server for file storage and sharing            |
