@@ -189,7 +189,7 @@ for app in $(printf "%s\n" "${!apps[@]}" | sort); do
     app_list+=("$app" "${descriptions[$app]}" OFF)
 done
 
-cmd=(dialog --separate-output --checklist "Select applications to install or update:" 24 86 18)
+cmd=(dialog --separate-output --checklist "Select applications to install or update:" 24 120 18)
 choices=$("${cmd[@]}" "${app_list[@]}" 2>&1 >/dev/tty)
 
 # === Cancel Handling ===
