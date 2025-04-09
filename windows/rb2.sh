@@ -5,7 +5,7 @@ cd /userdata/roms/ports || exit 1
 
 # Step 2: Download the tar.gz
 echo "Downloading Rockbot..."
-curl -L -o rockbot.tar.gz https://github.com/trashbus99/profork/releases/download/r1/rockbot2.tar.gz
+curl -L -o rockbot2.tar.gz https://github.com/trashbus99/profork/releases/download/r1/rockbot2.tar.gz
 
 # Step 3: Extract it
 echo "Extracting Rockbot..."
