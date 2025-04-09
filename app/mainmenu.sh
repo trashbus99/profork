@@ -27,7 +27,15 @@ if [ -d "/userdata/system/add-ons" ]; then
     sleep 4
     exit 0
 fi
+# Detect system architecture
+ARCH=$(uname -m)
 
+if [ "$ARCH" = "aarch64" ]; then
+    echo "ARM64 (aarch64) detected. Loading ARM Menu..."
+    sleep 2
+    curl -Ls https://github.com/trashbus99/profork/raw/master/app/arm_menu.sh | bash
+    exit 0
+fi
 # === Profork Lock Check ===
 LOCK_FLAG="/userdata/system/pro/.bua_softlock"
 BUA_LAUNCHER_1="/userdata/roms/ports/BatoceraUnofficialAddOns.sh"
@@ -80,15 +88,7 @@ fi
 
 export DIALOGRC="$DIALOGRC_FILE"
 
-# Detect system architecture
-ARCH=$(uname -m)
 
-if [ "$ARCH" = "aarch64" ]; then
-    echo "ARM64 (aarch64) detected. Loading ARM Menu..."
-    sleep 2
-    curl -Ls https://github.com/trashbus99/profork/raw/master/app/arm_menu.sh | bash
-    exit 0
-fi
 
 if [ "$ARCH" != "x86_64" ]; then
     echo "This script only runs on x86_64 (AMD/Intel) or aarch64 (ARM64)."
@@ -117,8 +117,7 @@ animate_text "${YELLOW}The apps on this repository are provided AS-IS.${NC}"
 animate_text "${RED}DO NOT ask for help in the Batocera Discord.${NC}"
 animate_text "${RED}They will NOT help you and will REFUSE support if they are made aware unofficial apps are installed.${NC}"
 animate_text "${YELLOW}Support is not available. Use at your own risk.${NC}"
-animate_text ""
-animate_text "${YELLOW}FYI: The Batocera Nation Youtube channel is back in action doing new help videos. Search for it!${NC}"
+
 
 echo -e "${NC}"
 sleep 4
