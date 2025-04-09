@@ -16,7 +16,7 @@ rm -f rockbot2.tar.gz
 
 # Step 5: Create the launcher script
 echo "Creating Rockbot2.sh launcher..."
-cat << 'EOF' > /userdata/roms/ports/Rockbot.sh
+cat << 'EOF' > /userdata/roms/ports/Rockbot2.sh
 #!/bin/bash
 cd /userdata/roms/ports/rockbot2
 DISPLAY=:0.0 LD_LIBRARY_PATH=/usr/lib64:/lib64:./libs ./rockbot
