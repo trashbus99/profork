@@ -14,14 +14,13 @@ clear
 MUSIC_DIR="/userdata/music"
 mkdir -p "$MUSIC_DIR"
 
-WIN="$MUSIC_DIR/win.mp3"
 FAIL="$MUSIC_DIR/lh.mp3"
 JEOPARDY="$MUSIC_DIR/jeopardy.mp3"
 COD="$MUSIC_DIR/comeondown.mp3"
 XBX="$MUSIC_DIR/xbx.mp3"
 
 declare -A MP3S=(
-    ["$WIN"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/win.mp3"
+  
     ["$FAIL"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/lh.mp3"
     ["$JEOPARDY"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/at.mp3"
     ["$COD"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/cod.mp3"
@@ -111,7 +110,7 @@ ask "Q10: In open-source projects, what’s a good way to verify that GPL obliga
 # === Results ===
 if [ "$score" -ge 9 ]; then
     # === Win Path ===
-    play_sound "$WIN"
+    
     mkdir -p /userdata/system/pro
     touch "$GEN_ACCESS"
     
