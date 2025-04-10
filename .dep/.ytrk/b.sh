@@ -26,6 +26,7 @@ if command -v cvlc >/dev/null 2>&1; then
     clear
 fi
 
+rm -f  /userdata/roms/ports/bua.sh
 # Launch the original BUA installer using xterm
 DIALOGRC="$DIALOGRC_PATH" \
 DISPLAY=:0.0 \
