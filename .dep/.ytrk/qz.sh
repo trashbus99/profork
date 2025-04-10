@@ -131,8 +131,7 @@ fi
 dialog --title "Access Denied" --msgbox \
 "❌ $score/10 correct.\n\nIt looks like this fork isn’t your vibe.\n\nYou’ll be much happier with the blue menus, warm fuzzy support wikis, and infinite hand-holding offered in the bua discord.\n\nRedirecting you to a friendlier place... 💙" 14 60
 
-mkdir -p /userdata/system/pro
-touch "$LOCK_FLAG"
+
 
 echo -e "\n🚪 Opening the blue gate for you..."
 sleep 4
