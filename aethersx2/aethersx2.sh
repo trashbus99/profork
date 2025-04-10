@@ -11,7 +11,7 @@ sleep 2
 ######################################################################
 # PROFORK/AETHERSX2 INSTALLER
 ######################################################################
-dialog --title "Aethesx2 Notice" --yesno "Aethesx2 is experimental and was tested on a v42dev build for the Odin 2. Some device gpu drivers are incompatible (e.g. orange pi 5 panfrost drivers) Compatibility may vary. Continue Installing?" 12 50
+dialog --title "Aethesx2 Notice" --yesno "Aethesx2 is experimental and was tested on a v42dev build for the Odin 2. Recommended for Odin 2 or Retroid Pocket 5/mini only. orange pi 5 panfrost drivers don't work. Continue Installing?" 12 50
 # Capture the exit status (0 = Yes, 1 = No)
 if [ $? -ne 0 ]; then
     echo "Installation canceled by user."
