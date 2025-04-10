@@ -10,7 +10,7 @@ boot_entries=$(efibootmgr | grep '^Boot[0-9A-Fa-f]*\*' | sed 's/^\(Boot[0-9A-Fa-
 # Step 2: Build dialog menu
 menu_items=()
 while read -r line; do
-    bootnum=$(echo "$line" | awk '{print $1}' | sed 's/[^0-9A-Fa-f]//g')
+    bootnum=$(echo "$line" | awk '{print $1}' | sed 's/^Boot//; s/\*//')
     label=$(echo "$line" | cut -d' ' -f2-)
     menu_items+=("$bootnum" "$label")
 done <<< "$boot_entries"
