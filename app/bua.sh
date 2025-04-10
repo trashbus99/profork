@@ -79,7 +79,6 @@ fi
 
 # === Install BUA launcher ===
 echo "📦 Installing the BUA Addon Launcher..."
-curl -Ls install.batoaddons.app | bash
 curl -Ls -o /userdata/roms/ports/bua.sh https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/b.sh
 chmod +x /userdata/roms/ports/bua.sh
 
