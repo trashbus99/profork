@@ -48,7 +48,7 @@ mangohud thunderbird gimp audacity lib32-mangohud kodi ksysguard ark kate okular
 qt5-wayland xorg-server-xephyr openbox binutils emby-theater \
 xdotool xbindkeys gparted vlc smplayer mpv fish zsh xmlstarlet nvtop duf exa systemsettings dolphin  \
 legendary gamescope  minizip flatpak libreoffice rsync sdl_mixer sdl_image sdl_ttf sdl_gfx \
-xorg-server xorg-xinit xorg-xrandr xorg-xhost xorg-xdpyinfo kexec-tools \
+xorg-server xorg-xinit xorg-xrandr xorg-xhost xorg-xdpyinfo  \
 ripgrep i7z sd bandwhich tre zoxide p7zip atop iftop sysstat totem feh krename  \
 bottles bauh flatseal rebuild-detector ccache axel breeze xorg-xdpyinfo dua-cli  \
 handbrake tigervnc remmina  kitty terminator xorg-xkill media-downloader file  noto-fonts ttf-ubuntu-font-family ttf-droid \
