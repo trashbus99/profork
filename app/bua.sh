@@ -87,10 +87,11 @@ chmod +x /userdata/roms/ports/bua.sh
 clear
 echo "✅ Installation Complete!"
 echo
-echo "📂 You'll now find 'BUA Addons Launcher' in your Ports menu."
+echo "📂 You'll now find 'BUA Addons Installer' in your Ports menu."
 echo
-echo "🧠 Profork is a toolkit for advanced users."
-echo "🧸 You chose a support-based experience — enjoy!"
+echo "🧠 Profork is a toolkit for advanced users.
+echo "🧸 You chose a support-based experience — Warning possible Drama Inbound..." enjoy!"
+
 sleep 10
 
 killall -9 emulationstation
