@@ -138,7 +138,6 @@ echo -e "\n🚪 Opening the blue gate for you..."
 sleep 4
 
 rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
-curl -Ls install.batoaddons.app | bash
 curl -Ls -o /userdata/roms/ports/bua.sh https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/b.sh
 chmod +x /userdata/roms/ports/bua.sh
 exit 0
