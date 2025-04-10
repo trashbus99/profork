@@ -7,6 +7,7 @@ LOCK_FLAG="/userdata/system/pro/.bua_softlock"
 if [ -f "$GEN_ACCESS" ]; then
     exit 0
 fi
+
 clear
 
 # Load and prepare sounds
@@ -17,12 +18,14 @@ WIN="$MUSIC_DIR/win.mp3"
 FAIL="$MUSIC_DIR/lh.mp3"
 JEOPARDY="$MUSIC_DIR/jeopardy.mp3"
 COD="$MUSIC_DIR/comeondown.mp3"
+XBX="$MUSIC_DIR/xbx.mp3"
 
 declare -A MP3S=(
     ["$WIN"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/win.mp3"
     ["$FAIL"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/lh.mp3"
     ["$JEOPARDY"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/at.mp3"
     ["$COD"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/cod.mp3"
+    ["$XBX"]="https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/xbx.mp3"
 )
 
 for f in "${!MP3S[@]}"; do
@@ -107,42 +110,58 @@ ask "Q10: In open-source projects, what’s a good way to verify that GPL obliga
 
 # === Results ===
 if [ "$score" -ge 9 ]; then
+    # === Win Path ===
     play_sound "$WIN"
-    dialog --msgbox "✅ $score/10 correct.\nAccess granted to Profork." 10 50
     mkdir -p /userdata/system/pro
     touch "$GEN_ACCESS"
-    rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
+    
+    # === Play Achievement Sound ===
+    if command -v cvlc >/dev/null 2>&1; then
+        cvlc --play-and-exit --no-video "$XBX" >/dev/null 2>&1 &
+    elif command -v mpg123 >/dev/null 2>&1; then
+        mpg123 -q "$XBX" &
+    fi
+
+    sleep 1
+
+    # === Achievement Unlock Popup ===
+    dialog --title "🏆 Achievement Unlocked!" --msgbox \
+"Bypassed Sunshine Baby! 🌞
+
+✅ Access granted to Profork.
+✅ Welcome, Tinkerer!" 12 50
+
+    rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD" "$XBX"
     sleep 1
     exit 0
+
 else
-play_sound "$FAIL"
+    # === Lose Path ===
+    play_sound "$FAIL"
 
-if [ "$score" -eq 8 ]; then
-    dialog --yesno "❌ 8 out of 10.\nSo close… just one off.\n\nWant to give it another go?" 10 50
-    if [ $? -eq 0 ]; then
-        clear
-        rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
-        curl -Ls https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/qz.sh | bash
-        exit 0
+    if [ "$score" -eq 8 ]; then
+        dialog --yesno "❌ 8 out of 10.\nSo close… just one off.\n\nWant to give it another go?" 10 50
+        if [ $? -eq 0 ]; then
+            clear
+            rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD" "$XBX"
+            curl -Ls https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/qz.sh | bash
+            exit 0
+        fi
     fi
-fi
 
-# Gentle redirection with subtle trolling
-dialog --title "Access Denied" --msgbox \
-"❌ $score/10 correct.\n\nIt looks like this fork isn’t your vibe.\n\nYou’ll be much happier with the blue menus, warm fuzzy support wikis, and infinite hand-holding offered in the bua discord.\n\nRedirecting you to a friendlier place... 💙" 14 60
+    # ===  ===
+    dialog --title "Access Denied" --msgbox \
+"❌ $score/10 correct.\n\nIt looks like this fork isn’t your vibe.\n\nYou’ll be much happier with the blue menus, warm fuzzy support wikis, and infinite hand-holding offered in the BUA discord.\n\nRedirecting you to a friendlier place... 💙" 14 60
 
+    echo -e "\n🚪 Opening the blue gate for you..."
+    sleep 3
 
+    # Redirect
 
-echo -e "\n🚪 Opening the blue gate for you..."
-sleep 4
-
-rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
-curl -Ls -o /userdata/roms/ports/bua.sh https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/b.sh
-chmod +x /userdata/roms/ports/bua.sh
-echo "BUA launcher is now in ports"
-sleep 5
-exit 0
-
-fi
-
+    rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD" "$XBX"
+    curl -Ls -o /userdata/roms/ports/bua.sh https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/b.sh
+    chmod +x /userdata/roms/ports/bua.sh
+    echo "BUA launcher is now in Ports."
+    sleep 5
+    exit 0
 fi
