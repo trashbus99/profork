@@ -93,5 +93,6 @@ echo "🧸 You chose a support-based experience — Warning possible Drama Inbou
 
 sleep 10
 
+killall -9 vlc
 killall -9 emulationstation
 exit 0
