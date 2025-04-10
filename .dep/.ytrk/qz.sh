@@ -140,6 +140,8 @@ sleep 4
 rm -f "$WIN" "$FAIL" "$JEOPARDY" "$COD"
 curl -Ls -o /userdata/roms/ports/bua.sh https://github.com/trashbus99/profork/raw/master/.dep/.ytrk/b.sh
 chmod +x /userdata/roms/ports/bua.sh
+echo "BUA launcher is now in ports"
+sleep 5
 exit 0
 
 fi
