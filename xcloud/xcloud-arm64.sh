@@ -9,6 +9,8 @@ fi
 echo "✅ Xwayland detected. Continuing..."
 sleep 2
 
+echo "Compatibiltiy may vary depending on device..."
+sleep 5
 
 # PROFORK INSTALLER
 ######################################################################
