@@ -49,85 +49,47 @@ clear
 case $CHOICE in
      1)
         echo "Installing Arch Container..."
-        rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/steam/install2.sh
-        dos2unix /tmp/runner 2>/dev/null 
-        chmod 777 /tmp/runner 2>/dev/null
-        bash /tmp/runner
+        curl -Ls https://github.com/trashbus99/profork/raw/master/steam/install2.sh | bash
         ;;
      2)
         echo "Loading Package List..."
-        rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/steam/list.sh
-        dos2unix /tmp/runner 2>/dev/null 
-        chmod 777 /tmp/runner 2>/dev/null
-        bash /tmp/runner
-        ;;
+        curl -Ls https://github.com/trashbus99/profork/raw/master/steam/list.sh | bash
+       ;;
     3)
         echo "Loading Uninstall script..."
-        rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/steam/uninstall.sh
-        dos2unix /tmp/runner 2>/dev/null 
-        chmod 777 /tmp/runner 2>/dev/null
-        bash /tmp/runner
+        curl -Ls https://github.com/trashbus99/profork/raw/master/steam/uninstall.sh | bash
         ;;
     4)  
-        echo "Update EmulationStation Arch Container Launcher Shortcuts..."
-        rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/steam/update_shortcuts.sh
-        dos2unix /tmp/runner 2>/dev/null 
-        chmod 777 /tmp/runner 2>/dev/null
-        bash /tmp/runner
+        echo "Update EmulationStation Arch Container Launcher Shortcuts..." 
+        curl -Ls https://github.com/trashbus99/profork/raw/master/steam/update_shortcuts.sh | bash
         ;;    
      5)  
         echo "Installing Desktop/Windowed Mode..."
-        rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/steam/arch-de.sh
-        dos2unix /tmp/runner 2>/dev/null 
-        chmod 777 /tmp/runner 2>/dev/null
-        bash /tmp/runner
+        curl -Ls https://github.com/trashbus99/profork/raw/master/steam/arch-de.sh | bash
         ;;
     6)  
         echo "Add/Update Lutris shortcuts to emulationstation..."
-        rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/steam/addon_lutris.sh
-        dos2unix /tmp/runner 2>/dev/null 
-        chmod 777 /tmp/runner 2>/dev/null
-        bash /tmp/runner
+        curl -Ls https://github.com/trashbus99/profork/raw/master/steam/addon_lutris.sh | bash
         ;;
     7)  
         echo "Add/update Heroic shortcuts to emulationstation..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/steam/addon_heroic.sh
-        dos2unix /tmp/runner 2>/dev/null 
-        chmod 777 /tmp/runner 2>/dev/null
-        bash /tmp/runner
+        curl -Ls  https://github.com/trashbus99/profork/raw/master/steam/addon_heroic.sh | bash
         ;;
    8)  
         echo "Add/update PS4 shortcuts to emulationstation..."
-        rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/steam/addon_ps4.sh
-        dos2unix /tmp/runner 2>/dev/null 
-        chmod 777 /tmp/runner 2>/dev/null
-        bash /tmp/runner
+        curl -Ls http://github.com/trashbus99/profork/raw/master/steam/addon_ps4.sh | bash
         ;;
   9)  
         echo "Emudeck Menu..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/emudeck/emudeck.sh
-        dos2unix /tmp/runner 2>/dev/null 
-        chmod 777 /tmp/runner 2>/dev/null
-        bash /tmp/runner
+        curl -Ls https://github.com/trashbus99/profork/raw/master/emudeck/emudeck.sh | bash
         ;;
  10)  
         echo "Webapps Installer..."
-        rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/trashbus99/profork/raw/master/webapps/install.sh
-        dos2unix /tmp/runner 2>/dev/null 
-        chmod 777 /tmp/runner 2>/dev/null
-        bash /tmp/runner
+        curl -Ls https://github.com/trashbus99/profork/raw/master/webapps/install.sh | bash
         ;;
-     99)
+ 99)
         echo "Exiting..."
         exit
         ;;
