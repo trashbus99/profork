@@ -49,7 +49,7 @@ clear
 case $CHOICE in
      1)
         echo "Installing Arch Container..."
-        curl -Ls https://github.com/trashbus99/profork/raw/master/steam/install2.sh | bash
+        curl -Ls https://github.com/trashbus99/profork/raw/master/steam/install_new.sh | bash
         ;;
      2)
         echo "Loading Package List..."
