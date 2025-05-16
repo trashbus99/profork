@@ -1,0 +1,21 @@
+#!/bin/bash
+
+start() {
+    cp -f /userdata/desktop/inittab /etc/inittab
+    cp -f /userdata/desktop/xinitrc /etc/X11/xinit/xinitrc
+    init q &
+    startx &
+    sleep 2
+    chvt 2
+}
+
+case "$1" in
+    start)
+	start &
+	exit 0
+	;;
+    *)
+        echo "Usage: $0 {start}"
+        exit 1
+esac
+

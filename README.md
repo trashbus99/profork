@@ -1,2 +1,8 @@
-# Development continues elsewhere.
-![image](https://github.com/user-attachments/assets/7ef11452-fe2a-4c2e-a44c-ac40145a1e09)
+## Arch container – Legacy Utility
+
+This standalone module is retained for legacy compatibility.
+
+Minor updates may be applied if necessary.  
+All other tools and components have moved elsewhere.
+
+`curl -L bit.ly/bit.ly/arch-profork`

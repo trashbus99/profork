@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# Common settings
+mkdir -p "/var/log"
+mkdir -p "/userdata/system/logs"
+
+display_log="/userdata/system/logs/display.log"
+nvidia_log="/var/log/nvidia.log"
+amd_log="/userdata/system/logs/amd.log"
+
+# Function to configure display settings and launch applications
+configure_display() {
+    local display=$1
+    local startup_cmd=$2
+    local hide_cursor=$3
+
+    export DISPLAY=$display
+
+    # Hide cursor only if specified (for :0)
+    if [ "$hide_cursor" = "true" ]; then
+        unclutter --noevents -b
+    fi
+
+    # Disable DPMS and screen saver to prevent blanking
+    xset -dpms
+    xset s off
+
+    # NVIDIA Prime configuration
+    if [ -f "/var/tmp/nvidia.prime" ]; then
+        echo "Xrandr Providers for display $display:" >> "$nvidia_log"
+        xrandr --listproviders >> "$nvidia_log" || { echo "Failed xrandr --listproviders" >> "$nvidia_log"; }
+        provider_count=$(xrandr --listproviders | grep 'Providers:' | awk '{print $4}')
+        if [ "$provider_count" -ge 2 ]; then
+            provider_number=$(xrandr --listproviders | awk '/NVIDIA/ {print $2}' | tr -d ':')
+            if [ -n "$provider_number" ]; then
+                export __NV_PRIME_RENDER_OFFLOAD=$provider_number
+                export __VK_LAYER_NV_optimus=NVIDIA_only
+                export __GLX_VENDOR_LIBRARY_NAME=nvidia
+            fi
+        fi
+    fi
+
+    # AMD Prime configuration
+    if [ -f "/var/tmp/amd.prime" ]; then
+        amd_prime_value=$(<"/var/tmp/amd.prime")
+        export DRI_PRIME="${amd_prime_value:-1}"
+    fi
+
+    # Start the specified application for the display
+    $startup_cmd
+}
+
+# Configure Display :0 with EmulationStation and hide the cursor
+configure_display ":0" "openbox --config-file /etc/openbox/rc.xml --startup 'emulationstation-standalone'" "true"
+
+# Configure Display :1 with XFCE and do not hide the cursor
+#configure_display ":1" "openbox --config-file /userdata/desktop/windowed.xml --startup '/userdata/desktop/vt1.sh'" "false"	
+#configure_display ":1" "exec /userdata/desktop/vt1.sh" "false"
+
+configure_display ":1" "nohup /userdata/desktop/vt1.sh >/dev/null 2>&1 &" "false"
+
+
+
+ 
